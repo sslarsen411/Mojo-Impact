@@ -11,7 +11,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
   display: grid;
   grid-template-rows: min-content 40vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -55,38 +54,63 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.has-text-drk-blue {
+  color: #17125B !important; }
+
+.has-bg-drk-blue {
+  background-color: #17125B !important; }
+
+.has-text-drk-red {
+  color: #8E001C !important; }
+
+.has-bg-drk-red {
+  background-color: #8E001C !important; }
+
 .u-center-text {
   text-align: center !important; }
 
-.u-margin-bottom-small {
+.mb-sm {
   margin-bottom: 1.5rem !important; }
 
-.u-margin-bottom-medium {
+.mb-med {
   margin-bottom: 4rem !important; }
 
-.u-margin-bottom-big {
+.mb-big {
   margin-bottom: 8rem !important; }
 
-.u-margin-top-big {
+.mt-big {
   margin-top: 8rem !important; }
 
-.u-margin-top-huge {
+.mt-huge {
   margin-top: 10rem !important; }
 
 /*@import "components/";*/
 .footer {
   background-color: #24221F; }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
+header {
+  grid-column: full-start / full-end; }
 
-.header__logo--img {
-  height: 3.5rem; }
-
-.header__nap {
-  text-align: center; }
+.header {
+  color: #FFF;
+  background-color: #24221F;
+  font-size: 3rem;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__logo-box {
+    /* position: absolute;
+        top: 4rem;
+        left: 4rem;
+        */
+    display: flex;
+    align-items: center; }
+  .header__logo--img {
+    height: 3.5rem; }
+  .header__nap {
+    font-size: 1.5rem;
+    line-height: 1.2; }
 
 .navigation {
   color: currentColor; }

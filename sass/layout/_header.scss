@@ -1,18 +1,33 @@
-.header {
+header {
+    grid-column: full-start / full-end; }
 
+.header {
+    color: $color-white;
+    background-color: $color-mojo-black;
+    font-size: 3rem;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &__logo-box {
-        position: absolute;
+       /* position: absolute;
         top: 4rem;
         left: 4rem;
+        */
+        display: flex;
+    
+        align-items: center;
+
     }
 
     &__logo--img {
         height: 3.5rem;
+
     }
     
-    &__nap {
- 
-        text-align: center;
+    &__nap {         
+        font-size: 1.5rem;
+        line-height: 1.2;
     }
 }

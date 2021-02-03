@@ -1,16 +1,13 @@
+
+.has-text-drk-blue{color:$color-blue-drk !important}
+.has-bg-drk-blue{background-color:$color-blue-drk !important}
+.has-text-drk-red{color:$color-red-drk !important}
+.has-bg-drk-red{background-color:$color-red-drk !important}
+
 .u-center-text { text-align: center !important; }
-
-.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
-.u-margin-bottom-medium {
-    margin-bottom: 4rem !important;
-    
-}
-
-.u-margin-bottom-big { 
-    margin-bottom: 8rem !important;
-
-  
-}
-
-.u-margin-top-big { margin-top: 8rem !important; }
-.u-margin-top-huge { margin-top: 10rem !important; }
+//MARGINS
+.mb-sm { margin-bottom: 1.5rem !important; }
+.mb-med {    margin-bottom: 4rem !important;}
+.mb-big {margin-bottom: 8rem !important;}
+.mt-big { margin-top: 8rem !important; }
+.mt-huge { margin-top: 10rem !important; }
