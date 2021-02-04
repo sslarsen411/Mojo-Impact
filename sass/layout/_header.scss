@@ -1,29 +1,22 @@
 header {
     grid-column: full-start / full-end; }
-
-.header {
+.header, .nav-bar{
     color: $color-white;
     background-color: $color-mojo-black;
-    font-size: 3rem;
     padding: 1rem 4rem;
+}
+.header {    
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__logo-box {
-       /* position: absolute;
-        top: 4rem;
-        left: 4rem;
-        */
-        display: flex;
-    
+        display: flex;    
         align-items: center;
-
     }
 
     &__logo--img {
         height: 3.5rem;
-
     }
     
     &__nap {         

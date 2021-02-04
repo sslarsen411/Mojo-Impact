@@ -8,21 +8,41 @@
         <link rel="stylesheet" href="css/mojo-style.css">
     </head>
     <body>
-        <header class="header">
-            <div class="header__logo-box">
-            <img class="header__logo--img" 
-                                     src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
-                                     alt="Mojo Impact logo"> 
+        <header>
+            <div class="header">
+                <div class="header__logo-box">
+                <img class="header__logo--img" 
+                                        src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
+                                        alt="Mojo Impact logo"> 
+                </div>
+                <div class="header__nap">
+                    <p>
+                        Mojo Impact<br> Sonoma, CA<br>707 939-5738
+                    </p>
+                </div>
             </div>
-            <div class="header__nap">
-                <p>
-                    Mojo Impact<br> Sonoma, CA<br>707 939-5738
-                </p>
-            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li class="nav-bar__item is-active" id="home"><a href="#" class="nav-bar__link">Home</a></li>
+                    <li class="nav-bar__item"><a href="#" class="nav-bar__link">Solutions</a></li>
+                    <li class="nav-bar__item" id="contact"><a href="#" class="nav-bar__link">Contact</a></li>
+                    <li class="nav-bar__item"><a href="#" class="nav-bar__link">About Mojo Impact</a></li>
+                </ul>
+                <div class="nav-bar__cta">
+                    <button>CTA</button>
+                </div>
+            </nav>
         </header>
         <div class="hero">
             <h2 class="heading-2 has-text-drk-red">Hero</h2>
         </div>   
-        
+        <div id="pg-name" class="pg-name">contact</div>
+
+        <p id="demo">Click the button to change the text in this paragraph.</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+
+        <script src="js/mojo.functions.js"></script>
     </body>
 </html>

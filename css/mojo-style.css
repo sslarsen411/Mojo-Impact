@@ -15,6 +15,9 @@ body {
   grid-template-rows: min-content 40vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.pg-name {
+  display: none; }
+
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
@@ -84,6 +87,14 @@ body {
 .mt-huge {
   margin-top: 10rem !important; }
 
+.is-active {
+  background-color: #FEB41C !important;
+  font-weight: 700; }
+  .is-active a {
+    color: #24221F; }
+  .is-active:hover {
+    background-color: #ffde9b !important; }
+
 /*@import "components/";*/
 .footer {
   background-color: #24221F; }
@@ -91,19 +102,16 @@ body {
 header {
   grid-column: full-start / full-end; }
 
-.header {
+.header, .nav-bar {
   color: #FFF;
   background-color: #24221F;
-  font-size: 3rem;
-  padding: 1rem 4rem;
+  padding: 1rem 4rem; }
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
   .header__logo-box {
-    /* position: absolute;
-        top: 4rem;
-        left: 4rem;
-        */
     display: flex;
     align-items: center; }
   .header__logo--img {
@@ -112,8 +120,31 @@ header {
     font-size: 1.5rem;
     line-height: 1.2; }
 
-.navigation {
-  color: currentColor; }
+.nav-bar {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between; }
+  .nav-bar ul {
+    list-style-type: none;
+    display: flex; }
+  .nav-bar__item {
+    margin-right: 1rem;
+    min-width: 14rem;
+    padding: 0 2rem;
+    text-align: center;
+    background-color: #8E001C;
+    transition: all .2s; }
+  .nav-bar__item:hover {
+    background-color: #ff0f3e;
+    transform: translateY(-0.5rem); }
+  .nav-bar__item:active, .nav-bar__item:focus {
+    background-color: #ff8ea4;
+    transform: translateY(-1rem); }
+  .nav-bar__link {
+    color: #F7F7F7;
+    text-decoration: none; }
+  .nav-bar__cta {
+    justify-self: flex-end; }
 
 section {
   background-color: #F7F7F7; }
