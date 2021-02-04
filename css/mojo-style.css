@@ -11,6 +11,7 @@ html {
 
 body {
   box-sizing: border-box;
+  height: 80rem;
   display: grid;
   grid-template-rows: min-content 40vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -95,7 +96,30 @@ body {
   .is-active:hover {
     background-color: #ffde9b !important; }
 
-/*@import "components/";*/
+.btnScrollToTop {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #FFF;
+  line-height: 5rem;
+  text-align: center;
+  text-decoration: none;
+  outline: none; }
+
+.btnScrollToTop {
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  background: rgba(142, 0, 28, 0.5);
+  border: thin solid #FFF;
+  border-radius: 50%;
+  z-index: 99;
+  display: inline-block;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem; }
+  .btnScrollToTop:hover {
+    background: rgba(142, 0, 28, 0.75); }
+
 .footer {
   background-color: #24221F; }
 

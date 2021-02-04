@@ -1,9 +1,33 @@
-//alert("hi")
+/** 
+* SCROLL TO TOP BUTTON
+* https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc
+*/
+let btnScrollToTop= document.querySelector(".btnScrollToTop")
+let rootElement = document.documentElement
 
-//let pg = document.getElementById("page-name").innerText
-//let x = document.getElementById("page-name");
-//let pg= x.innerText
-//let y = "hi"
+function handleScroll() {
+  // do something on scroll
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  if ((rootElement.scrollTop / scrollTotal ) > 0.40) {
+    //show button
+    btnScrollToTop.style.display = "block"
+  } else {
+    //hide button
+    btnScrollToTop.style.display = "none"
+  }
+}
+
+function scrollToTop() {
+  //scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+btnScrollToTop.addEventListener("click", scrollToTop)
+document.addEventListener("scroll", handleScroll)
+
+
 function myFunction() {
     //let tits =  document.getElementById("pg-name").innerHTML
    // let x = "hi"

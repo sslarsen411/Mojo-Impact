@@ -1,0 +1,28 @@
+%btn {
+    font-family: $font-display;
+    font-weight: 600;
+    color: $color-white;
+    line-height:5rem;
+    text-align:center;
+    text-decoration:none;
+    outline:none;
+}
+.btnScrollToTop {
+    @extend %btn;
+    width:5rem;
+    height:5rem;
+    font-size:2rem;    
+    background:rgba($color-red-drk, .5);
+    border:thin solid $color-white ;
+    border-radius: 50%;
+    z-index:99;
+    //display:none;
+    display:inline-block;
+    position:fixed;
+    bottom:3rem;
+    right:3rem;
+    
+    &:hover {         
+        background:rgba($color-red-drk, .75);
+    }
+}
