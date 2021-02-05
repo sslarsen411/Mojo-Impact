@@ -5,20 +5,15 @@
 let btnScrollToTop= document.querySelector(".btnScrollToTop")
 let rootElement = document.documentElement
 
-function handleScroll() {
-  // do something on scroll
+const handleScroll = () => {  
   let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-  if ((rootElement.scrollTop / scrollTotal ) > 0.40) {
-    //show button
+  if ((rootElement.scrollTop / scrollTotal ) > 0.40) {    
     btnScrollToTop.style.display = "block"
-  } else {
-    //hide button
+  } else {    
     btnScrollToTop.style.display = "none"
   }
 }
-
-function scrollToTop() {
-  //scroll to top logic
+const scrollToTop = () => {
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -27,18 +22,28 @@ function scrollToTop() {
 btnScrollToTop.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
+/** 
+* UPDATE ACTIVE PAGE ON NAV
+* 
+*/
+const updateMenu = (inTit) =>{    
+  let pgName = document.getElementsByClassName("pg-name")
+  let navBar = document.getElementsByClassName("nav-bar__link");
 
-function myFunction() {
-    //let tits =  document.getElementById("pg-name").innerHTML
-   // let x = "hi"
-   //alert('click')
-   let tits =  document.getElementById("pg-name")
-    //let pg = document.getElementById("contact")
-    console.log(tits.innerHTML)
-    tits.innerHTML = "Hello World";
-    document.getElementById("home").classList.remove("is-active")
-    document.getElementById("contact").classList.add("is-active")
+  let currPg = pgName[0].innerText    
+  pgName[0].innerText = inTit
+  for (var i = 0; i < navBar.length; ++i) {
+    // TODO: CHANGE TO HREF
+      let linkTitle = navBar[i].getAttribute("title"); 
+
+      if (linkTitle.includes(currPg)){
+          navBar[i].parentNode.classList.remove("is-active")            
+      }else if (linkTitle.includes(pgName[0].innerText))
+          navBar[i].parentNode.classList.add("is-active")        
   }
+}
+
+
 
 
 //alert(x)

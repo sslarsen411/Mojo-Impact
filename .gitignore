@@ -4,6 +4,7 @@ package.json
 README.md
 setup-npm.txt
 mojo-impact.code-workspace
+js/mojo.menu.js
 
 # Packages #
 ############
