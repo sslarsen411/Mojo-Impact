@@ -96,29 +96,97 @@ body {
   .is-active:hover {
     background-color: #ffde9b !important; }
 
-.btnScrollToTop {
+.mojo-btn, .mojo-btn:link, .mojo-btn:visited, .btnScrollToTop {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
-  color: #FFF;
-  line-height: 5rem;
+  line-height: 1rem;
   text-align: center;
   text-decoration: none;
-  outline: none; }
+  outline: none;
+  padding: 1rem 4rem;
+  display: inline-block; }
+
+.mojo-btn, .mojo-btn:link, .mojo-btn:visited {
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.mojo-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .mojo-btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.mojo-btn:active, .mojo-btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.mojo-btn--saffron {
+  background-color: #FEB41C;
+  color: #333; }
+  .mojo-btn--saffron:hover {
+    background-color: #e69b01;
+    color: white; }
+  .mojo-btn--saffron::after {
+    background-color: #FEB41C; }
+
+.mojo-btn--white {
+  background-color: #FFF;
+  color: #333; }
+  .mojo-btn--white::after {
+    background-color: #FFF; }
+
+.mojo-btn--green {
+  background-color: #55c57a;
+  color: #FFF; }
+  .mojo-btn--green::after {
+    background-color: #55c57a; }
+
+.mojo-btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.mojo-btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
 
 .btnScrollToTop {
   width: 5rem;
   height: 5rem;
   font-size: 2rem;
+  color: #FFF;
   background: rgba(142, 0, 28, 0.5);
   border: thin solid #FFF;
   border-radius: 50%;
   z-index: 99;
-  display: inline-block;
+  padding: 0;
   position: fixed;
   bottom: 3rem;
-  right: 3rem; }
+  right: 3rem;
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease; }
   .btnScrollToTop:hover {
     background: rgba(142, 0, 28, 0.75); }
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0); }
 
 .footer {
   background-color: #24221F; }

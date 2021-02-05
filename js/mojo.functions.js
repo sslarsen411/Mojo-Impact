@@ -2,24 +2,30 @@
 * SCROLL TO TOP BUTTON
 * https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc
 */
-let btnScrollToTop= document.querySelector(".btnScrollToTop")
+let scrollToTopBtn = document.querySelector(".btnScrollToTop")
 let rootElement = document.documentElement
+const ToggleRatio = 0.40
 
-const handleScroll = () => {  
+function handleScroll() {
+  // do something on scroll
   let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-  if ((rootElement.scrollTop / scrollTotal ) > 0.40) {    
-    btnScrollToTop.style.display = "block"
-  } else {    
-    btnScrollToTop.style.display = "none"
+  if ((rootElement.scrollTop / scrollTotal) > ToggleRatio) {
+    //show button
+    scrollToTopBtn.classList.add("showBtn")
+  } else {
+    //hide button
+    scrollToTopBtn.classList.remove("showBtn")
   }
 }
-const scrollToTop = () => {
+
+function scrollToTop() {
+  //scroll to top logic
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
   })
 }
-btnScrollToTop.addEventListener("click", scrollToTop)
+scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
 /** 
@@ -32,7 +38,7 @@ const updateMenu = (inTit) =>{
 
   let currPg = pgName[0].innerText    
   pgName[0].innerText = inTit
-  for (var i = 0; i < navBar.length; ++i) {
+  for (let i = 0; i < navBar.length; ++i) {
     // TODO: CHANGE TO HREF
       let linkTitle = navBar[i].getAttribute("title"); 
 
