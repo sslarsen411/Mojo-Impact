@@ -188,6 +188,17 @@ body {
   opacity: 1;
   transform: translateY(0); }
 
+.two-col__content {
+  background-color: #F7F7F7;
+  padding: 6rem 8vw;
+  display: grid;
+  align-content: center;
+  justify-items: start; }
+  .two-col__content-left {
+    grid-column: full-start/ col-start 5; }
+  .two-col__content-right {
+    grid-column: col-start 5/ full-end; }
+
 .footer {
   background-color: #24221F; }
 
@@ -219,7 +230,12 @@ header {
   .nav-bar ul {
     list-style-type: none;
     display: flex; }
+  .nav-bar li {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; }
   .nav-bar__item {
+    flex: 0 0 auto;
     margin-right: 1rem;
     min-width: 14rem;
     padding: 0 2rem;
