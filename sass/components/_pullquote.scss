@@ -1,0 +1,24 @@
+.pullquote{
+
+    font-weight:600;
+    
+    font-size:1.2em;
+    font-style:italic;
+    letter-spacing:0;
+    line-height:1.4rem;
+    margin:.6rem 1rem 1.2rem;
+    &-left{
+        float:left;
+        padding-left:0;
+        border-left:none;
+        border-right:2px solid $color-grey-med-2;
+
+    }&-right{
+        float:right;
+        padding-left:1rem;
+        border-left:2px solid $color-grey-med-2;
+ //       width:30%
+    }
+
+    
+}

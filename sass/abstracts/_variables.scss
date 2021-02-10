@@ -1,7 +1,5 @@
 // COLORS
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -9,24 +7,32 @@ $color-secondary-dark: #ff7730;
 $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
 
-$color-grey-lt-1:       #F7F7F7;
-$color-grey-lt-2:       #EEE;
+$color-white:           #FFF;
+$color-black:           #000;
+
+$color-white-1:       #F7F7F7;
+$color-white-2:       #EEE;
+
+$color-grey-med-1:      #999;
+$color-grey-med-2:      #777;
+$color-grey-med-3:      #474747;
+
+$color-grey-drk-1:      #363636;
+$color-grey-drk-2:      #333;
 
 $color-mojo-grey-lt:    #5E7C88;
 $color-mojo-grey-med:   #4B5F6D;
 $color-mojo-grey-drk:   #363F45;
-
-$color-grey-drk-1:      #777;
-$color-grey-drk-2:      #999;
-$color-grey-drk-3:      #333;
-
-$color-white:           #FFF;
-$color-black:           #000;
 $color-mojo-black:      #24221F;
 
 $color-saffron:         #FEB41C;
+$color-mojo-hot:        #E8175D;
 $color-red-drk:         #8E001C;
 $color-blue-drk:        #17125B;
+
+$color-green:           #55c57a;
+$color-green-lt:        #7ed56f;
+$color-green-drk:       #28b485;
 
 $color-saffron-invert: findColorInvert($color-saffron); 
 
@@ -36,6 +42,13 @@ $default-font-size: 1.6rem;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+$font-sizes: (
+  "font-size-small": calc(.75rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-xlarge": calc(2.5rem + 5vw),
+);
 
 // GRID
 $grid-width: 114rem;

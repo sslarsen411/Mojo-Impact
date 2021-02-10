@@ -1,0 +1,20 @@
+.two-col{
+
+    &__content{
+        background-color: $color-white-1;        
+        padding: 6rem 8vw;
+   
+        // USING GRID
+        display: grid;
+        align-content: center;
+        justify-items: start;
+
+        &-left{
+            grid-column: full-start/ col-start 5;
+        }
+        &-right{
+            grid-column: col-start 5/ full-end;
+        }
+
+    }
+}

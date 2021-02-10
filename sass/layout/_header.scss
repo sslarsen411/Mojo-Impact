@@ -1,5 +1,9 @@
 header {
-    grid-column: full-start / full-end; }
+    grid-column: full-start / full-end;
+   // display: grid; 
+    //grid-template-columns: minmax(min-content, max-content);
+
+}
 .header, .nav-bar{
     color: $color-white;
     background-color: $color-mojo-black;

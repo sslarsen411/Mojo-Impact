@@ -45,7 +45,7 @@
     
     &--saffron {
         background-color: $color-saffron;
-        color: $color-grey-drk-3;
+        color: $color-grey-med-3;
 
         &:hover {
             background-color: darken($color-saffron, 10%);
@@ -57,7 +57,7 @@
     }
     &--white {
         background-color: $color-white;
-        color: $color-grey-drk-3;
+        color: $color-mojo-black;
 
         &::after {
             background-color: $color-white;
@@ -65,11 +65,11 @@
     }
 
     &--green {
-        background-color: $color-primary;
+        background-color: $color-green;
         color: $color-white;
 
         &::after {
-            background-color: $color-primary;
+            background-color: $color-green;
         }
     }
     
@@ -99,7 +99,12 @@
     height:5rem;
     font-size:2rem;
     color: $color-white;    
-    background:rgba($color-red-drk, .5);
+    background-color:rgba($color-red-drk, .5) ;
+    background-image: url(../img/angle-up.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center center;
+    
     border:thin solid $color-white ;
     border-radius: 50%;
     z-index:99;
@@ -112,16 +117,41 @@
 
     opacity: 0;
   /* also add a translate effect */
-  transform: translateY(100px);
+  //transform: translateY(100px);
   /* and a transition */
   transition: all 0.5s ease;
     
     &:hover {         
-        background:rgba($color-red-drk, .75);
+        background-color:rgba($color-red-drk, .75);
     }
+    & svg{
+         fill: lawngreen;
+     }
 }
 
 .showBtn {
     opacity: 1;
     transform: translateY(0);
   }
+
+  /*    
+.top-of-site-link {
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.5rem;
+    z-index: 15
+}
+
+.top-of-site-link[data-visible=true] {
+    opacity: 1;
+    visibility: visible
+}
+
+.top-of-site-link svg {
+    -webkit-filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,.3))
+}
+  */
