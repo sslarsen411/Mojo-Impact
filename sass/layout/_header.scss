@@ -28,3 +28,67 @@ header {
         line-height: 1.2;
     }
 }
+/* HEADER NAV */
+.nav-bar{
+    
+    //font-size: 1.5rem;
+    display: flex;
+    
+    justify-content: space-between;
+    
+    & ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__item{
+        flex: 1;
+        margin-right: 1rem;
+        min-width: 14rem;
+        padding: 0 2rem;
+        text-align: center;
+        background-color: $color-red-drk;
+        transition: all .2s;
+
+        & a{
+            border:none;
+        }
+    }
+
+    &__item:hover{
+        background-color:lighten($color-red-drk, 25%);
+        transform: translateY(-.5rem);
+    }
+  
+    &__item:active,
+    &__item:focus{
+        background-color:lighten($color-red-drk, 50%);
+        transform: translateY(-1rem);
+    }
+
+    &__link{
+        color:$color-white-1;
+        text-decoration: none;
+    }
+
+    &__cta{
+        justify-self: flex-end;
+    }
+
+}
+
+
+/*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:800px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+@media screen and (max-width: 800px) {
+
+    .nav-bar{display: none;}
+
+
+
+}
+
+
+

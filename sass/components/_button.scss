@@ -4,9 +4,51 @@
     line-height:1rem;
     text-align:center;
     text-decoration:none;
-    outline:none;
-    padding: 1rem 4rem;
+    outline:none;   
     display: inline-block;
+    cursor: pointer;
+    justify-content: center;    
+    padding: calc(.5em - 1px) 1em;  
+    white-space: nowrap;
+    border-radius: 1rem !important;
+    border: thin solid currentColor;
+}
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        @extend %btn;
+        background-color: $color-white;       
+        color: currentColor; 
+    }
+
+    &:hover {
+        background-color: $color-grey-med-1;
+        border-color: $color-grey-med-2 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);       
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(3px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+
+    &--saffron {
+        background-color: $color-saffron;
+        color: $color-grey-med-3;
+        border-color: darken($color-saffron, 10%);
+
+        &:hover {
+            background-color: lighten($color-saffron, 10%);
+            color:lighten($color-saffron, 50%);
+            border-color: currentColor !important;
+        }
+        
+    }
 }
 
 .mojo-btn {
@@ -93,65 +135,39 @@
 }
 
 
+
 .btnScrollToTop {
     @extend %btn;
     width:5rem;
     height:5rem;
-    font-size:2rem;
-    color: $color-white;    
-    background-color:rgba($color-red-drk, .5) ;
-    background-image: url(../img/angle-up.svg);
-    background-repeat: no-repeat;
-    background-size: 3rem;
-    background-position: center center;
-    
-    border:thin solid $color-white ;
-    border-radius: 50%;
+    font-size:2rem;    
+     
     z-index:99;
-    padding: 0;
-    //@error:none;
-    //display:inline-block;
+    padding: 0;    
     position:fixed;
     bottom:3rem;
     right:3rem;
-
     opacity: 0;
   /* also add a translate effect */
   //transform: translateY(100px);
   /* and a transition */
-  transition: all 0.5s ease;
-    
-    &:hover {         
-        background-color:rgba($color-red-drk, .75);
-    }
+  transition: all 0.5s ease; 
+  
     & svg{
-         fill: lawngreen;
-     }
+        fill: $color-mojo-hot;
+        transition: fill 0.5s ease;
+    }
+
+    &:hover {         
+        background-color:rgba($color-mojo-hot, .9);
+
+        & svg{
+            fill: $color-white-1;
+        }
+    }
 }
 
 .showBtn {
     opacity: 1;
     transform: translateY(0);
   }
-
-  /*    
-.top-of-site-link {
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s;
-    position: fixed;
-    bottom: 1.2rem;
-    right: 1.5rem;
-    z-index: 15
-}
-
-.top-of-site-link[data-visible=true] {
-    opacity: 1;
-    visibility: visible
-}
-
-.top-of-site-link svg {
-    -webkit-filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,.3))
-}
-  */

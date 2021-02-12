@@ -27,7 +27,32 @@ body {
     color: $color-white-2;
     background-color: $color-mojo-hot;
   }
-  
+
+// ANCHR TAGS
+a,
+a:link,
+a:visited{
+    color:currentColor;
+    border-bottom:2px solid $color-red-drk;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 2px;
+    transition:all .5s ease;
+
+    
+    &:hover,
+    &:active{
+    background-color: $color-mojo-hot;
+    border-color: $color-mojo-hot;
+    color:$color-white-2;
+    border-radius:2px
+    }
+
+    
+}
+
+
+
 .pg-name{
     display: none;
 }

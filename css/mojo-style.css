@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap");
 /*@import "base/animations";*/
 *,
 *::after,
@@ -24,15 +25,34 @@ body {
   color: #EEE;
   background-color: #E8175D; }
 
+a,
+a:link,
+a:visited {
+  color: currentColor;
+  border-bottom: 2px solid #8E001C;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: all .5s ease; }
+  a:hover, a:active,
+  a:link:hover,
+  a:link:active,
+  a:visited:hover,
+  a:visited:active {
+    background-color: #E8175D;
+    border-color: #E8175D;
+    color: #EEE;
+    border-radius: 2px; }
+
 .pg-name {
   display: none; }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: #24221F;
-  font-size: 1.6rem; }
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem); }
 
 h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
@@ -41,23 +61,21 @@ h1, h2, h3, h4 {
   margin-bottom: 1.5rem; }
 
 h1 {
-  font-size: calc(3rem + 1vw); }
+  font-size: calc(3rem + .625vw); }
 
 h2 {
-  font-size: calc(2.4rem + 1vw);
+  font-size: calc(2.4rem + .625vw);
   font-style: italic; }
 
 h3 {
-  font-size: calc(1.8rem + 1vw);
+  font-size: calc(1.8rem + .625vw);
   text-transform: uppercase; }
 
 h4 {
-  font-size: calc(1.5rem + 1vw); }
+  font-size: calc(1.5rem + .625vw); }
 
-p {
-  font-size: 1.6rem; }
-  p:not(:last-child) {
-    margin-bottom: 1rem; }
+p:not(:last-child) {
+  margin-bottom: 1rem; }
 
 blockquote {
   border-left: 0.2rem solid #777;
@@ -67,7 +85,7 @@ blockquote {
   blockquote:before {
     color: #777;
     content: open-quote;
-    font-size: calc(10rem + 1vw);
+    font-size: calc(10rem + .625vw);
     line-height: 0.1rem;
     margin-right: 0.25rem;
     position: relative;
@@ -131,21 +149,50 @@ blockquote {
   .is-active:hover {
     background-color: #ffde9b !important; }
 
-.mojo-btn, .mojo-btn:link, .mojo-btn:visited, .btnScrollToTop {
+.btn, .btn:link, .btn:visited, .mojo-btn, .mojo-btn:link, .mojo-btn:visited, .btnScrollToTop {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   line-height: 1rem;
   text-align: center;
   text-decoration: none;
   outline: none;
-  padding: 1rem 4rem;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer;
+  justify-content: center;
+  padding: calc(.5em - 1px) 1em;
+  white-space: nowrap;
+  border-radius: 1rem !important;
+  border: thin solid currentColor; }
+
+.btn, .btn:link, .btn:visited {
+  background-color: #FFF;
+  color: currentColor; }
+
+.btn:hover {
+  background-color: #999;
+  border-color: #777 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--saffron {
+  background-color: #FEB41C;
+  color: #474747;
+  border-color: #e69b01; }
+  .btn--saffron:hover {
+    background-color: #fec54f;
+    color: white;
+    border-color: currentColor !important; }
 
 .mojo-btn, .mojo-btn:link, .mojo-btn:visited {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem);
   border: none;
   cursor: pointer; }
 
@@ -202,14 +249,6 @@ blockquote {
   width: 5rem;
   height: 5rem;
   font-size: 2rem;
-  color: #FFF;
-  background-color: rgba(142, 0, 28, 0.5);
-  background-image: url(../img/angle-up.svg);
-  background-repeat: no-repeat;
-  background-size: 3rem;
-  background-position: center center;
-  border: thin solid #FFF;
-  border-radius: 50%;
   z-index: 99;
   padding: 0;
   position: fixed;
@@ -219,39 +258,30 @@ blockquote {
   /* also add a translate effect */
   /* and a transition */
   transition: all 0.5s ease; }
-  .btnScrollToTop:hover {
-    background-color: rgba(142, 0, 28, 0.75); }
   .btnScrollToTop svg {
-    fill: lawngreen; }
+    fill: #E8175D;
+    transition: fill 0.5s ease; }
+  .btnScrollToTop:hover {
+    background-color: rgba(232, 23, 93, 0.9); }
+    .btnScrollToTop:hover svg {
+      fill: #F7F7F7; }
 
 .showBtn {
   opacity: 1;
   transform: translateY(0); }
 
-/*    
-.top-of-site-link {
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s;
-    position: fixed;
-    bottom: 1.2rem;
-    right: 1.5rem;
-    z-index: 15
-}
-
-.top-of-site-link[data-visible=true] {
-    opacity: 1;
-    visibility: visible
-}
-
-.top-of-site-link svg {
-    -webkit-filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,.3))
-}
-  */
 .hero {
   width: 100vw;
   padding: 2rem; }
+
+.icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
 
 .two-col__content {
   background-color: #F7F7F7;
@@ -288,15 +318,10 @@ header {
     font-size: 1.5rem;
     line-height: 1.2; }
 
+/* HEADER NAV */
 .nav-bar {
-  font-size: 1.5rem;
   display: flex;
-  justify-content: space-between;
-  /*
-    @media only screen and (max-width: 86rem) {
-        display: none;
-    }
-    */ }
+  justify-content: space-between; }
   .nav-bar ul {
     list-style-type: none;
     display: flex;
@@ -304,13 +329,15 @@ header {
     justify-content: center;
     align-content: center; }
   .nav-bar__item {
-    flex: 0 0 auto;
+    flex: 1;
     margin-right: 1rem;
     min-width: 14rem;
     padding: 0 2rem;
     text-align: center;
     background-color: #8E001C;
     transition: all .2s; }
+    .nav-bar__item a {
+      border: none; }
   .nav-bar__item:hover {
     background-color: #ff0f3e;
     transform: translateY(-0.5rem); }
@@ -323,5 +350,13 @@ header {
   .nav-bar__cta {
     justify-self: flex-end; }
 
+/*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:800px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+@media screen and (max-width: 800px) {
+  .nav-bar {
+    display: none; } }
+
 section {
-  background-color: #F7F7F7; }
+  background-color: #F7F7F7;
+  padding: 6rem 10rem; }
+  section p {
+    width: 80ch; }

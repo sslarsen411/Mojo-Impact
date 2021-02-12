@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -9,10 +11,11 @@
 
 @import "components/button";
 @import "components/hero";
+@import "components/icon";
 
 @import "layout/column";
 @import "layout/footer";
 @import "layout/header";
-@import "layout/navigation";
+//@import "layout/navigation";
 
 @import "pages/home";

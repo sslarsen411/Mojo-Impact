@@ -28,6 +28,18 @@ function scrollToTop() {
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
+
+/* ALL .btn */
+const btns = document.querySelectorAll(".btn")
+for (const butt of btns) {
+  butt.addEventListener('click', function() {
+    alert('click');
+  })
+}
+
+
+
+
 /** 
 * UPDATE ACTIVE PAGE ON NAV
 * 

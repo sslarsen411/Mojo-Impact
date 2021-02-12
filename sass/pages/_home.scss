@@ -1,4 +1,9 @@
 section {
     background-color: $color-white-1;
+    padding: 6rem 10rem;
+
+    & p{
+        width: 80ch;
+    }
 
 }

@@ -15,28 +15,28 @@ body{
 
 h1 {
     @extend %heading;
-    font-size: calc(3rem + 1vw);            
+    font-size: calc(3rem + .625vw);            
 }
     
 h2 {
     @extend %heading;
-    font-size: calc(2.4rem + 1vw);
+    font-size: calc(2.4rem + .625vw);
     font-style: italic; 
 }
     
 h3 {
     @extend %heading;
-    font-size: calc(1.8rem + 1vw);       
+    font-size: calc(1.8rem + .625vw);       
     text-transform: uppercase;
 }
 
 h4 {
     @extend %heading;
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1.5rem + .625vw);
 };
 
 p {
-    font-size: $default-font-size;
+
     &:not(:last-child) {
         margin-bottom: 1rem;
     }
@@ -51,7 +51,7 @@ blockquote{
     &:before{
         color:$color-grey-med-2;
         content:open-quote;
-        font-size:calc(10rem + 1vw);
+        font-size:calc(10rem + .625vw);
         line-height:0.1rem;
         margin-right:0.25rem;
         position: relative;
