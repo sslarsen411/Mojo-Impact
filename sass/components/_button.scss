@@ -12,6 +12,11 @@
     white-space: nowrap;
     border-radius: 1rem !important;
     border: thin solid currentColor;
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);  
+    }
 }
 
 .btn {
@@ -25,9 +30,8 @@
 
     &:hover {
         background-color: $color-grey-med-1;
-        border-color: $color-grey-med-2 !important;
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);       
+        border-color: $color-grey-med-2;
+             
     }
 
     &:active,
@@ -38,102 +42,18 @@
     }
 
     &--saffron {
-        background-color: $color-saffron;
-        color: $color-grey-med-3;
-        border-color: darken($color-saffron, 10%);
+        background-color: $color-saffron !important;
+        color: $color-grey-med-3 !important;
+        border-color: darken($color-saffron, 10%) !important;
 
         &:hover {
-            background-color: lighten($color-saffron, 10%);
-            color:lighten($color-saffron, 50%);
-            border-color: currentColor !important;
+            background-color: lighten($color-saffron, 10%) !important;
+            color:lighten($color-saffron, 50%) !important;
+            border-color: currentColor !important ;
         }
         
     }
 }
-
-.mojo-btn {
-    &,
-    &:link,
-    &:visited {
-        @extend %btn;
-        //text-transform: uppercase;        
-        
-        border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
-        font-size: $default-font-size;
-
-        //Change for the <button> element
-        border: none;
-        cursor: pointer;
-    }
-    
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-    
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-    }
-    
-    &--saffron {
-        background-color: $color-saffron;
-        color: $color-grey-med-3;
-
-        &:hover {
-            background-color: darken($color-saffron, 10%);
-            color:lighten($color-saffron, 50%)
-        }
-        &::after {
-            background-color: $color-saffron;
-        }
-    }
-    &--white {
-        background-color: $color-white;
-        color: $color-mojo-black;
-
-        &::after {
-            background-color: $color-white;
-        }
-    }
-
-    &--green {
-        background-color: $color-green;
-        color: $color-white;
-
-        &::after {
-            background-color: $color-green;
-        }
-    }
-    
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
-    
-    &--animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
-}
-
 
 
 .btnScrollToTop {

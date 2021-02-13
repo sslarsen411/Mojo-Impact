@@ -1,4 +1,7 @@
 /* FLEXBOX BASED RESPONSIVE HEADER & NAV BAR  */
+header, footer{
+    width: 100vw;
+}
 .header, .header__nav-bar{
     color: $color-white;
     background-color: $color-mojo-black;
@@ -65,9 +68,6 @@
         & ul{
             list-style-type: none;
             display: flex;
-            //flex-wrap: wrap;
-            //justify-content: center;
-            //align-content: center;
         }
 
         &--item{
@@ -106,24 +106,24 @@
         /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:800px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
         @media screen and (max-width: 800px) {
             /* CHANGE TO VERTICAL */
-            &{
+            &{             
+                display: none;
                 position: absolute;
                 top: 6.2rem;
                 right: -30%;
                 width: 30%;
-                height: 100%;
+                height: 100%;                
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
                 background-color: $color-red-drk;
                 padding-top: 15rem;
-                transition: all 0.35s ease-in;
+                transition: all 0.35s ease-in;                
             }
 
             &--links{
                 flex-direction: column;
             }
-
 
             &--item{
                 color:$color-white-1;
@@ -139,7 +139,10 @@
             &--cta{display: none;}    
     }
 }
-.open {right:0 }
+.show-nav-bar {
+    display: flex;
+    transform: translatex(-100%);
+}
 
 
 

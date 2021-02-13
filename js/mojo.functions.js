@@ -1,3 +1,12 @@
+/*******  ALL BUTTONS *******/
+const btns = document.querySelectorAll(".btn")
+for (const butt of btns) {
+  butt.addEventListener('click', function(e) {
+    //alert('click');
+    e.preventDefault()
+    console.log(this.href)
+  })
+}
 /** 
 * SCROLL TO TOP BUTTON
 * https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc
@@ -18,8 +27,7 @@ function handleScroll() {
   }
 }
 
-function scrollToTop() {
-  //scroll to top logic
+function scrollToTop() { 
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -27,17 +35,6 @@ function scrollToTop() {
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
-
-/* ALL .btn */
-const btns = document.querySelectorAll(".btn")
-for (const butt of btns) {
-  butt.addEventListener('click', function() {
-    alert('click');
-  })
-}
-
-
-
 
 /** 
 * UPDATE ACTIVE PAGE ON NAV
@@ -64,14 +61,10 @@ const updateMenu = (inTit) =>{
 /* Do Burger Click */
 const navContainer = document.querySelector(".header__nav-bar");
 const burger = document.querySelector(".nav-burger");
-//const navLinks = document.querySelectorAll(".header__nav-bar--links li");
 
 burger.addEventListener("click", () => {
     burger.classList.toggle("clicked");
-    navContainer.classList.toggle("open");
-  //  navLinks.forEach((link) => {
-  //  link.classList.toggle("fade");
-  //});
+    navContainer.classList.toggle("show-nav-bar");  
 });
 
 
