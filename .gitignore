@@ -10,6 +10,7 @@ js/mojo.menu.js
 testy.php
 mod.html
 mojo.functions.jquery.js
+keyboard-shortcuts-windows.pdf
 
 
 # Packages #
@@ -30,8 +31,5 @@ mojo.functions.jquery.js
 *.log
 *.sql
 *.sqlite
-mojo-style.css
 
-css/mojo-style.css
-keyboard-shortcuts-windows.pdf
-css/mojo-style.css
+

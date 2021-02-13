@@ -28,7 +28,6 @@ function scrollToTop() {
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
-
 /* ALL .btn */
 const btns = document.querySelectorAll(".btn")
 for (const butt of btns) {
@@ -60,6 +59,22 @@ const updateMenu = (inTit) =>{
           navBar[i].parentNode.classList.add("is-active")        
   }
 }
+
+
+/* Do Burger Click */
+const navContainer = document.querySelector(".header__nav-bar");
+const burger = document.querySelector(".nav-burger");
+//const navLinks = document.querySelectorAll(".header__nav-bar--links li");
+
+burger.addEventListener("click", () => {
+    burger.classList.toggle("clicked");
+    navContainer.classList.toggle("open");
+  //  navLinks.forEach((link) => {
+  //  link.classList.toggle("fade");
+  //});
+});
+
+
 
 !function(){var t,n,e,o,l,c,a,d,i,m,u,s;(
   t="data-target",
