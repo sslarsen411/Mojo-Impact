@@ -18,16 +18,3 @@
 .mt-big { margin-top: 8rem !important; }
 .mt-huge { margin-top: 10rem !important; }
 
-.is-active{    
-    background-color: $color-saffron !important;
-    font-weight: 700;
-
-    & a{
-        color:$color-mojo-black;
-    }
-
-    &:hover{
-        background-color:lighten($color-saffron, 25%) !important;        
-    }
-    
-}

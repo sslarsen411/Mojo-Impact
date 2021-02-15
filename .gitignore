@@ -1,5 +1,7 @@
 css/
+css/mojo-style.css
 img/
+images/
 node_modules/
 package-lock.json
 package.json
@@ -11,7 +13,8 @@ testy.php
 mod.html
 mojo.functions.jquery.js
 keyboard-shortcuts-windows.pdf
-
+element.html
+typography.html
 
 # Packages #
 ############
@@ -31,5 +34,6 @@ keyboard-shortcuts-windows.pdf
 *.log
 *.sql
 *.sqlite
+
 
 

@@ -40,20 +40,28 @@ document.addEventListener("scroll", handleScroll)
 * UPDATE ACTIVE PAGE ON NAV
 * 
 */
-const updateMenu = (inTit) =>{    
+document.addEventListener("DOMContentLoaded", function(event) { 
+  updateMenu('home',true)
+});
+const updateMenu = (inPg, isInit=false) =>{    
   let pgName = document.getElementsByClassName("pg-name")
   let navBar = document.getElementsByClassName("nav-bar__link");
 
   let currPg = pgName[0].innerText    
-  pgName[0].innerText = inTit
+  pgName[0].innerText = inPg
   for (let i = 0; i < navBar.length; ++i) {
     // TODO: CHANGE TO HREF
       let linkTitle = navBar[i].getAttribute("title"); 
 
-      if (linkTitle.includes(currPg)){
-          navBar[i].parentNode.classList.remove("is-active")            
-      }else if (linkTitle.includes(pgName[0].innerText))
-          navBar[i].parentNode.classList.add("is-active")        
+      if (linkTitle.includes(currPg) && !isInit){
+          navBar[i].parentNode.classList.remove("is-current-page") 
+          navBar[i].classList.remove("is-current-page") 
+
+      }else if (linkTitle.includes(pgName[0].innerText)){
+          navBar[i].parentNode.classList.add("is-current-page")   
+          navBar[i].classList.add("is-current-page")   
+          
+      }
   }
 }
 

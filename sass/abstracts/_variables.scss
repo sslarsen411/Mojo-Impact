@@ -37,9 +37,13 @@ $color-green-drk:       #28b485;
 $color-saffron-invert: findColorInvert($color-saffron); 
 
 // FONT
-$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);;
 $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+$medium-font-size: clamp(1.4rem, 2vw, 1.8rem);
+$large-font-size: clamp(1.6rem, 2vw, 2.2rem);
+
 
 $font-sizes: (
   "font-size-small": calc(.75rem + 0.5vw),
