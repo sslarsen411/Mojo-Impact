@@ -25,24 +25,53 @@ body {
   color: #EEE;
   background-color: #E8175D; }
 
+/*  ANCHOR TAGS with slide-up effect */
 a,
 a:link,
 a:visited {
   color: currentColor;
-  border-bottom: 2px solid #8E001C;
+  border-bottom: 1px solid #8E001C;
   text-decoration: none;
   cursor: pointer;
   padding: 0 2px;
-  transition: all .5s ease; }
-  a:hover, a:active,
+  display: inline-block;
+  vertical-align: baseline;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition: all .5s ease;
+  /**/ }
+  a:before,
+  a:link:before,
+  a:visited:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8E001C;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition: all .5s ease; }
+  a:hover, a:focus, a:active,
   a:link:hover,
+  a:link:focus,
   a:link:active,
   a:visited:hover,
+  a:visited:focus,
   a:visited:active {
-    background-color: #E8175D;
-    border-color: #E8175D;
     color: #EEE;
     border-radius: 2px; }
+  a:hover:before, a:focus:before, a:active:before,
+  a:link:hover:before,
+  a:link:focus:before,
+  a:link:active:before,
+  a:visited:hover:before,
+  a:visited:focus:before,
+  a:visited:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
 
 .pg-name {
   display: none; }
@@ -74,14 +103,20 @@ h3 {
 h4 {
   font-size: calc(1.5rem + .625vw); }
 
-p {
-  margin-bottom: 1rem; }
-
+/*  
+p, li{
+    color: currentColor;
+    font-size: $default-font-size;
+}
+*/
 blockquote {
   border-left: 0.2rem solid #777;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  quotes: ' \201C ' ' \201D '; }
+  quotes: ' \201C ' ' \201D ';
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  width: calc(80vw); }
   blockquote:before {
     color: #777;
     content: open-quote;
@@ -94,10 +129,10 @@ blockquote {
     display: inline; }
 
 .font-size-medium {
-  font-size: clamp(1.4rem, 2vw, 1.8rem); }
+  font-size: clamp(1.6rem, 2vw, 2rem); }
 
 .font-size-large {
-  font-size: clamp(1.6rem, 2vw, 2.2rem); }
+  font-size: clamp(1.8rem, 2vw, 2.4rem); }
 
 .dropcap {
   float: left;
@@ -179,6 +214,8 @@ blockquote {
 .btn, .btn:link, .btn:visited {
   background-color: #FFF;
   color: currentColor; }
+  .btn::before, .btn:link::before, .btn:visited::before {
+    background-color: transparent; }
 
 .btn:hover {
   background-color: #999;
@@ -202,22 +239,21 @@ blockquote {
   width: 5rem;
   height: 5rem;
   font-size: 2rem;
+  background-color: rgba(142, 0, 28, 0.6);
   z-index: 99;
   padding: 0;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
   opacity: 0;
-  /* also add a translate effect */
-  /* and a transition */
   transition: all 0.5s ease; }
   .btnScrollToTop svg {
-    fill: #E8175D;
+    fill: #EEE;
     transition: fill 0.5s ease; }
   .btnScrollToTop:hover {
-    background-color: rgba(232, 23, 93, 0.9); }
+    background-color: rgba(142, 0, 28, 0.9); }
     .btnScrollToTop:hover svg {
-      fill: #F7F7F7; }
+      fill: #FFF; }
 
 .showBtn {
   opacity: 1;
@@ -238,7 +274,7 @@ blockquote {
 
 .pullquote-left, .pullquote-right {
   font-weight: 600;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.6rem, 2vw, 2rem);
   font-style: italic;
   letter-spacing: 0;
   width: 30%;
@@ -366,9 +402,10 @@ header, footer {
   .header__nav-bar--item:active, .header__nav-bar--item:focus {
     background-color: #ff8ea4;
     transform: translateY(-1rem); }
-  .header__nav-bar--link {
-    color: #F7F7F7;
-    text-decoration: none; }
+  .header__nav-bar--link::before, .header__nav-bar--link:link::before, .header__nav-bar--link:visited::before {
+    background-color: transparent; }
+  .header__nav-bar--link:hover:before, .header__nav-bar--link:focus:before, .header__nav-bar--link:active:before {
+    background-color: transparent; }
   .header__nav-bar--cta {
     color: #17125B; }
   @media screen and (max-width: 800px) {
@@ -406,6 +443,12 @@ header, footer {
 .footer__nav--link {
   color: #F7F7F7;
   text-decoration: none; }
+
+section p:not(:last-child) {
+  margin-bottom: 1rem; }
+
+section p:last-child, section li:last-child {
+  margin-bottom: 2rem; }
 
 section {
   background-color: #F7F7F7;

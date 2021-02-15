@@ -45,8 +45,7 @@
 .clicked .line-3 {transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);}
 
 /* HEADER NAV BAR */
-    .header__nav-bar{
-        
+    .header__nav-bar{        
         display: flex;        
         justify-content: space-between;
         
@@ -82,8 +81,17 @@
         }
 
         &--link{
-            color:$color-white-1;
-            text-decoration: none;         
+            // No slide-up
+            &::before, 
+            &:link::before, 
+            &:visited::before {
+                background-color: transparent;
+            }
+            &:hover:before, 
+            &:focus:before, 
+            &:active:before {
+                background-color: transparent;
+            }        
         }
 
         &--cta{

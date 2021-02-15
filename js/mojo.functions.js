@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 const updateMenu = (inPg, isInit=false) =>{    
   let pgName = document.getElementsByClassName("pg-name")
-  let navBar = document.getElementsByClassName("nav-bar__link");
+  let navBar = document.getElementsByClassName("header__nav-bar--link");
 
   let currPg = pgName[0].innerText    
   pgName[0].innerText = inPg

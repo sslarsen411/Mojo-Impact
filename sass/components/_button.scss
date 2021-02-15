@@ -26,7 +26,11 @@
         @extend %btn;
         background-color: $color-white;       
         color: currentColor; 
-    }
+
+        &::before{
+            background-color: transparent; // No slide-up
+        }
+    }    
 
     &:hover {
         background-color: $color-grey-med-1;
@@ -55,34 +59,30 @@
     }
 }
 
-
 .btnScrollToTop {
     @extend %btn;
     width:5rem;
     height:5rem;
     font-size:2rem;    
-     
+    background-color:rgba($color-red-drk, .6); 
     z-index:99;
     padding: 0;    
     position:fixed;
     bottom:3rem;
     right:3rem;
     opacity: 0;
-  /* also add a translate effect */
-  //transform: translateY(100px);
-  /* and a transition */
-  transition: all 0.5s ease; 
+    transition: all 0.5s ease; 
   
     & svg{
-        fill: $color-mojo-hot;
+        fill: $color-white-2;
         transition: fill 0.5s ease;
     }
 
     &:hover {         
-        background-color:rgba($color-mojo-hot, .9);
+        background-color:rgba($color-red-drk, .9);
 
         & svg{
-            fill: $color-white-1;
+            fill: $color-white;
         }
     }
 }

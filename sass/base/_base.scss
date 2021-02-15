@@ -29,30 +29,53 @@ body {
     background-color: $color-mojo-hot;
   }
 
-// ANCHR TAGS
+/*  ANCHOR TAGS with slide-up effect */
 a,
 a:link,
 a:visited{
     color:currentColor;
-    border-bottom:2px solid $color-red-drk;
+    border-bottom:1px solid $color-red-drk;
     text-decoration: none;
     cursor: pointer;
     padding: 0 2px;
+    
+    display: inline-block;
+    vertical-align: baseline;    
+    transform: perspective(1px) translateZ(0);
+    
+    position: relative;
     transition:all .5s ease;
 
-    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color-red-drk;        
+        transform: scaleY(0);        
+        transform-origin: 50% 100%;
+        transition:all .5s ease;       
+      }
+      
     &:hover,
+    &:focus,
     &:active{
-    background-color: $color-mojo-hot;
-    border-color: $color-mojo-hot;
+    
     color:$color-white-2;
     border-radius:2px
     }
 
-    
+    &:hover:before, 
+    &:focus:before, 
+    &:active:before {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+      }
+    /**/
 }
-
-
 
 .pg-name{
     display: none;

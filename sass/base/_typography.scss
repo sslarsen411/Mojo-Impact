@@ -35,20 +35,20 @@ h4 {
     font-size: calc(1.5rem + .625vw);
 };
 
-p {
-    margin-bottom: 1rem;
-    
-
-
+/*  
+p, li{
+    color: currentColor;
+    font-size: $default-font-size;
 }
-
-
-
+*/
 blockquote{
     border-left:.2rem solid $color-grey-med-2;
     margin:1.5em 10px;
     padding:0.5em 10px;
     quotes: ' \201C ' ' \201D ';
+    font-weight:600;    
+    font-size:$medium-font-size;
+    width: calc(80vw);
 
     &:before{
         color:$color-grey-med-2;
@@ -60,11 +60,9 @@ blockquote{
         top: 4rem;
     }
     
-
     & p{
         display:inline;
     }
-
 }
 
 .font-size-medium{
