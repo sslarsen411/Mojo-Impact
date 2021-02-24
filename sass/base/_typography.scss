@@ -20,27 +20,24 @@ h1 {
     
 h2 {
     @extend %heading;
-    font-size: calc(2.4rem + .625vw);
-    font-style: italic; 
+    font-size: calc(2.4rem + .625vw);    
 }
     
 h3 {
     @extend %heading;
-    font-size: calc(1.8rem + .625vw);       
-    text-transform: uppercase;
+    font-size: calc(1.8rem + .625vw);
 }
 
 h4 {
     @extend %heading;
     font-size: calc(1.5rem + .625vw);
 };
-
-/*  
-p, li{
-    color: currentColor;
-    font-size: $default-font-size;
+  
+ul{
+    margin-left: 1.4rem;
+    list-style: none;
 }
-*/
+
 blockquote{
     border-left:.2rem solid $color-grey-med-2;
     margin:1.5em 10px;

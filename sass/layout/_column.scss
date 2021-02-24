@@ -1,20 +1,16 @@
-.two-col{
+.columns{
+    grid-column: container-start / container-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        
+    place-items: center;
 
-    &__content{
-        background-color: $color-white-1;        
-        padding: 6rem 8vw;
-   
-        // USING GRID
-        display: grid;
-        align-content: center;
-        justify-items: start;
-
-        &-left{
-            grid-column: full-start/ col-start 5;
-        }
-        &-right{
-            grid-column: col-start 5/ full-end;
-        }
-
+    &__col-2{            
+        & img{
+            display: block;
+            @media screen and (max-width: 720px) {
+                display:none;
+            }
+        }         
     }
-}
+} 

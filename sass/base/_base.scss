@@ -23,16 +23,12 @@ body {
 
 .container {
   display: grid;
-  /* width: 100vw; */
   grid-template-columns:
-    [container-start] 1fr [center-start] repeat(
-      10,
-      [col-start] minmax(min-content, 11rem) [col-end]
-    )
+    [container-start] 1fr [center-start] 
+    repeat(10,[col-start] minmax(min-content, 11rem) [col-end])
     [center-end] 1fr [container-end];
-  grid-template-rows: min-content 60vh repeat(8, min-content);
+  grid-template-rows: min-content 60vh repeat(4, min-content);
 }
-
 
 /*  ANCHOR TAGS with slide-up effect */
 a,
@@ -67,10 +63,9 @@ a:visited{
       
     &:hover,
     &:focus,
-    &:active{
-    
-    color:$color-white-2;
-    border-radius:2px
+    &:active{    
+      color:$color-white-2;
+      border-radius:2px
     }
 
     &:hover:before, 
@@ -78,8 +73,7 @@ a:visited{
     &:active:before {
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
-      }
-    /**/
+      }    
 }
 
 .pg-name{

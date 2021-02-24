@@ -1,29 +1,15 @@
-.section-wrapper{
-    grid-column: container-start / container-end;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+section{
+    background-color: $color-white-1;
+    padding: 4rem;
     
-     place-items: center;
-   /* grid-auto-flow: column; */
-
-}
-
-.sec{    
-    place-content: center;    
-
-    & p:not(:last-child) {
-        margin-bottom: 1rem;
+    & p:not(:last-child),
+    & li:not(:last-child){
+        margin-bottom: .6rem;
     }
-
+    
     & p:last-child, 
     & li:last-child{
         margin-bottom: 2rem;
     }   
-    
-    & > img{display: block;
-        @media screen and (max-width: 720px) {
-            display:none;
-        }
-    } 
-  }
+}
 

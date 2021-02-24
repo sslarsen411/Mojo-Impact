@@ -37,9 +37,10 @@ scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
 /** 
-* UPDATE ACTIVE PAGE ON NAV
+* NAVIGATION
 * 
 */
+/* UPDATE ACTIVE PAGE ON NAV MENUS */
 document.addEventListener("DOMContentLoaded", function(event) { 
   updateMenu('home',true)
 });
@@ -65,7 +66,6 @@ const updateMenu = (inPg, isInit=false) =>{
   }
 }
 
-
 /* Do Burger Click */
 const navContainer = document.querySelector(".header__nav-bar");
 const burger = document.querySelector(".nav-burger");
@@ -75,7 +75,24 @@ burger.addEventListener("click", () => {
     navContainer.classList.toggle("show-nav-bar");  
 });
 
+/** 
+* SITE POLICY MODAL
+*/
 
+const getModalContent = (inPolicy,inTit) =>{	
+  fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
+    method: 'POST',      
+    body: JSON.stringify({
+      title: inTit   
+    })    
+  }).then(function(response) {
+    response.text().then(function(text) {    
+      document.getElementById("modal-content").innerHTML = text
+    });
+
+    //this.preventDefault()
+  });
+}
 
 !function(){var t,n,e,o,l,c,a,d,i,m,u,s;(
   t="data-target",

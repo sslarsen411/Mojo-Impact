@@ -1,10 +1,206 @@
+/*
 .footer {
-    display: grid;
     grid-column: container-start / container-end;
     color: $color-white-1;
     background-color: $color-mojo-black;
-   /*  position: absolute;
-    bottom: 0; */
-   // display: flex;   
     padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh repeat(2, max-content);
+    grid-row-gap: 8vh;
+
+  
+   
+   &__nav{
+       display: grid;
+       grid-column: 1;
+
+        grid-template-columns:
+            1fr
+            minmax(250rem, 100%)
+            1fr;
+   }
+
+   &__columns{
+       display:grid;
+    grid-template-columns: 1fr auto 1fr;
+   }
+}
+  */
+.footer {
+    // background-color: var(--color-quaternary);
+    color: $color-white-1;
+    background-color: $color-mojo-black;
+    grid-column: container-start / container-end;
+   /* 
+    background-image: linear-gradient(
+        var(--color-tertiary-m),
+        var(--color-tertiary-m)
+      ),
+      url("../img/footer/footer-bg.jpg");
+    @extend %bg;
+    @extend %sec-padding;
+   */
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-row-gap: 8vh;
+  
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 25rem);
+      place-content: center;
+      grid-gap: 10rem 4vw;
+  
+      &--section {
+        display: grid;
+        grid-row-gap: 1.5rem;
+  /* 
+        &__title {
+          @extend %sec-h3;
+        }
+   */
+        &__link:link,
+        &__link:visited {
+          display: block;
+          letter-spacing: initial;
+        }
+  
+        &__para {
+          color: var($color-white);
+          font-weight: font-weight(font-weight-light);
+          font-size: font-size(font-size-small);
+        }
+      }
+  
+      &--section:first-child,
+      &--section:nth-child(2),
+      &--section:nth-child(3) {
+        border-right: 0.1rem solid var($color-white);
+      }
+  
+      &--section:nth-child(3) {
+        padding-right: 4vw;
+  
+        input[type="email"] {
+          padding: 1rem;
+          background-color: transparent;
+          color: var($color-white);
+          border: 0.1rem solid var($color-white);
+          border-bottom: none;
+          border-right: none;
+        }
+  
+        input[type="submit"] {
+          background-color: transparent;
+          border: none;
+          color: var($color-white);
+          font-size: 1.5rem;
+          border: 0.1rem solid var($color-white);
+          padding: 0.85rem 1.5rem;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+        }
+  
+        input[type="submit"]:hover,
+        input[type="submit"]:active {
+          background-color: var($color-white);
+          color: black;
+        }
+      }
+  
+      &--section:last-child {
+        padding-bottom: 4vw;
+        border-bottom: 0.1rem solid var($color-white);
+      }
+    }
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        height: 5rem;
+        width: 5rem;
+      }
+  
+      span {
+        font-size: 2.5rem;
+        color: var($color-white);
+        margin-left: 0.5rem;
+        letter-spacing: 0.3rem;
+        font-family: "Balsamiq Sans", cursive;
+      }
+    }
+  
+    &__social {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      &--call {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+  
+        p,
+        i {
+          display: inline-block;
+        }
+  
+        i {
+          font-size: 3rem;
+        }
+  
+        p {
+          margin-left: 1rem;
+          @extend .footer__content--section__para;
+        }
+      }
+  
+      &--icons {
+        display: flex;
+  
+        &__link:link,
+        &__link:visited {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: calc(0.5rem + 2vw);
+          height: 3rem;
+          width: 3rem;
+          border: 0.1rem solid var($color-white);
+          padding: 2.5rem;
+          border-radius: 50%;
+          position: relative;
+          z-index: 1;
+          i {
+            font-size: 3rem;
+          }
+        }
+  
+        &__link:link::before,
+        &__link:visited::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: var($color-white);
+          border-radius: inherit;
+          z-index: -1;
+          transform: scale(0);
+          transition: transform 0.5s ease;
+        }
+  
+        &__link:hover::before,
+        &__link:active::before {
+          transform: scale(1);
+        }
+      }
+    }
+}
+
+.policy_icon {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
 }

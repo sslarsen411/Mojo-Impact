@@ -11,6 +11,10 @@
 .has-bg-white{background-color:$color-white !important}
 
 .is-centered { text-align: center !important; }
+
+.is-italic{font-style: italic;}
+.is-upper{text-transform: uppercase;}
+.is-smcap{font-variant: small-caps;}
 //MARGINS
 .mb-sm { margin-bottom: 1.5rem !important; }
 .mb-med {    margin-bottom: 4rem !important;}

@@ -1,10 +1,27 @@
-.icon{
+svg.icon {
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+    width: 1.6rem;
+    height: 1.6rem;
+    vertical-align: text-bottom; 
+    
+    &-blue{
+      fill:$color-blue-drk;
+    }
+    &-green{
+      fill:$color-green-drk;
+    }
+    &-red{
+      fill:$color-red-drk;
+    }    
+    &-saffron{
+      fill:$color-saffron;
+      stroke: $color-grey-drk-2;
+      stroke-width: 2;
+    }  
+    &-white{
+      fill:$color-white;
+      stroke: $color-grey-drk-2;
+      stroke-width: 2;
+    }     
   }
   
