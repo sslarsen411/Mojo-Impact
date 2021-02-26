@@ -40,9 +40,14 @@ $color-saffron-invert: findColorInvert($color-saffron);
 $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);
-$medium-font-size: clamp(1.6rem, 2vw, 2rem);
-$large-font-size: clamp(1.8rem, 2vw, 2.4rem);
+//$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+//$medium-font-size: clamp(1.6rem, 2vw, 2rem);
+//$large-font-size: clamp(1.8rem, 2vw, 2.4rem);
+$font-size-default:     clamp(1.2rem, 1.4vw, 1.6rem);
+$font-size-medium:      clamp(1.6rem, 2vw, 2rem);
+$font-size-large:       clamp(1.8rem, 2vw, 2.4rem);
+$font-size-extra-large: clamp(2rem, 5vw, 3rem);
+$font-size-small:       clamp(1rem, 1vw, 1.2rem);
 
 
 $font-sizes: (

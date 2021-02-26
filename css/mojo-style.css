@@ -20,7 +20,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: min-content 60vh repeat(4, min-content); }
+  grid-template-rows: min-content 60vh repeat(12, min-content); }
 
 /*  ANCHOR TAGS with slide-up effect */
 a,
@@ -86,16 +86,16 @@ h1, h2, h3, h4 {
   margin: 1rem 0; }
 
 h1 {
-  font-size: calc(3rem + .625vw); }
+  font-size: clamp(2rem, 5vw, 3rem); }
 
 h2 {
-  font-size: calc(2.4rem + .625vw); }
+  font-size: clamp(1.8rem, 2vw, 2.4rem); }
 
 h3 {
-  font-size: calc(1.8rem + .625vw); }
+  font-size: clamp(1.6rem, 2vw, 2rem); }
 
 h4 {
-  font-size: calc(1.5rem + .625vw); }
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem); }
 
 ul {
   margin-left: 1.4rem;
@@ -137,6 +137,9 @@ blockquote {
   text-align: center;
   width: 2.6rem; }
 
+.has-text-black {
+  color: #000 !important; }
+
 .has-text-blue {
   color: #17125B !important; }
 
@@ -161,11 +164,20 @@ blockquote {
 .has-bg-red {
   background-color: #8E001C !important; }
 
+.has-text-saffron {
+  color: #FEB41C !important; }
+
 .has-text-white {
   color: #FFF !important; }
 
 .has-bg-white {
   background-color: #FFF !important; }
+
+.is-font-size-small {
+  font-size: clamp(1rem, 1vw, 1.2rem); }
+
+.is-font-size-large {
+  font-size: clamp(1.8rem, 2vw, 2.4rem); }
 
 .is-centered {
   text-align: center !important; }
@@ -187,6 +199,9 @@ blockquote {
 
 .mb-big {
   margin-bottom: 8rem !important; }
+
+.mt-med {
+  margin-top: 4rem !important; }
 
 .mt-big {
   margin-top: 8rem !important; }
@@ -350,6 +365,9 @@ svg.icon {
    }
 }
   */
+footer {
+  padding: 2rem 0; }
+
 .footer {
   color: #F7F7F7;
   background-color: #24221F;
@@ -368,106 +386,28 @@ svg.icon {
   grid-row-gap: 8vh; }
   .footer__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-template-columns: repeat(auto-fit, 27.5rem);
     place-content: center;
     grid-gap: 10rem 4vw; }
-    .footer__content--section {
-      display: grid;
-      grid-row-gap: 1.5rem;
-      /* 
-        &__title {
-          @extend %sec-h3;
-        }
-   */ }
-      .footer__content--section__link:link, .footer__content--section__link:visited {
-        display: block;
-        letter-spacing: initial; }
-      .footer__content--section__para, .footer__social--call p {
-        color: var(#FFF);
-        font-weight: font-weight(font-weight-light);
-        font-size: calc(.75rem + 0.5vw); }
-    .footer__content--section:first-child, .footer__content--section:nth-child(2), .footer__content--section:nth-child(3) {
-      border-right: 0.1rem solid var(#FFF); }
-    .footer__content--section:nth-child(3) {
+    .footer__content a {
+      border: none; }
+    .footer__content ul {
+      line-height: 3; }
+    .footer__content div:not(:last-child) {
+      border-right: 0.1rem solid #FFF; }
+    .footer__content div:nth-child(3) {
       padding-right: 4vw; }
-      .footer__content--section:nth-child(3) input[type="email"] {
-        padding: 1rem;
-        background-color: transparent;
-        color: var(#FFF);
-        border: 0.1rem solid var(#FFF);
-        border-bottom: none;
-        border-right: none; }
-      .footer__content--section:nth-child(3) input[type="submit"] {
-        background-color: transparent;
-        border: none;
-        color: var(#FFF);
-        font-size: 1.5rem;
-        border: 0.1rem solid var(#FFF);
-        padding: 0.85rem 1.5rem;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out; }
-      .footer__content--section:nth-child(3) input[type="submit"]:hover,
-      .footer__content--section:nth-child(3) input[type="submit"]:active {
-        background-color: var(#FFF);
-        color: black; }
-    .footer__content--section:last-child {
-      padding-bottom: 4vw;
-      border-bottom: 0.1rem solid var(#FFF); }
   .footer__logo {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .footer__logo img {
-      height: 5rem;
-      width: 5rem; }
-    .footer__logo span {
-      font-size: 2.5rem;
-      color: var(#FFF);
-      margin-left: 0.5rem;
-      letter-spacing: 0.3rem;
-      font-family: "Balsamiq Sans", cursive; }
-  .footer__social {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .footer__social--call {
-      margin-right: 2rem;
-      margin-bottom: 2rem; }
-      .footer__social--call p,
-      .footer__social--call i {
-        display: inline-block; }
-      .footer__social--call i {
-        font-size: 3rem; }
-      .footer__social--call p {
-        margin-left: 1rem; }
-    .footer__social--icons {
-      display: flex; }
-      .footer__social--icons__link:link, .footer__social--icons__link:visited {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: calc(0.5rem + 2vw);
-        height: 3rem;
-        width: 3rem;
-        border: 0.1rem solid var(#FFF);
-        padding: 2.5rem;
-        border-radius: 50%;
-        position: relative;
-        z-index: 1; }
-        .footer__social--icons__link:link i, .footer__social--icons__link:visited i {
-          font-size: 3rem; }
-      .footer__social--icons__link:link::before, .footer__social--icons__link:visited::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: var(#FFF);
-        border-radius: inherit;
-        z-index: -1;
-        transform: scale(0);
-        transition: transform 0.5s ease; }
-      .footer__social--icons__link:hover::before, .footer__social--icons__link:active::before {
-        transform: scale(1); }
+  .footer__copyright {
+    /* display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   */
+    display: block;
+    text-align: center; }
 
 .policy_icon {
   height: 24px;
@@ -611,6 +551,8 @@ header {
 section {
   background-color: #F7F7F7;
   padding: 4rem; }
+  section p {
+    width: 65ch; }
   section p:not(:last-child),
   section li:not(:last-child) {
     margin-bottom: .6rem; }

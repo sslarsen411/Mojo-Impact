@@ -1,4 +1,5 @@
 
+.has-text-black{color:$color-black !important}
 .has-text-blue{color:$color-blue-drk !important}
 .has-bg-blue{background-color:$color-blue-drk !important}
 .has-text-green{color:$color-green !important}
@@ -7,18 +8,23 @@
 .has-bg-hot{background-color:$color-mojo-hot !important}
 .has-text-red{color:$color-red-drk !important}
 .has-bg-red{background-color:$color-red-drk !important}
+.has-text-saffron{color:$color-saffron !important}
 .has-text-white{color:$color-white !important}
 .has-bg-white{background-color:$color-white !important}
 
-.is-centered { text-align: center !important; }
+.is-font-size-small{font-size: $font-size-small;}
+.is-font-size-large{font-size: $font-size-large;}
 
+.is-centered { text-align: center !important; }
 .is-italic{font-style: italic;}
 .is-upper{text-transform: uppercase;}
 .is-smcap{font-variant: small-caps;}
+
 //MARGINS
-.mb-sm { margin-bottom: 1.5rem !important; }
-.mb-med {    margin-bottom: 4rem !important;}
+.mb-sm  { margin-bottom: 1.5rem !important; }
+.mb-med {margin-bottom: 4rem !important;}
 .mb-big {margin-bottom: 8rem !important;}
-.mt-big { margin-top: 8rem !important; }
-.mt-huge { margin-top: 10rem !important; }
+.mt-med {margin-top: 4rem !important;}
+.mt-big {margin-top: 8rem !important; }
+.mt-huge{margin-top: 10rem !important; }
 

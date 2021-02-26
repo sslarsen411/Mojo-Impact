@@ -27,6 +27,9 @@
    }
 }
   */
+  footer{
+    padding: 2rem 0;
+  }
 .footer {
     // background-color: var(--color-quaternary);
     color: $color-white-1;
@@ -47,155 +50,45 @@
   
     &__content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, 25rem);
+      grid-template-columns: repeat(auto-fit, 27.5rem);
       place-content: center;
       grid-gap: 10rem 4vw;
-  
-      &--section {
-        display: grid;
-        grid-row-gap: 1.5rem;
-  /* 
-        &__title {
-          @extend %sec-h3;
-        }
-   */
-        &__link:link,
-        &__link:visited {
-          display: block;
-          letter-spacing: initial;
-        }
-  
-        &__para {
-          color: var($color-white);
-          font-weight: font-weight(font-weight-light);
-          font-size: font-size(font-size-small);
-        }
+      
+      & a{
+        border:none;
+      }
+
+      & ul{
+        line-height: 3;
+      }
+
+      & div:not(:last-child){
+
+        border-right: 0.1rem solid $color-white;
       }
   
-      &--section:first-child,
-      &--section:nth-child(2),
-      &--section:nth-child(3) {
-        border-right: 0.1rem solid var($color-white);
-      }
-  
-      &--section:nth-child(3) {
+      & div:nth-child(3) {
         padding-right: 4vw;
   
-        input[type="email"] {
-          padding: 1rem;
-          background-color: transparent;
-          color: var($color-white);
-          border: 0.1rem solid var($color-white);
-          border-bottom: none;
-          border-right: none;
-        }
-  
-        input[type="submit"] {
-          background-color: transparent;
-          border: none;
-          color: var($color-white);
-          font-size: 1.5rem;
-          border: 0.1rem solid var($color-white);
-          padding: 0.85rem 1.5rem;
-          cursor: pointer;
-          transition: all 0.5s ease-in-out;
-        }
-  
-        input[type="submit"]:hover,
-        input[type="submit"]:active {
-          background-color: var($color-white);
-          color: black;
-        }
+ 
       }
   
-      &--section:last-child {
-        padding-bottom: 4vw;
-        border-bottom: 0.1rem solid var($color-white);
-      }
+     
     }
   
     &__logo {
       display: flex;
       align-items: center;
-      justify-content: center;
-  
-      img {
-        height: 5rem;
-        width: 5rem;
-      }
-  
-      span {
-        font-size: 2.5rem;
-        color: var($color-white);
-        margin-left: 0.5rem;
-        letter-spacing: 0.3rem;
-        font-family: "Balsamiq Sans", cursive;
-      }
+      justify-content: center;      
     }
   
-    &__social {
-      display: flex;
+    &__copyright {
+      /* display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-  
-      &--call {
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-  
-        p,
-        i {
-          display: inline-block;
-        }
-  
-        i {
-          font-size: 3rem;
-        }
-  
-        p {
-          margin-left: 1rem;
-          @extend .footer__content--section__para;
-        }
-      }
-  
-      &--icons {
-        display: flex;
-  
-        &__link:link,
-        &__link:visited {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: calc(0.5rem + 2vw);
-          height: 3rem;
-          width: 3rem;
-          border: 0.1rem solid var($color-white);
-          padding: 2.5rem;
-          border-radius: 50%;
-          position: relative;
-          z-index: 1;
-          i {
-            font-size: 3rem;
-          }
-        }
-  
-        &__link:link::before,
-        &__link:visited::before {
-          content: "";
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          background-color: var($color-white);
-          border-radius: inherit;
-          z-index: -1;
-          transform: scale(0);
-          transition: transform 0.5s ease;
-        }
-  
-        &__link:hover::before,
-        &__link:active::before {
-          transform: scale(1);
-        }
-      }
+   */
+      display: block;
+      text-align: center;
     }
 }
 

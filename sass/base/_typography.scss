@@ -3,7 +3,7 @@ body{
     font-weight: 400;
     line-height: 1.6;
     color: $color-mojo-black;
-    font-size: $default-font-size;
+    font-size: $font-size-default;
 }
 
 %heading {
@@ -15,22 +15,26 @@ body{
 
 h1 {
     @extend %heading;
-    font-size: calc(3rem + .625vw);            
+    //font-size: calc(3rem + .625vw);  
+    font-size: $font-size-extra-large          
 }
     
 h2 {
     @extend %heading;
-    font-size: calc(2.4rem + .625vw);    
+    //font-size: calc(2.4rem + .625vw);    
+    font-size:$font-size-large;    
 }
     
 h3 {
     @extend %heading;
-    font-size: calc(1.8rem + .625vw);
+   // font-size: calc(1.8rem + .625vw);
+    font-size: $font-size-medium;
 }
 
 h4 {
     @extend %heading;
-    font-size: calc(1.5rem + .625vw);
+    //font-size: calc(1.5rem + .625vw);
+    font-size: $font-size-default;
 };
   
 ul{
@@ -44,7 +48,7 @@ blockquote{
     padding:0.5em 10px;
     quotes: ' \201C ' ' \201D ';
     font-weight:600;    
-    font-size:$medium-font-size;
+    font-size:$font-size-medium;
     width: calc(80vw);
 
     &:before{
@@ -63,11 +67,11 @@ blockquote{
 }
 
 .font-size-medium{
-    font-size: $medium-font-size;   
+    font-size: $font-size-medium;   
 }
 
 .font-size-large{
-    font-size: $large-font-size;   
+    font-size: $font-size-large;   
 }
 
 .dropcap{
