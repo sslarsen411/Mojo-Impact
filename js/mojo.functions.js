@@ -13,7 +13,7 @@ for (const butt of btns) {
 */
 let scrollToTopBtn = document.querySelector(".btnScrollToTop")
 let rootElement = document.documentElement
-const ToggleRatio = 0.40
+const ToggleRatio = 0.20
 
 function handleScroll() {
   // do something on scroll

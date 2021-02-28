@@ -1,333 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mojo Impact</title>
-        <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet"> -->
-        <link rel="stylesheet" href="css/mojo-style.css">
-    </head>
-    <body class="container">
-        <header>
-            <div class="header">
-                <div class="header__logo-box">
-                <img class="header__logo--img" 
-                                        src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
-                                        alt="Mojo Impact logo"> 
-                </div>
-                <div class="header__nap">
-                    <p>
-                        Mojo Impact<br> Sonoma, CA<br>707 939-5738
-                    </p>
-                </div>
-            </div>
-            <div class="nav-burger">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-            </div>
-            <nav id="topNav" class="header__nav-bar">                
-                <ul class="header__nav-bar--links">
-                    <li class="header__nav-bar--item is-active">
-                        <a href="#" title="home" class="header__nav-bar--link" onclick="updateMenu(this.title)">Home</a>
-                    </li>
-                    <li class="header__nav-bar--item">
-                        <a href="#" title="solution" class="header__nav-bar--link" onclick="updateMenu(this.title)">Solutions</a>
-                    </li>
-                    <li class="header__nav-bar--item">
-                        <a href="#" title="contact" class="header__nav-bar--link" onclick="updateMenu(this.title)">Contact</a>
-                    </li>
-                    <li class="header__nav-bar--item">
-                        <a href="#" title="about" class="header__nav-bar--link" onclick="updateMenu(this.title)">About</a>
-                    </li>
-                </ul>
-                <div class="header__nav-bar--cta">                   
-                    <a href="https://buzz.mojoimpact.net/ws1/MTU4Nw==/MzU3Mw==" class="btn btn--saffron" target="_blank" title="Link: Request your content">
-                        Special Offer 
-                    </a>
-                </div>
-            </nav>               
-        </header>
-        <section class="hero" >
-            <h2>Hero</h2>
-        </section>
-        <section id="stakes" class="columns columns__col-2">
-            <div id="stakes-txt" class="">
-                <h2 class="is-centered">Meat!</h2>
-                <p>
-                    Bacon ipsum dolor amet cupim turducken shoulder chislic corned beef meatloaf short loin shank pork belly 
-                    jowl venison pastrami rump. Short ribs pancetta pork loin, brisket beef ribs ribeye tri-tip sirloin flank 
-                    jerky boudin ball tip buffalo pork chop shoulder. Burgdoggen tongue sausage meatloaf. Buffalo pastrami chuck 
-                    kevin bacon.
-                </p>
-                <p>
-                    Buffalo filet mignon frankfurter landjaeger venison, pancetta bacon biltong. Pastrami beef shoulder chislic. 
-                    Pork chop leberkas pork tenderloin andouille turducken.
-                </p>
-            </div>        
-            <div id="stakes-pics" class="">
-                <img src="img/social-media-time.svg" width="500" alt="Social media is a grind"> 
-            </div>
-        </section><!-- END COLUMN WRAPPER -->
-        <section id="value-proposition" class="columns columns__col-2">
-            <div id="value-pics" class=""><img src="https://via.placeholder.com/300/17125B" alt="placeholder"></div>
-            <div id="value-txt" class="">
-                <h2 class="is-centered">More Meat!</h2>
-                <p>
-                    Buffalo filet mignon frankfurter landjaeger venison, pancetta bacon biltong. Pastrami beef shoulder chislic. 
-                    Pork chop leberkas pork tenderloin andouille turducken.
-                </p>
-                <p>
-                    Bacon ipsum dolor amet cupim turducken shoulder chislic corned beef meatloaf short loin shank pork belly 
-                    jowl venison pastrami rump. Short ribs pancetta pork loin, brisket beef ribs ribeye tri-tip sirloin flank 
-                    jerky boudin ball tip buffalo pork chop shoulder. Burgdoggen tongue sausage meatloaf. Buffalo pastrami chuck 
-                    kevin bacon.
-                </p>
-            </div>
-        </section><!-- END COLUMN WRAPPER -->
-        <section id="guide" class="columns columns__col-2">
-            <div id="guide-txt" class=""><h2>Guide</h2></div>
-            <div id="guide-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-        </section><!-- END COLUMN WRAPPER -->
-        <section id="choices" class="columns columns__col-2">
-          <div id="choices-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-          <div id="choices-txt" class=""><h2>Choices</h2></div>
-        </section><!-- END COLUMN WRAPPER --> 
-        <section id="the-plan" class="columns columns__col-2">
-          <div id="the-plan-txt" class=""><h2>The Plan</h2></div>
-          <div id="the-plan-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-        </section><!-- END COLUMN WRAPPER --> 
-        <section id="explanation" class="columns columns__col-2">
-          <div id="explanation-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-          <div id="explanation-txt" class=""><h2>Explanation</h2></div>
-        </section><!-- END COLUMN WRAPPER --> 
-        <section id="lead-gen" class="columns columns__col-2">
-          <div id="lead-gen-txt" class=""><h2>Lead Gen</h2></div>
-          <div id="lead-gen-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-        </section> 
-        <section id="video" class="columns columns__col-2">
-          <div id="video-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-          <div id="video-txt" class=""><h2>Video</h2></div>
-        </section><!-- END COLUMN WRAPPER --> 
-        <section id="junk-drawer" class="columns columns__col-2">
-          <div id="junk-drawer-txt" class=""><h2>Junk Drawer</h2></div>
-          <div id="junk-drawer-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-        </section><!-- END COLUMN WRAPPER --> 
-<!--
-        <section class="columns columns__col-3">
-            <div  class="">
-                <h2 class="is-centered is-italic">Text 1</h2>
-                <p>
-                    Lorem ipsum <span class="is-smcap has-text-red">dolor sit amet consectetur</span> adipisicing elit. Iusto dolore earum quae id neque unde, error officiis.
-                </p>
-                <ul>
-                    <li>
-                        <svg class="icon icon-green"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>
-                         <a href="#">Item-1</a>                        
-                    </li>
-                    <li>
-                        <svg class="icon icon-white"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>
-                        Item-2
-                    </li>                    
-                    <li>
-                        <svg class="icon icon-blue"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                        
-                        Item-3
-                    </li>
-                    <li>
-                        <svg class="icon icon-red"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                                                
-                        Item-4
-                    </li>
-                    <li>
-                        <svg class="icon icon-saffron"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                                                                        
-                        Item-5
-                    </li>
-                </ul>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolore earum quae id neque unde, error officiis.
-                </p>
-            </div>
-            <div  class="">Text 2</div>
-            <div  class="">Text 3</div>            
-        </section>  -->  <!-- END COLUMN WRAPPER --> 
-<!-- 
-        <footer class="footer">
-            <div class="footer__nav">
-                <nav id="footerNav" class="header__nav-bar">                
-                    <ul class="header__nav-bar--links">
-                        <li class="header__nav-bar--item is-active">
-                            <a href="#" title="home" class="header__nav-bar--link" onclick="updateMenu(this.title)">Home</a>
-                        </li>
-                        <li class="header__nav-bar--item">
-                            <a href="#" title="solution" class="header__nav-bar--link" onclick="updateMenu(this.title)">Solutions</a>
-                        </li>
-                        <li class="header__nav-bar--item">
-                            <a href="#" title="contact" class="header__nav-bar--link" onclick="updateMenu(this.title)">Contact</a>
-                        </li>
-                        <li class="header__nav-bar--item">
-                            <a href="#" title="about" class="header__nav-bar--link" onclick="updateMenu(this.title)">About</a>
-                        </li>
-                    </ul>                    
-                </nav>  
-            </div>
-            <div class="footer__columns">
-                <h2>Footer</h2>&nbsp;&nbsp;&nbsp;
-                <p><a href="typography.html" target="_blank">Mojo Typeography</a></p>&nbsp;&nbsp;&nbsp;
-                <p><a href="element.html" target="_blank">Sample Elements</a></p>
-            </div>
-        </footer>
-         -->
-        <!-- END FOOTER WRAPPER -->
-        <footer class="footer">          
-          <!-- Footer Logo -->
-         <div class="footer__logo">
-           <img class="header__logo--img" 
-                                     src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
-                                     alt="Mojo Impact logo">         
-         </div>
-         <!-- Footer Content -->
-          <div class="footer__content">      
-            <div class="footer__content--navigation">
-              <h2>Site Navigation</h2>
-              <nav class="nav-bar">
-                <ul class="nav-bar__links">
-                  <li class="nav-bar__item is-active">
-                      <a href="#" title="home" class="nav-bar__link" onclick="updateMenu(this.title)">Home</a>
-                  </li>
-                  <li class="nav-bar__item">
-                      <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">Solutions</a>
-                  </li>
-                  <li class="nav-bar__item">
-                      <a href="#" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
-                  </li>
-                  <li class="nav-bar__item">
-                      <a href="#" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>              
-            <div class="footer__content--policies">                
-                <h2> Site Policies </h2> 
-                <ul class="menu-list"> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('calif',this.title);return false;" title="California Privacy Rights"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> California Privacy Rights
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('cookie',this.title);return false;" title="Cookie Policy"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Cookie Policy
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('copyrt',this.title);return false;" title="Copyright Policy"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Copyright Policy
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('privacy',this.title);return false;" title="Privacy Policy"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Privacy Policy
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('refund',this.title);return false;" title="Refund Policy"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Refund Policy
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('spam',this.title);return false;" title="Anti Spam Policy"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Anti Spam Policy
-                    </a> 
-                  </li> 
-                  <li class=""> 
-                    <a href="" class="modal-button" data-target="modal-id" onclick="getModalContent('terms',this.title);return false;" title="Website Terms and Conditions"> 
-                      <img src="https://cdn.mojoimpact.net/images/icons/policy-o.svg" class="policy_icon" alt="policy icon"> Website Terms and Conditions
-                    </a> 
-                  </li> 
-                </ul>
-            </div> 
-            <div class="footer__content--support">
-              <h2>Support</h2> 
-              <ul class="menu-list"> 
-                <li class=""> 
-                  <a href="https://support.mojoimpact.com/" rel="noopener" target="_blank"> 
-                    <i class="fa fa-life-ring"></i> Mojo Impact Help Desk 
-                  </a> 
-                </li> 
-              </ul> 
-              <h2 class="mt-med">Additional Sites</h2> 
-              <ul>
-                <li class="" title="blog"> 
-                  <a href="https://insights.mojoimpact.com" target="_blank" rel="noopener" class="mim"> 
-                    <i class="fa fa-lightbulb-o"></i> Mojo Impact Insights Blog 
-                  </a> 
-                </li> 
-                <li class="" title="Mojo Impact Buzz blog"> 
-                  <a href="https://buzz.mojoimpact.com" target="_blank" rel="noopener" class="mim"> 
-                    <i class="fa fa-comments-o"></i> Mojo Impact Buzz 
-                  </a> 
-                </li> 
-                <li class="" title="mojo website for Mojo Impact Media"> 
-                  <a href="https://mojoimpactmedia.com/" target="_blank" rel="noopener" class="mim"> 
-                    <i class="fa fa-server"></i> Mojo Impact Media 
-                  </a> 
-                </li> 
-                <li class="" title="Mojo Impact Co"> 
-                  <a href="https://www.mojoimpact.co" target="_blank" rel="noopener" class="mim"> 
-                    <i class="fa fa-calendar"></i> Mojo Impact Co 
-                  </a> 
-                </li>
-              </ul>
-            </div>            
-            <div class="footer__content--contact">                 
-              <h2 class="">Stay Connected</h2> 
-              <h3 class="mt-med">Contact Mojo Impact</h3>
-              <ul>
-                <li>Phone: <a href="tel:+17079395738"> 707 939-5738</a></li>
-                <li>Email: <a href="mailto:mojo&#64;mojoimpact.com"> mojo&#64;mojoimpact.com</a></li>                
-                <li><a href="#"><span class="is-font-size-large has-text-saffron">Contact Page</span></a></li>
-              </ul>
 
-              <h3 class="mt-med">Mojo Impact on Social Media </h3> 
-              <ul class="social-links"> 
-                <li>
-                  <a href="https://www.facebook.com/MojoImpact" title="Like us on Facebook" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link"><i class="fa fa-facebook"></i><br><span class="is-size-7">8K</span></a>
-                  <a href="https://www.google.com/maps/place/Mojo+Impact/@38.3071948,-122.496724,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xff28e1caa479e499!8m2!3d38.3071948!4d-122.4945353?hl=en" title="Leave a review on Google My Business" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
-                    <img src="https://cdn.mojoimpact.net/images/icons/google-my-business.svg" width="32" height="32" alt="Google My Business icon"><br>&nbsp;
-                  </a>
-                  <a href="http://instagram.com/sslarsen411" title="See us on Instagram" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
-                    <i class="fa fa-instagram"></i><br>&nbsp;
-                  </a>
-                  <a href="https://www.linkedin.com/company/mojo-impact-marketing-solutions" title="Connect through Linked In" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
-                    <i class="fa fa-linkedin"></i><br>&nbsp;
-                  </a>
-                  <a href="https://www.pinterest.com/MojoImpact" title="Pin us on Pinterest" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link"><i class="fa fa-pinterest"></i><br>&nbsp;</a><a href="https://twitter.com/MojoImpact" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link"><i class="fa fa-twitter"></i><br>&nbsp;
-                  </a>
-                  <a href="https://www.youtube.com/channel/UC0avCaoDexpHuHBA7YfdC5A/feed" title="Watch our videos on YouTube" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link"><i class="fa fa-youtube"></i><br>&nbsp;
-                  </a> 
-                </li> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mojo Impact</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/mojo-style.css">
+</head>
+
+<body class="container">
+  <header>
+    <div class="header">
+      <div class="header__logo-box">
+        <img class="header__logo--img" src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
+          alt="Mojo Impact logo">
+      </div>
+      <div class="header__usp">
+        <h1>Get noticed &mdash; Give your message Mojo Impact</h1>
+      </div>
+      <div class="header__nap">
+        <p>
+          Mojo Impact<br>
+          Sonoma, CA<br>
+          707 939-5738
+        </p>
+      </div>
+    </div>
+    <div class="nav-burger">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+    <nav id="topNav" class="header__nav-bar">
+      <ul class="header__nav-bar--links">
+        <li class="header__nav-bar--item is-active">
+          <a href="#" title="home" class="header__nav-bar--link" onclick="updateMenu(this.title)">Home</a>
+        </li>
+        <li class="header__nav-bar--item">
+          <a href="#" title="solution" class="header__nav-bar--link" onclick="updateMenu(this.title)">Solutions</a>
+        </li>
+        <li class="header__nav-bar--item">
+          <a href="#" title="contact" class="header__nav-bar--link" onclick="updateMenu(this.title)">Contact</a>
+        </li>
+        <li class="header__nav-bar--item">
+          <a href="#" title="about" class="header__nav-bar--link" onclick="updateMenu(this.title)">About</a>
+        </li>
+      </ul>
+      <div class="header__nav-bar--cta">
+        <a href="https://buzz.mojoimpact.net/ws1/MTU4Nw==/MzU3Mw==" class="btn btn--saffron" target="_blank"
+          title="Link: Request your content">
+          Special Offer
+        </a>
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Hero</h2>
+  </section>
+  <section id="stakes" class="columns columns__col-2">
+    <div id="stakes-txt" class="">
+      <h2 class="is-centered">Meat!</h2>
+      <p>
+        Bacon ipsum dolor amet cupim turducken shoulder chislic corned beef meatloaf short loin shank pork belly
+        jowl venison pastrami rump. Short ribs pancetta pork loin, brisket beef ribs ribeye tri-tip sirloin flank
+        jerky boudin ball tip buffalo pork chop shoulder. Burgdoggen tongue sausage meatloaf. Buffalo pastrami chuck
+        kevin bacon.
+      </p>
+      <p>
+        Buffalo filet mignon frankfurter landjaeger venison, pancetta bacon biltong. Pastrami beef shoulder chislic.
+        Pork chop leberkas pork tenderloin andouille turducken.
+      </p>
+    </div>
+    <div id="stakes-pics" class="">
+      <img src="img/social-media-time.svg" width="500" alt="Social media is a grind">
+    </div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="value-proposition" class="columns columns__col-2">
+    <div id="value-pics" class=""><img src="https://via.placeholder.com/300/17125B" alt="placeholder"></div>
+    <div id="value-txt" class="">
+      <h2 class="is-centered">More Meat!</h2>
+      <p>
+        Buffalo filet mignon frankfurter landjaeger venison, pancetta bacon biltong. Pastrami beef shoulder chislic.
+        Pork chop leberkas pork tenderloin andouille turducken.
+      </p>
+      <p>
+        Bacon ipsum dolor amet cupim turducken shoulder chislic corned beef meatloaf short loin shank pork belly
+        jowl venison pastrami rump. Short ribs pancetta pork loin, brisket beef ribs ribeye tri-tip sirloin flank
+        jerky boudin ball tip buffalo pork chop shoulder. Burgdoggen tongue sausage meatloaf. Buffalo pastrami chuck
+        kevin bacon.
+      </p>
+    </div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="guide" class="columns columns__col-2">
+    <div id="guide-txt" class="">
+      <h2>Guide</h2>
+    </div>
+    <div id="guide-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="choices" class="columns columns__col-2">
+    <div id="choices-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="choices-txt" class="">
+      <h2>Choices</h2>
+    </div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="the-plan" class="columns columns__col-2">
+    <div id="the-plan-txt" class="">
+      <h2>The Plan</h2>
+    </div>
+    <div id="the-plan-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="explanation" class="columns columns__col-2">
+    <div id="explanation-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="explanation-txt" class="">
+      <h2>Explanation</h2>
+    </div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="lead-gen" class="columns columns__col-2">
+    <div id="lead-gen-txt" class="">
+      <h2>Lead Gen</h2>
+    </div>
+    <div id="lead-gen-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+  </section>
+  <section id="video" class="columns columns__col-2">
+    <div id="video-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="video-txt" class="">
+      <h2>Video</h2>
+    </div>
+  </section><!-- END COLUMN WRAPPER -->
+  <section id="junk-drawer" class="columns columns__col-2">
+    <div id="junk-drawer-txt" class="">
+      <h2>Junk Drawer</h2>
+    </div>
+    <div id="junk-drawer-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+  </section><!-- END COLUMN WRAPPER -->
+  <!--
+      <section class="columns columns__col-3">
+          <div  class="">
+              <h2 class="is-centered is-italic">Text 1</h2>
+              <p>
+                  Lorem ipsum <span class="is-smcap has-text-red">dolor sit amet consectetur</span> adipisicing elit. Iusto dolore earum quae id neque unde, error officiis.
+              </p>
+              <ul>
+                  <li>
+                      <svg class="icon icon-green"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>
+                        <a href="#">Item-1</a>                        
+                  </li>
+                  <li>
+                      <svg class="icon icon-white"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>
+                      Item-2
+                  </li>                    
+                  <li>
+                      <svg class="icon icon-blue"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                        
+                      Item-3
+                  </li>
+                  <li>
+                      <svg class="icon icon-red"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                                                
+                      Item-4
+                  </li>
+                  <li>
+                      <svg class="icon icon-saffron"><use xlink:href="img/sprite5.svg#checkmark"></use></svg>                                                                        
+                      Item-5
+                  </li>
               </ul>
-            </div>
-          </div><!-- END Footer Content --> 
-            <!-- Footer Copyright -->
-            <div class="footer__copyright">
               <p>
-                A <strong>Mojo Impact custom website</strong>. Design and development by 
-                <a href="https://www.mojoimpact.site" target="_blank" rel="noopener">Mojo Impact Web Services</a> 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolore earum quae id neque unde, error officiis.
               </p>
-              <p>
-                &copy; 2012 — 2021 Mojo Impact, LLC. All rights reserved.     
-              </p>
-              <p class="is-font-size-small has-text-black">
-                <a href="https://en.wikipedia.org/wiki/Marketing_strategy" rel="noopener" target="_blank">
-                  Marketing strategy definition
-                </a>
-              </p>
-            </div>
-          </footer>
-        <div id="pg-name" class="pg-name">contact</div>
-        <button class="btnScrollToTop">
-            <svg><use xlink:href="img/sprite5.svg#circle-up"></use></svg>
-        </button>
-        <script src="js/mojo.functions.js"></script > 
-    </body>
+          </div>
+          <div  class="">Text 2</div>
+          <div  class="">Text 3</div>            
+      </section>  -->
+  <!-- END COLUMN WRAPPER -->
+  <footer class="footer">
+    <!-- Footer Logo -->
+    <div class="footer__logo">
+      <img class="header__logo--img" src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
+        alt="Mojo Impact logo">
+    </div>
+    <!-- Footer Content -->
+    <div class="footer__content">
+      <div class="footer__content--navigation">
+        <h2>Site Navigation</h2>
+        <nav class="nav-bar">
+          <ul class="nav-bar__links">
+            <li class="nav-bar__item is-active">
+              <a href="#" title="home" class="nav-bar__link" onclick="updateMenu(this.title)">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#page-home"></use>
+                </svg>
+                Home Page
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#page-solutions"></use>
+                </svg>
+                Business Solutions
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#page-contact"></use>
+                </svg>
+                Contact Mojo Impact
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#page-about"></use>
+                </svg>
+                About Mojo Impact
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#" title="site-map" class="nav-bar__link">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#page-site-map"></use>
+                </svg>
+                Site Map
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="typography.html" title="typography" class="nav-bar__link" target="_blank">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#typography"></use>
+                </svg>
+                Typeography
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="element.html" title="Elements" class="nav-bar__link" target="_blank">
+                <svg class="icon-saffron">
+                  <use xlink:href="img/sprite.svg#elements"></use>
+                </svg>
+                Elements
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__content--policies">
+        <h2> Site Policies </h2>
+        <ul class="menu-list">
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('calif',this.title);return false;" title="California Privacy Rights">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> California Privacy Rights
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('cookie',this.title);return false;" title="Cookie Policy">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Cookie Policy
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('copyrt',this.title);return false;" title="Copyright Policy">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Copyright Policy
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('privacy',this.title);return false;" title="Privacy Policy">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Privacy Policy
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('refund',this.title);return false;" title="Refund Policy">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Refund Policy
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('spam',this.title);return false;" title="Anti Spam Policy">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Anti Spam Policy
+            </a>
+          </li>
+          <li class="">
+            <a href="" class="modal-button" data-target="modal-id"
+              onclick="getModalContent('terms',this.title);return false;" title="Website Terms and Conditions">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
+              </svg> Website Terms and Conditions
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__content--support">
+        <h2>Support</h2>
+        <ul class="menu-list">
+          <li class="">
+            <a href="https://support.mojoimpact.com/" rel="noopener" target="_blank">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-support"></use>
+              </svg> Mojo Impact Help Desk
+            </a>
+          </li>
+        </ul>
+        <h2 class="mt-med">Additional Sites</h2>
+        <ul>
+          <li class="" title="blog">
+            <a href="https://insights.mojoimpact.com" target="_blank" rel="noopener" class="mim">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-insights"></use>
+              </svg> Mojo Impact Insights
+            </a>
+          </li>
+          <li class="" title="Mojo Impact Buzz blog">
+            <a href="https://buzz.mojoimpact.com" target="_blank" rel="noopener" class="mim">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-buzz"></use>
+              </svg> Mojo Impact Buzz
+            </a>
+          </li>
+          <li class="" title="mojo website for Mojo Impact Media">
+            <a href="https://mojoimpactmedia.com/" target="_blank" rel="noopener" class="mim">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-media"></use>
+              </svg> Mojo Impact Media
+            </a>
+          </li>
+          <li class="" title="Mojo Impact Co">
+            <a href="https://www.mojoimpact.co" target="_blank" rel="noopener" class="mim">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#mojo-impact-social-media"></use>
+              </svg> Mojo Impact Social
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__content--contact">
+        <h2 class="">Stay Connected</h2>
+        <h3 class="mt-med">Contact Mojo Impact</h3>
+        <ul>
+          <li>
+            <svg class="icon-saffron">
+              <use xlink:href="img/sprite.svg#nap-phone"></use>
+            </svg>
+            <a href="tel:+17079395738"> 707 939-5738</a>
+          </li>
+          <li>
+            <svg class="icon-saffron">
+              <use xlink:href="img/sprite.svg#ctc-email"></use>
+            </svg>
+            <a href="mailto:mojo&#64;mojoimpact.com"> mojo&#64;mojoimpact.com</a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="is-font-size-large has-text-saffron">More&hellip;</span>
+            </a>
+          </li>
+        </ul>
+        <h3 class="mt-med">Find us on Social Media </h3>
+        <ul class="footer__social-links">
+          <li>
+            <a href="https://www.facebook.com/MojoImpact" title="Like us on Facebook" target="_blank"
+              rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-facebook"></use>
+              </svg>
+            </a>
+            <a href="https://www.google.com/maps/place/Mojo+Impact/@38.3071948,-122.496724,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xff28e1caa479e499!8m2!3d38.3071948!4d-122.4945353?hl=en"
+              title="Leave a review on Google My Business" target="_blank" rel="noopener noreferrer"
+              class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-gmb"></use>
+              </svg>
+            </a>
+            <a href="http://instagram.com/sslarsen411" title="See us on Instagram" target="_blank"
+              rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-instagram"></use>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/social-media-marketing-solutions"
+              title="Connect through Linked In" target="_blank" rel="noopener noreferrer"
+              class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-linkedin"></use>
+              </svg>
+            </a>
+            <a href="https://www.pinterest.com/MojoImpact" title="Pin us on Pinterest" target="_blank"
+              rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-pinterest"></use>
+              </svg>
+            </a>
+            </a>
+            <!--  
+              <a href="https://www.reddit.com/user/scolar411" title="Read it on Redit" target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+                <svg><use xlink:href="img/sprite.svg#social-media-reddit"></use></svg>
+              </a>
+            -->
+            <a href="https://twitter.com/MojoImpact" title="Follow us on Twitter" target="_blank"
+              rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-twitter"></use>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC0avCaoDexpHuHBA7YfdC5A/feed" title="Watch our videos on YouTube"
+              target="_blank" rel="noopener noreferrer" class="hvr-wobble-top is-size-4 social-link">
+              <svg class="icon-saffron">
+                <use xlink:href="img/sprite.svg#social-media-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- END Footer Content -->
+    <!-- Footer Copyright -->
+    <div class="footer__copyright">
+      <p class="font-size-large">
+        Another <strong>Mojo <span class="has-text-saffron"> Impact</span></strong> custom website.
+      </p>
+      <p>
+        <svg class="footer__code-icon">
+          <use xlink:href="img/sprite.svg#mojo-impact-web-development"></use>
+        </svg>
+      </p>
+      <p>
+        Design and development by <a href="https://www.mojoimpact.site" target="_blank" rel="noopener">
+          Mojo Impact Web Development</a>
+      </p>
+      <p>
+        &copy; 2012 — 2021 <strong>Mojo <span class="has-text-saffron"> Impact</span></strong>, LLC. All rights
+        reserved.
+      </p>
+      <p class="is-font-size-small has-text-black">
+        <a href="https://en.wikipedia.org/wiki/Marketing_strategy" rel="noopener" target="_blank">
+          Marketing strategy definition
+        </a>
+      </p>
+    </div>
+  </footer>
+  <div id="pg-name" class="pg-name">contact</div>
+  <button class="btnScrollToTop">
+    <svg>
+      <use xlink:href="img/sprite.svg#circle-up"></use>
+    </svg>
+  </button>
+  <script src="js/mojo.functions.js"></script>
+</body>
+
 </html>

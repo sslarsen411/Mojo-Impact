@@ -1,27 +1,40 @@
+%icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 2px; 
+  vertical-align: middle; 
+}
 svg.icon {
-    display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
-    vertical-align: text-bottom; 
-    
+  @extend %icon;
+  fill:currentColor;
+
     &-blue{
+      @extend %icon;
       fill:$color-blue-drk;
     }
     &-green{
+      @extend %icon;
       fill:$color-green-drk;
     }
     &-red{
+      @extend %icon;
       fill:$color-red-drk;
     }    
     &-saffron{
+      @extend %icon;
       fill:$color-saffron;
       stroke: $color-grey-drk-2;
       stroke-width: 2;
     }  
     &-white{
+      @extend %icon;
       fill:$color-white;
       stroke: $color-grey-drk-2;
       stroke-width: 2;
     }     
+  }
+
+  .footer__code-icon{
+    height:5rem
   }
   
