@@ -1,17 +1,19 @@
-/*  ANCHOR TAGS with slide-up effect */
-a,
-a:link,
-a:visited{
-    color:currentColor;
-    border-bottom:1px solid $color-red-drk;
+%link {
+    color:currentColor;    
     text-decoration: none;
     cursor: pointer;
-    padding: 0 2px;
-    
+    padding: 0 2px;    
     display: inline-block;
-    vertical-align: baseline;    
-    transform: perspective(1px) translateZ(0);
-    
+    vertical-align: baseline;  
+}
+
+/*  Text ANCHOR TAGS with slide-up effect */
+:is(article, aside, main, section) a,
+:is(article, aside, main, section) a:link,
+:is(article, aside, main, section) a:visited{
+    @extend %link;
+    border-bottom:1px solid $color-red-drk; 
+    transform: perspective(1px) translateZ(0);    
     position: relative;
     transition:all .5s ease;
 
@@ -42,4 +44,65 @@ a:visited{
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
       }    
+}
+
+/*  HEADER and FOOTER ANCHOR TAGS */
+:is(header, footer) a,
+:is(header, footer) a:link,
+:is(header, footer) a:visited{
+    @extend %link;
+    color: $color-white-2;
+    transition:all .5s ease; 
+
+    &:hover,
+    &:focus,
+    &:active{    
+      color:$color-white;
+
+      & svg{
+        fill:$color-white;
+      }      
+    }
+}
+
+footer{
+
+  & a,
+  & a:link,
+  & a:visited{
+    border-bottom: thick solid transparent;
+  }
+
+  & a:hover,
+  & a:focus,
+  & a:active{   
+    text-shadow: $shadow-glow;
+    border-bottom: thick solid $color-saffron;      
+  }
+}
+
+.footer__social-link{
+	line-height:.5rem;
+	display:inline-block;
+	vertical-align:middle;	
+	transform:perspective(1px) 
+	translateZ(0);
+	box-shadow:0 0 1px transparent;	
+	transform-origin:0 100%;
+
+  &:hover,
+  &:focus,
+  &:active{
+    border: none;
+    background-color:transparent;
+    animation-name:hvr-wobble-top;    
+    animation-duration:1s;   
+    animation-timing-function:ease-in-out;    
+    animation-iteration-count:1;
+
+    & svg{
+      fill:$color-saffron !important;
+    }  
+  }
+  
 }

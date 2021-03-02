@@ -25,6 +25,14 @@ header{
         //font-size: 1.5rem;
         line-height: 1.2;       
     }    
+
+    &__nav-bar--links{
+        display: flex;
+    }
+
+    @media screen and (max-width: 1280px) { 
+        &__usp{display: none;} 
+    }
 }
 
 

@@ -42,6 +42,14 @@ ul{
     list-style: none;
 }
 
+.font-size-medium{
+    font-size: $font-size-medium;   
+}
+
+.font-size-large{
+    font-size: $font-size-large;   
+}
+
 blockquote{
     border-left:.2rem solid $color-grey-med-2;
     margin:1.5em 10px;
@@ -64,14 +72,6 @@ blockquote{
     & p{
         display:inline;
     }
-}
-
-.font-size-medium{
-    font-size: $font-size-medium;   
-}
-
-.font-size-large{
-    font-size: $font-size-large;   
 }
 
 .dropcap{

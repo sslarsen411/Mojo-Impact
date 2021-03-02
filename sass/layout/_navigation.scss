@@ -1,17 +1,24 @@
 /* HIGHLIGHT CURRENT PAGE */
-.is-current-page{    
-    background-color: $color-saffron !important;
-    font-weight: 700;
+header li.is-current-page{
+    background-color: $color-saffron ;
 
     & a{
         color:$color-mojo-black;
     }
-
     &:hover{
-        background-color:lighten($color-saffron, 25%) !important;        
-    }    
+        background-color:  lighten($color-saffron, 25%);
+    }
 }
 
+footer li.is-current-page{
+
+    & a{
+        color:$color-saffron;
+    }
+    & svg{
+        fill:$color-saffron;
+    }
+}
 
 /* NAV BURGER */
 .nav-burger{
@@ -50,12 +57,13 @@
         justify-content: space-between;
         
         & ul{
-            list-style-type: none;
-            display: flex;
+            list-style-type: none;            
         }
 
         &--item{
             flex: 1;
+            display: flex;
+            justify-content: space-evenly;
             margin-right: 1rem;
             min-width: 11rem;
             padding: 0 2rem;
@@ -78,20 +86,6 @@
         &--item:focus{
             background-color:lighten($color-red-drk, 50%);
             transform: translateY(-1rem);
-        }
-
-        &--link{
-            // No slide-up
-            &::before, 
-            &:link::before, 
-            &:visited::before {
-                background-color: transparent;
-            }
-            &:hover:before, 
-            &:focus:before, 
-            &:active:before {
-                background-color: transparent;
-            }        
         }
 
         &--cta{

@@ -15,32 +15,29 @@ let scrollToTopBtn = document.querySelector(".btnScrollToTop")
 let rootElement = document.documentElement
 const ToggleRatio = 0.20
 
-function handleScroll() {
-  // do something on scroll
+const handleScroll = () => {
   let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
   if ((rootElement.scrollTop / scrollTotal) > ToggleRatio) {
-    //show button
     scrollToTopBtn.classList.add("showBtn")
   } else {
-    //hide button
     scrollToTopBtn.classList.remove("showBtn")
   }
 }
 
-function scrollToTop() { 
+const scrollToTop = () => { 
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
   })
 }
+
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
 /** 
 * NAVIGATION
-* 
 */
-/* UPDATE ACTIVE PAGE ON NAV MENUS */
+  /* UPDATE ACTIVE PAGE ON NAV MENUS */
 document.addEventListener("DOMContentLoaded", function(event) { 
   updateMenu('home',true)
 });
@@ -67,7 +64,7 @@ const updateMenu = (inPg, isInit=false) =>{
 }
 
 /* Do Burger Click */
-const navContainer = document.querySelector(".header__nav-bar");
+const navContainer = document.querySelector(".nav-bar");
 const burger = document.querySelector(".nav-burger");
 
 burger.addEventListener("click", () => {
@@ -78,7 +75,6 @@ burger.addEventListener("click", () => {
 /** 
 * SITE POLICY MODAL
 */
-
 const getModalContent = (inPolicy,inTit) =>{	
   fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
     method: 'POST',      
@@ -89,7 +85,6 @@ const getModalContent = (inPolicy,inTit) =>{
     response.text().then(function(text) {    
       document.getElementById("modal-content").innerHTML = text
     });
-
     //this.preventDefault()
   });
 }
