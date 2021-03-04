@@ -58,26 +58,14 @@
     &:focus,
     &:active{    
       color:$color-white;
-
-      & svg{
-        fill:$color-white;
-      }      
     }
 }
 
 footer{
-
-  & a,
-  & a:link,
-  & a:visited{
-    border-bottom: thick solid transparent;
-  }
-
   & a:hover,
   & a:focus,
   & a:active{   
-    text-shadow: $shadow-glow;
-    border-bottom: thick solid $color-saffron;      
+    text-shadow: $shadow-glow;   
   }
 }
 
@@ -95,7 +83,7 @@ footer{
   &:active{
     border: none;
     background-color:transparent;
-    animation-name:hvr-wobble-top;    
+    animation-name:waggle-top;    
     animation-duration:1s;   
     animation-timing-function:ease-in-out;    
     animation-iteration-count:1;

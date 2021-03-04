@@ -1,6 +1,4 @@
 // COLORS
-
-
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 
@@ -12,6 +10,9 @@ $color-black:           #000;
 
 $color-white-1:       #F7F7F7;
 $color-white-2:       #EEE;
+$color-alabaster: #F8F8F8;
+
+$color-delta-grey: #AFAFAE;
 
 $color-grey-med-1:      #999;
 $color-grey-med-2:      #777;
@@ -19,11 +20,17 @@ $color-grey-med-3:      #474747;
 
 $color-grey-drk-1:      #363636;
 $color-grey-drk-2:      #333;
+$color-abbey:           #4F5051;
 
 $color-mojo-grey-lt:    #5E7C88;
 $color-mojo-grey-med:   #4B5F6D;
+
 $color-mojo-grey-drk:   #363F45;
-$color-mojo-black:      #24221F;
+$color-ship-grey:       #3A393F;
+
+$color-mojo-charcoal:   #24221F;
+$color-mojo-black:      #0E0D0D;
+
 
 $color-saffron:         #FEB41C;
 $color-mojo-hot:        #E8175D;
@@ -39,7 +46,7 @@ $color-saffron-invert: findColorInvert($color-saffron);
 $shadow-glow: 0 0 10px $color-white-1, 0 0 20px $color-white-2, 0 0 30px $color-saffron, 
               0 0 40px $color-saffron, 0 0 50px $color-saffron, 0 0 60px $color-saffron,; 
 // FONT
-$font-primary: 'Lato', sans-serif;
+$font-primary: 'Roboto', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 //$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);

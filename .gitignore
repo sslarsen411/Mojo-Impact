@@ -17,6 +17,13 @@ element.html
 typography.html
 css/mojo-style.css
 hvr-top.css
+js/Javascript-flexbox-modal-master/modal.js
+js/Javascript-flexbox-modal-master/modal.css
+js/Javascript-flexbox-modal-master/LICENSE
+js/mojo-modal.js
+js/modal.js
+modal.html
+mod2.html
 
 # Packages #
 ############
@@ -36,7 +43,3 @@ hvr-top.css
 *.log
 *.sql
 *.sqlite
-
-
-
-

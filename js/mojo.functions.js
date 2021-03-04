@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 const updateMenu = (inPg, isInit=false) =>{    
   let pgName = document.getElementsByClassName("pg-name")
-  let navBar = document.getElementsByClassName("header__nav-bar--link");
+  let navBar = document.getElementsByClassName("nav-bar__link");
 
   let currPg = pgName[0].innerText    
   pgName[0].innerText = inPg
@@ -63,7 +63,29 @@ const updateMenu = (inPg, isInit=false) =>{
   }
 }
 
-/* Do Burger Click */
+/* LIVE
+const updateMenu = (inPg, isInit=false) =>{    
+  let pgName = document.getElementsByClassName("pg-name")
+  let navBar = document.getElementsByClassName("nav-bar__link");
+
+  let currPg = pgName[0].innerText    
+  pgName[0].innerText = inPg
+  for (let i = 0; i < navBar.length; ++i) {    
+      let linkTitle = navBar[i].getAttribute("href"); 
+
+      if (linkTitle.includes(currPg) && !isInit){
+          navBar[i].parentNode.classList.remove("is-current-page") 
+          navBar[i].classList.remove("is-current-page") 
+
+      }else if (linkTitle.includes(pgName[0].innerText)){
+          navBar[i].parentNode.classList.add("is-current-page")   
+          navBar[i].classList.add("is-current-page")
+      }
+  }
+}
+*/
+
+/* Handle Burger Click */
 const navContainer = document.querySelector(".nav-bar");
 const burger = document.querySelector(".nav-burger");
 
@@ -75,39 +97,43 @@ burger.addEventListener("click", () => {
 /** 
 * SITE POLICY MODAL
 */
-const getModalContent = (inPolicy,inTit) =>{	
-  fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
-    method: 'POST',      
-    body: JSON.stringify({
-      title: inTit   
+const   modal  = document.getElementsByClassName('modal')[0],
+        btnClose  = document.querySelectorAll(".modal__close"),
+        mdlID =  document.getElementById('policy-modal');
+
+const getModalContent = (inPolicy,inTitle) =>{
+    fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
+        method: 'POST',      
+        body: JSON.stringify({
+        type: inPolicy   
     })    
   }).then(function(response) {
     response.text().then(function(text) {    
-      document.getElementById("modal-content").innerHTML = text
-    });
-    //this.preventDefault()
+      document.getElementById("policy").innerHTML = text
+      document.getElementById("hdr_title").innerHTML = inTitle
+    })
+    modal.classList.add('modal--show')   
   });
 }
 
-!function(){var t,n,e,o,l,c,a,d,i,m,u,s;(
-  t="data-target",
-  n="is-active",
-  e=".modal-button",
-  o=".modal-close",
-  l=".modal-button-close",
-  c=".modal-background",
-  a=function(e,t){
-    document.querySelectorAll(e).forEach(function(e){e.addEventListener("click",t)})},
-    d=function(){document.querySelectorAll("."+n).forEach(function(e){e.classList.remove(n)}),
-    s()},i=function(){var e=this.getAttribute(t);u(),document.getElementById(e).classList.add(n)},
-    m=function(){var e=this.parentElement.id;document.getElementById(e).classList.remove(n),s()},
-    u=function(){document.getElementsByTagName("html")[0].style.overflow="hidden",
-    document.getElementsByTagName("body")[0].style.overflowY="scroll"},
-    s=function(){document.getElementsByTagName("html")[0].style.overflow="",
-    document.getElementsByTagName("body")[0].style.overflowY=""},
-    {init:function(){a(e,i),a(o,m),a(l,d),a(c,m),
-      document.addEventListener("keyup",
-      function(e){
-        27==e.key&&d()
-      })
-    }}).init()}();
+for (const btn of btnClose) {
+  btn.addEventListener('click', function(e) {   
+    e.preventDefault()
+    closeModal();
+  })
+}
+
+window.onclick = function(event) {  //click outside of modal
+  if (event.target == mdlID) {
+    closeModal();
+  }
+}
+
+const closeModal = () =>{
+  modal.classList.remove('modal--show');
+  modal.classList.add('modal--hide');  // Remove hide class after animation is done
+  afterAnimation = function() {
+    modal.classList.remove('modal--hide');
+  }  
+  modal.addEventListener("animationend", afterAnimation, false);
+}

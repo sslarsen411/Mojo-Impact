@@ -56,6 +56,19 @@
         }
         
     }
+
+    &--red {
+        background-color: $color-red-drk !important;
+        color: $color-alabaster !important;
+        border-color: darken($color-red-drk, 10%) !important;
+
+        &:hover {
+            background-color: lighten($color-mojo-hot, 10%) !important;
+            color:lighten($color-mojo-hot, 50%) !important;
+            border-color: currentColor !important ;
+        }
+        
+    }
 }
 
 .btnScrollToTop {
