@@ -71,6 +71,5 @@
 
 .modal--show,
 .modal--hide { display: flex; } /* classes fired by js for animation control */
-
-  .modal.modal--show {animation: modal-open 0.3s;}
-  .modal.modal--hide {animation: modal-close 0.3s;}
+.modal.modal--show {animation: modal-open 0.3s;}
+.modal.modal--hide {animation: modal-close 0.3s;}

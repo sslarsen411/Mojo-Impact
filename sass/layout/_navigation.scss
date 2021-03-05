@@ -97,6 +97,7 @@ footer li.is-current-page{
         @media screen and (max-width: 800px) {            
             &{             
                 display: none;
+                opacity: 0;
                 position: absolute;
                 top: 6.2rem;
                 right: -30%;
@@ -130,5 +131,11 @@ footer li.is-current-page{
 }
 .show-nav-bar {
     display: flex;
-    transform: translatex(-100%);
+    animation:animateright 0.4s;
+    right:0;
+    opacity:1;
+    position: fixed;
+    padding-top: 0;
+    height: max-content;
+    
 }

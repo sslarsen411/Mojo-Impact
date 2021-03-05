@@ -14,6 +14,11 @@
     100% {opacity: 1;}
 }
 
+@keyframes animateright{
+    from{right:-300px;opacity:0} 
+    to{right:0;opacity:1}
+}
+
 @keyframes waggle-top{
     16.65%{transform:skew(-12deg)}
     33.3% {transform:skew(10deg)}

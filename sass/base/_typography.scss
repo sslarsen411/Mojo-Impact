@@ -3,7 +3,7 @@ body{
     font-weight: 400;
     line-height: 1.6;
     color: $color-mojo-black;
-    font-size: $font-size-default;
+    font-size: font-size(font-size-regular);
 }
 
 %heading {
@@ -16,25 +16,25 @@ body{
 h1 {
     @extend %heading;
     //font-size: calc(3rem + .625vw);  
-    font-size: $font-size-extra-large          
+    font-size: font-size(font-size-xlarge);          
 }
     
 h2 {
     @extend %heading;
     //font-size: calc(2.4rem + .625vw);    
-    font-size:$font-size-large;    
+    font-size:font-size(font-size-large);    
 }
     
 h3 {
     @extend %heading;
    // font-size: calc(1.8rem + .625vw);
-    font-size: $font-size-medium;
+    font-size: font-size(font-size-medium);
 }
 
 h4 {
     @extend %heading;
     //font-size: calc(1.5rem + .625vw);
-    font-size: $font-size-default;
+    font-size: font-size(font-size-regular);
 };
   
 ul{
@@ -42,13 +42,10 @@ ul{
     list-style: none;
 }
 
-.font-size-medium{
-    font-size: $font-size-medium;   
-}
-
-.font-size-large{
-    font-size: $font-size-large;   
-}
+.font-size-small{font-size: font-size(font-size-small);}
+.font-size-medium{font-size: font-size(font-size-medium);}
+.font-size-large{font-size: font-size(font-size-large);}
+.font-size-xlarge{font-size: font-size(font-size-xlarge);}
 
 blockquote{
     font-family: $font-display;
@@ -57,7 +54,7 @@ blockquote{
     padding:0.5em 10px;
     quotes: ' \201C ' ' \201D ';
     font-weight:500;    
-    font-size:$font-size-medium;
+    font-size:font-size(font-size-medium);
     width: calc(80vw);
 
     &:before{

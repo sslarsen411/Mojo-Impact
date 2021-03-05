@@ -49,22 +49,14 @@ $shadow-glow: 0 0 10px $color-white-1, 0 0 20px $color-white-2, 0 0 30px $color-
 $font-primary: 'Roboto', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-//$default-font-size: clamp(1.2rem, 1.4vw, 1.6rem);
-//$medium-font-size: clamp(1.6rem, 2vw, 2rem);
-//$large-font-size: clamp(1.8rem, 2vw, 2.4rem);
-$font-size-default:     clamp(1.2rem, 1.4vw, 1.6rem);
-$font-size-medium:      clamp(1.6rem, 2vw, 2rem);
-$font-size-large:       clamp(1.8rem, 2vw, 2.4rem);
-$font-size-extra-large: clamp(2rem, 5vw, 3rem);
-$font-size-small:       clamp(1rem, 1vw, 1.2rem);
-
 
 $font-sizes: (
-  "font-size-small": calc(.75rem + 0.5vw),
-  "font-size-regular": calc(1.5rem + 1vw),
-  "font-size-medium": calc(1.5rem + 2vw),
-  "font-size-large": calc(1.5rem + 5vw),
-  "font-size-xlarge": calc(2.5rem + 5vw),
+  "font-size-small": calc(.75rem + .25vw),
+  "font-size-regular": calc(1rem + .5vw),
+  "font-size-medium": calc(.75rem + 1vw),
+  "font-size-large": calc(1rem + 1vw),
+  "font-size-xlarge": calc(1.6rem + 1vw),
+  "font-size-xxlarge": calc(2rem + 1vw),
 );
 
 // GRID

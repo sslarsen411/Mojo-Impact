@@ -1,10 +1,14 @@
 .hero{
     grid-column: container-start / container-end;
     padding: 2rem;
-    background: linear-gradient(to right, rgba($color-grey-med-3, .4), rgba($color-mojo-black, .5)),
-                url(../img/boxing-gloves.jpg) 
+    background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
+                url(../img/exploding-bulb.jpg) 
                 no-repeat center center ;
     background-size: cover;
-    /* min-height: 60vh; */
-    
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: $color-white;
+    text-align: center;
 }

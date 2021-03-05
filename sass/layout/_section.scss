@@ -2,9 +2,6 @@ section{
     background-color: $color-white-1;
     padding: 4rem;
     
-    & p{
-        width: 65ch;
-    }
     & p:not(:last-child),
     & li:not(:last-child){
         margin-bottom: .6rem;

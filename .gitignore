@@ -43,3 +43,8 @@ mod2.html
 *.log
 *.sql
 *.sqlite
+js/modalJS/modal.js
+js/modalJS/mojo-modal.js
+js/modalJS/Javascript-flexbox-modal-master/LICENSE
+js/modalJS/Javascript-flexbox-modal-master/modal.css
+js/modalJS/Javascript-flexbox-modal-master/modal.js
