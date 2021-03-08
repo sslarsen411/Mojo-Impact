@@ -3,6 +3,8 @@ footer{
   }
 .footer {    
     color: $color-white-1;
+    font-size: font-size(font-size-std);
+    white-space: nowrap;
     background-color: $color-mojo-black;
     grid-column: container-start / container-end;
     
@@ -28,7 +30,7 @@ footer{
       display: grid;
       grid-template-columns: repeat(auto-fit, 27.5rem);
       place-content: center;
-      grid-gap: 10rem 4vw;
+      grid-gap: 10rem 2vw;
       
       & a{
         border:none;
@@ -59,6 +61,17 @@ footer{
   
     &__copyright {
       display: block;
-      text-align: center;
+      text-align: center;     
     }
+}
+
+.noshow {
+  color:transparent !important;  
+  &:hover,
+  &:focus,
+  &:active{
+    border: none;
+    background-color:transparent;
+    text-shadow: none;
+  }
 }

@@ -24,6 +24,13 @@ js/mojo-modal.js
 js/modal.js
 modal.html
 mod2.html
+js/modalJS/modal.js
+js/modalJS/mojo-modal.js
+js/modalJS/Javascript-flexbox-modal-master/LICENSE
+js/modalJS/Javascript-flexbox-modal-master/modal.css
+js/modalJS/Javascript-flexbox-modal-master/modal.js
+js/map/google-map-api.js
+
 
 # Packages #
 ############
@@ -43,8 +50,3 @@ mod2.html
 *.log
 *.sql
 *.sqlite
-js/modalJS/modal.js
-js/modalJS/mojo-modal.js
-js/modalJS/Javascript-flexbox-modal-master/LICENSE
-js/modalJS/Javascript-flexbox-modal-master/modal.css
-js/modalJS/Javascript-flexbox-modal-master/modal.js

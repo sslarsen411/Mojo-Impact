@@ -17,7 +17,6 @@
           alt="Mojo Impact logo">
       </div>
       <div class="header__usp">
-
       </div>
       <div class="header__nap">
         <p>
@@ -44,7 +43,7 @@
           <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
         </li>
         <li class="header__nav-bar--item">
-          <a href="#" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
+          <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
         </li>
       </ul>
       <div class="header__nav-bar--cta">
@@ -60,7 +59,7 @@
     <h2>Jump ahead of your competition</h2>
   </section>
   <section id="stakes" class="columns columns__col-2">
-    <div id="stakes-txt" class="">
+    <div id="stakes-txt" class="column__text">
       <h2 class="is-centered">Meat!</h2>
       <p>
         <a href="#">Bacon ipsum dolor amet cupim turducken</a> shoulder chislic corned beef meatloaf short loin shank
@@ -74,14 +73,18 @@
         Pork chop leberkas pork tenderloin andouille turducken.
       </p>
     </div>
-    <div id="stakes-pics" class="">
-      <img src="img/social-media-time.svg" width="500" alt="Social media is a grind">
+    <div id="stakes-pics" class="column__img">
+      <!-- <img src="img/loss.svg" width="100%" height="auto" alt="What is at risk"> -->
+      <img src="img/struggle-med.jpg" width="100%" height="auto"   alt="Elva dressed as a fairy">
     </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="value-proposition" class="columns columns__col-2">
-    <div id="value-pics" class=""><img src="https://via.placeholder.com/300/17125B" alt="placeholder"></div>
-    <div id="value-txt" class="">
-      <h2 class="is-centered">More Meat!</h2>
+    <div id="value-pics" class="column__img">
+      <img src="img/business.svg" width="100%" height="auto" alt="YOUR VALUE">
+      
+    </div>
+    <div id="value-txt" class="column__text">
+      <h2 class="is-centered">Value</h2>
       <p>
         Buffalo filet mignon frankfurter landjaeger venison, pancetta bacon biltong. Pastrami beef shoulder chislic.
         Pork chop leberkas pork tenderloin andouille turducken.
@@ -95,46 +98,60 @@
     </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="guide" class="columns columns__col-2">
-    <div id="guide-txt" class="">
+    <div id="guide-txt" class="column__text">
       <h2>Guide</h2>
     </div>
-    <div id="guide-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="guide-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="choices" class="columns columns__col-2">
-    <div id="choices-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-    <div id="choices-txt" class="">
+    <div id="choices-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
+    <div id="choices-txt" class="column__text">
       <h2>Choices</h2>
     </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="the-plan" class="columns columns__col-2">
-    <div id="the-plan-txt" class="">
+    <div id="the-plan-txt" class="column__text">
       <h2>The Plan</h2>
     </div>
-    <div id="the-plan-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="the-plan-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="explanation" class="columns columns__col-2">
-    <div id="explanation-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-    <div id="explanation-txt" class="">
+    <div id="explanation-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
+    <div id="explanation-txt" class="column__text">
       <h2>Explanation</h2>
     </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="lead-gen" class="columns columns__col-2">
-    <div id="lead-gen-txt" class="">
+    <div id="lead-gen-txt" class="column__text">
       <h2>Lead Gen</h2>
     </div>
-    <div id="lead-gen-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="lead-gen-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
   </section>
   <section id="video" class="columns columns__col-2">
-    <div id="video-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
-    <div id="video-txt" class="">
+    <div id="video-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
+    <div id="video-txt" class="column__text">
       <h2>Video</h2>
     </div>
   </section><!-- END COLUMN WRAPPER -->
   <section id="junk-drawer" class="columns columns__col-2">
-    <div id="junk-drawer-txt" class="">
+    <div id="junk-drawer-txt" class="column__text">
       <h2>Junk Drawer</h2>
     </div>
-    <div id="junk-drawer-pic" class=""><img src="https://via.placeholder.com/300/28b485" alt="placeholder"></div>
+    <div id="junk-drawer-pic" class="column__img">
+      <img src="https://via.placeholder.com/300/28b485" alt="placeholder">
+    </div>
   </section><!-- END COLUMN WRAPPER -->
   <!--
       <section class="columns columns__col-3">
@@ -210,7 +227,7 @@
               </a>
             </li>
             <li class="">
-              <a href="#" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">
+              <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">
                 <svg class="icon-white">
                   <use xlink:href="img/sprite.svg#page-about"></use>
                 </svg>
@@ -218,7 +235,7 @@
               </a>
             </li>
             <li class="">
-              <a href="#" title="site-map" class="nav-bar__link">
+              <a href="#" title="site-map" class="nav-bar__link isDisabled">
                 <svg class="icon-white">
                   <use xlink:href="img/sprite.svg#page-site-map"></use>
                 </svg>
@@ -300,7 +317,7 @@
               onclick="getModalContent('terms',this.title);return false;" title="Website Terms and Conditions">
               <svg class="icon-white">
                 <use xlink:href="img/sprite.svg#mojo-impact-site-policy"></use>
-              </svg> Website Terms and Conditions
+              </svg> Website Terms of Use
             </a>
           </li>
         </ul>
@@ -322,7 +339,7 @@
             <a href="https://insights.mojoimpact.com" target="_blank" rel="noopener" class="mim">
               <svg class="icon-white">
                 <use xlink:href="img/sprite.svg#mojo-impact-insights"></use>
-              </svg> Mojo Impact Insights
+              </svg> Mojo Impact Insights Blog
             </a>
           </li>
           <li class="" title="Mojo Impact Buzz blog">
@@ -333,17 +350,17 @@
             </a>
           </li>
           <li class="" title="mojo website for Mojo Impact Media">
-            <a href="https://mojoimpactmedia.com/" target="_blank" rel="noopener" class="mim">
+            <a href="https://mojoimpact.site/" target="_blank" rel="noopener" class="mim">
               <svg class="icon-white">
-                <use xlink:href="img/sprite.svg#mojo-impact-media"></use>
-              </svg> Mojo Impact Media
+                <use xlink:href="img/sprite.svg#solution-coding"></use>
+              </svg> Mojo Impact Websites
             </a>
           </li>
           <li class="" title="Mojo Impact Co">
             <a href="https://www.mojoimpact.co" target="_blank" rel="noopener" class="mim">
               <svg class="icon-white">
                 <use xlink:href="img/sprite.svg#mojo-impact-social-media"></use>
-              </svg> Mojo Impact Social
+              </svg> Mojo Impact Social Media
             </a>
           </li>
         </ul>
@@ -444,14 +461,13 @@
         &copy; 2012 — 2021 <strong>Mojo <span class="has-text-saffron"> Impact</span></strong>, LLC. All rights
         reserved.
       </p>
-      <p class="is-font-size-small has-text-black">
-        <a href="https://en.wikipedia.org/wiki/Marketing_strategy" rel="noopener" target="_blank">
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Marketing_strategy" class="noshow" rel="noopener" target="_blank">
           Marketing strategy definition
         </a>
       </p>
     </div>
   </footer>
-
   <div class="modal " id="policy-modal">
     <div class="modal__content">
       <header>
@@ -476,8 +492,6 @@
       </footer>
     </div>
   </div>
-
-
   <div id="pg-name" class="pg-name">index</div>
   <button class="btnScrollToTop">
     <svg>

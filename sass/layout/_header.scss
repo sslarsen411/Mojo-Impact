@@ -1,6 +1,10 @@
 /* FLEXBOX BASED RESPONSIVE HEADER & NAV BAR  */
 header{
     grid-column: container-start / container-end;
+/* 
+    position: fixed;
+    width: 100vw;
+     */
 }
 .header, .header__nav-bar{
     color: $color-white;

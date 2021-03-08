@@ -52,6 +52,7 @@ $font-display: 'Josefin Sans', sans-serif;
 
 $font-sizes: (
   "font-size-small": calc(.75rem + .25vw),
+  "font-size-std"  : calc(.75rem + .625vw),
   "font-size-regular": calc(1rem + .5vw),
   "font-size-medium": calc(.75rem + 1vw),
   "font-size-large": calc(1rem + 1vw),

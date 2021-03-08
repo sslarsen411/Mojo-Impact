@@ -7,6 +7,7 @@
     vertical-align: baseline;  
 }
 
+
 /*  Text ANCHOR TAGS with slide-up effect */
 :is(article, aside, main, section) a,
 :is(article, aside, main, section) a:link,
@@ -91,6 +92,13 @@ footer{
     & svg{
       fill:$color-saffron !important;
     }  
-  }
-  
+  }  
+}
+
+
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed !important;
+  opacity: 0.5;
+  text-decoration: none;
 }

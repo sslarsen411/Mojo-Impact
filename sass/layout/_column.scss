@@ -5,12 +5,24 @@
         
     place-items: center;
 
-    &__col-2{            
-        & img{
-            display: block;
-            @media screen and (max-width: 720px) {
-                display:none;
-            }
-        }         
-    }
 } 
+
+.column{
+
+    &__text{
+        padding:4rem;
+
+    }
+
+    &__img{        
+        width: 100%; 
+        height: auto;
+       // padding:1rem;
+        display: flex;
+        justify-content: center;
+        align-content: center; 
+        @media screen and (max-width: 720px) {
+            display:none;
+        }
+    }
+}

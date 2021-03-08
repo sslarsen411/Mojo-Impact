@@ -417,6 +417,12 @@ footer a:active {
     .footer__social-link:hover svg, .footer__social-link:focus svg, .footer__social-link:active svg {
       fill: #FEB41C !important; }
 
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed !important;
+  opacity: 0.5;
+  text-decoration: none; }
+
 .modal {
   display: none;
   top: 0;
@@ -509,17 +515,27 @@ footer a:active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   place-items: center; }
-  .columns__col-2 img {
-    display: block; }
-    @media screen and (max-width: 720px) {
-      .columns__col-2 img {
-        display: none; } }
+
+.column__text {
+  padding: 4rem; }
+
+.column__img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+  @media screen and (max-width: 720px) {
+    .column__img {
+      display: none; } }
 
 footer {
   padding: 2rem 0; }
 
 .footer {
   color: #F7F7F7;
+  font-size: calc(.75rem + .625vw);
+  white-space: nowrap;
   background-color: #0E0D0D;
   grid-column: container-start / container-end;
   background-image: linear-gradient(#0E0D0D, #333);
@@ -537,7 +553,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, 27.5rem);
     place-content: center;
-    grid-gap: 10rem 4vw; }
+    grid-gap: 10rem 2vw; }
     .footer__content a {
       border: none; }
     .footer__content ul {
@@ -557,9 +573,20 @@ footer {
     display: block;
     text-align: center; }
 
+.noshow {
+  color: transparent !important; }
+  .noshow:hover, .noshow:focus, .noshow:active {
+    border: none;
+    background-color: transparent;
+    text-shadow: none; }
+
 /* FLEXBOX BASED RESPONSIVE HEADER & NAV BAR  */
 header {
-  grid-column: container-start / container-end; }
+  grid-column: container-start / container-end;
+  /* 
+    position: fixed;
+    width: 100vw;
+     */ }
 
 .header, .header__nav-bar {
   color: #FFF;
@@ -701,24 +728,85 @@ footer li.is-current-page svg {
   height: max-content; }
 
 section {
-  background-color: #F7F7F7;
-  padding: 4rem; }
+  background-color: #F7F7F7; }
   section p:not(:last-child),
   section li:not(:last-child) {
-    margin-bottom: .6rem; }
+    margin-bottom: 0.6rem; }
   section p:last-child,
   section li:last-child {
     margin-bottom: 2rem; }
 
+#contact, #schedule {
+  height: 100%;
+  width: 100%;
+  /* 
+    @media screen and (max-width: 750px) {
+        background: none !important;
+    } */ }
+
+#contact {
+  background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat right center/contain; }
+
+#location-img {
+  height: 100%;
+  width: 100%;
+  background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center/contain;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.addr-wrapper {
+  padding: 4rem;
+  background-color: rgba(36, 34, 31, 0.9);
+  color: #F8F8F8; }
+
+#schedule {
+  background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center/contain; }
+
 .contact__txt {
+  background-color: rgba(248, 248, 248, 0.75);
+  padding: 2rem;
   display: grid;
-  grid-template-rows: repeat(4, min-content);
-  grid-template-columns: repeat(2, min-content) 1fr;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem; }
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, max-content) 1fr;
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 2rem; }
+  .contact__txt div {
+    display: grid;
+    align-items: center; }
+  .contact__txt p {
+    font-size: calc(.75rem + 1vw);
+    margin-bottom: 0 !important; }
+  .contact__txt .title {
+    grid-area: 1 / 1 / 2 / 4; }
+    .contact__txt .title svg {
+      display: inline;
+      vertical-align: middle; }
+  .contact__txt svg {
+    height: 4rem;
+    width: 4rem;
+    fill: #0E0D0D; }
+  .contact__txt .action {
+    color: #17125B; }
+  .contact__txt .value {
+    color: #8E001C; }
 
 .location__address {
   display: flex; }
 
-.location__map {
-  display: flex; }
+.map-wrapper {
+  width: 40vw;
+  height: 40vh;
+  background-color: grey;
+  border: 2px solid #474747;
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; }
+  .map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }

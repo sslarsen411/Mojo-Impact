@@ -7,6 +7,14 @@ for (const butt of btns) {
     console.log(this.href)
   })
 }
+
+const noLinks = document.querySelectorAll(".isDisabled")
+for (const noLink of noLinks) {
+  noLink.addEventListener('click', function(e) {   
+    e.preventDefault()
+  })
+}
+
 /** 
 * SCROLL TO TOP BUTTON
 * https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc
@@ -14,7 +22,6 @@ for (const butt of btns) {
 let scrollToTopBtn = document.querySelector(".btnScrollToTop")
 let rootElement = document.documentElement
 const ToggleRatio = 0.20
-
 const handleScroll = () => {
   let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
   if ((rootElement.scrollTop / scrollTotal) > ToggleRatio) {
@@ -23,14 +30,12 @@ const handleScroll = () => {
     scrollToTopBtn.classList.remove("showBtn")
   }
 }
-
 const scrollToTop = () => { 
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
   })
 }
-
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 
@@ -42,11 +47,10 @@ document.addEventListener("scroll", handleScroll)
 document.addEventListener("DOMContentLoaded", function(event) { 
     updateMenu(document.getElementsByClassName("pg-name")[0].innerText,true)
 });
-
 /* LIVE*/
 const updateMenu = (inPg, isInit=false) =>{    
-  let pgName = document.getElementsByClassName("pg-name")
-  let navBar = document.getElementsByClassName("nav-bar__link");
+  let pgName = document.getElementsByClassName("pg-name"),
+      navBar = document.getElementsByClassName("nav-bar__link");
 
   let currPg = pgName[0].innerText    
   pgName[0].innerText = inPg
@@ -63,12 +67,9 @@ const updateMenu = (inPg, isInit=false) =>{
       }
   }
 }
-
-
 /* Handle Burger Click */
 const navContainer = document.querySelector(".nav-bar"),
       burger = document.querySelector(".nav-burger")
-
 burger.addEventListener("click", () => {
     burger.classList.toggle("clicked");
     navContainer.classList.toggle("show-nav-bar");  
@@ -79,8 +80,7 @@ burger.addEventListener("click", () => {
 */
 const   modal  = document.getElementsByClassName('modal')[0],
         btnClose  = document.querySelectorAll(".modal__close"),
-        mdlID =  document.getElementById('policy-modal');
-
+        mdlID =  document.getElementById('policy-modal')
 const getModalContent = (inPolicy,inTitle) =>{
     fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
         method: 'POST',      
@@ -95,20 +95,17 @@ const getModalContent = (inPolicy,inTitle) =>{
     modal.classList.add('modal--show')   
   });
 }
-
 for (const btn of btnClose) {
   btn.addEventListener('click', function(e) {   
     e.preventDefault()
     closeModal();
   })
 }
-
 window.onclick = function(event) {  //click outside of modal
   if (event.target == mdlID) {
     closeModal();
   }
 }
-
 const closeModal = () =>{
   modal.classList.remove('modal--show');
   modal.classList.add('modal--hide');  // Remove hide class after animation is done
