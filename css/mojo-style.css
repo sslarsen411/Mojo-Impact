@@ -510,6 +510,17 @@ footer a:active {
   padding-left: 1rem;
   border-left: 2px solid #777; }
 
+#contact-img,
+#schedule-img,
+#location-img {
+  height: 100%;
+  width: 100%; }
+  @media screen and (max-width: 600px) {
+    #contact-img,
+    #schedule-img,
+    #location-img {
+      display: none; } }
+
 .columns {
   grid-column: container-start / container-end;
   display: grid;
@@ -736,33 +747,6 @@ section {
   section li:last-child {
     margin-bottom: 2rem; }
 
-#contact, #schedule {
-  height: 100%;
-  width: 100%;
-  /* 
-    @media screen and (max-width: 750px) {
-        background: none !important;
-    } */ }
-
-#contact {
-  background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat right center/contain; }
-
-#location-img {
-  height: 100%;
-  width: 100%;
-  background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center/contain;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
-.addr-wrapper {
-  padding: 4rem;
-  background-color: rgba(36, 34, 31, 0.9);
-  color: #F8F8F8; }
-
-#schedule {
-  background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center/contain; }
-
 .contact__txt {
   background-color: rgba(248, 248, 248, 0.75);
   padding: 2rem;
@@ -771,28 +755,53 @@ section {
   grid-template-columns: repeat(2, max-content) 1fr;
   grid-row-gap: 0.5rem;
   grid-column-gap: 2rem; }
-  .contact__txt div {
-    display: grid;
-    align-items: center; }
-  .contact__txt p {
-    font-size: calc(.75rem + 1vw);
-    margin-bottom: 0 !important; }
-  .contact__txt .title {
-    grid-area: 1 / 1 / 2 / 4; }
-    .contact__txt .title svg {
-      display: inline;
-      vertical-align: middle; }
-  .contact__txt svg {
-    height: 4rem;
-    width: 4rem;
-    fill: #0E0D0D; }
-  .contact__txt .action {
-    color: #17125B; }
-  .contact__txt .value {
-    color: #8E001C; }
+
+#contact-img {
+  background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat center center/contain; }
+
+#schedule-img {
+  background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center/contain; }
+
+#location-img {
+  background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center/contain; }
+
+.contact__txt div {
+  display: grid;
+  align-items: center; }
+
+.contact__txt p {
+  font-size: calc(.75rem + 1vw);
+  margin-bottom: 0 !important; }
+
+.contact__txt .title {
+  grid-area: 1 / 1 / 2 / 4; }
+  .contact__txt .title svg {
+    display: inline;
+    vertical-align: middle; }
+
+.contact__txt svg {
+  height: 4rem;
+  width: 4rem;
+  fill: #0E0D0D; }
+
+.contact__txt .action {
+  color: #17125B; }
+
+.contact__txt .value {
+  color: #8E001C; }
 
 .location__address {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.addr-wrapper {
+  display: flex;
+  padding: 4rem;
+  background-color: rgba(36, 34, 31, 0.9);
+  color: #F8F8F8;
+  flex-direction: column; }
 
 .map-wrapper {
   width: 40vw;
@@ -803,6 +812,9 @@ section {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%; }
+  @media screen and (max-width: 600px) {
+    .map-wrapper {
+      width: 90vw; } }
   .map-wrapper iframe {
     position: absolute;
     top: 0;

@@ -1,17 +1,21 @@
+%col-img {
+    height: 100%;
+    width: 100%;      
+    @media screen and (max-width: 600px) {
+        display:none;
+    }
+}
+
 .columns{
     grid-column: container-start / container-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));        
     place-items: center;
-
 } 
 
 .column{
-
     &__text{
         padding:4rem;
-
     }
 
     &__img{        

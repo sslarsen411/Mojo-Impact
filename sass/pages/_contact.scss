@@ -1,37 +1,4 @@
-%column-img {
-    height: 100%;
-    width: 100%;
-    /* 
-    @media screen and (max-width: 750px) {
-        background: none !important;
-    } */
-}
-#contact {
-    @extend %column-img;
-    background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat right center / contain;
-}
-
-#location-img {
-    height: 100%;
-    width: 100%;
-    background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center / contain;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.addr-wrapper {
-    padding: 4rem;
-    background-color: rgba($color-mojo-charcoal, 0.9);
-    color: $color-alabaster;
-}
-
-#schedule {
-    @extend %column-img;
-    background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center / contain;
-}
-
-.contact__txt {
+%col-txt{
     background-color: rgba($color-alabaster, 0.75);
     padding: 2rem;
     display: grid;
@@ -39,6 +6,29 @@
     grid-template-columns: repeat(2, max-content) 1fr;
     grid-row-gap: 0.5rem;
     grid-column-gap: 2rem;
+}
+
+#contact-img, 
+#schedule-img,
+#location-img{
+    @extend %col-img;    
+}
+
+#contact-img {    
+    background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat center center / contain;
+}
+
+#schedule-img {
+    background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center / contain;
+}
+
+#location-img {
+    background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center / contain;
+    
+}
+
+.contact__txt {
+    @extend %col-txt;
 
     & div {
         display: grid;
@@ -76,6 +66,17 @@
 
 .location__address {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addr-wrapper {
+    display: flex;
+    padding: 4rem;
+    background-color: rgba($color-mojo-charcoal, 0.9);
+    color: $color-alabaster;
+    flex-direction: column;    
 }
 
 .map-wrapper {
@@ -87,6 +88,10 @@
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
+
+    @media screen and (max-width: 600px) {
+        width: 90vw;
+    }
 
     & iframe {
         position: absolute;
