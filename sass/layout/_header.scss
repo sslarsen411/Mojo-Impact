@@ -1,14 +1,16 @@
 /* FLEXBOX BASED RESPONSIVE HEADER & NAV BAR  */
 header{
     grid-column: container-start / container-end;
-/* 
-    position: fixed;
-    width: 100vw;
-     */
+  
+    position: sticky;
+    top: 0;
+   width: 100vw;
+ /*    */
 }
 .header, .header__nav-bar{
     color: $color-white;
-    background-color: $color-mojo-charcoal;
+    //background-color: $color-mojo-charcoal;
+  //  background-color: transparent;
     padding: 1rem 4rem;
 }
 .header {    
@@ -39,4 +41,12 @@ header{
     }
 }
 
+.bg-black{
+    background-color:$color-mojo-charcoal;
+    transition:all .5s ease;
+}
+.bg-trans{
+    background-color:transparent;
+    transition:all .5s ease;
+}
 

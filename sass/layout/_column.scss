@@ -11,11 +11,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));        
     place-items: center;
+
+    &__col-3{
+        align-items: start;
+    }
 } 
 
 .column{
     &__text{
+        display: flex;
+        flex-direction: column;
         padding:4rem;
+        & svg{
+            align-self: center;
+        }
     }
 
     &__img{        

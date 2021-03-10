@@ -16,34 +16,45 @@ for (const noLink of noLinks) {
 }
 
 /** 
-* SCROLL TO TOP BUTTON
-* https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc
+* SCROLL EVENTS
 */
-let scrollToTopBtn = document.querySelector(".btnScrollToTop")
-let rootElement = document.documentElement
-const ToggleRatio = 0.20
+const rootEle    = document.documentElement
+const scrollToTopBtn = document.querySelector(".btnScrollToTop")
+const ToggleRatio    = 0.20
+const header         = document.querySelector("header")
+/* CHANGE HEADER BACKGROUND */
+const colorHeader = () => {
+  if ( rootEle.scrollTop < 200) {
+    header.classList.remove("bg-black");
+    header.classList.add("bg-trans");
+  } else {
+    header.classList.remove("bg-trans");
+    header.classList.add("bg-black");
+  }
+}
+/* SCROLL TO TOP BUTTON */
 const handleScroll = () => {
-  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-  if ((rootElement.scrollTop / scrollTotal) > ToggleRatio) {
+  let scrollTotal = rootEle.scrollHeight - rootEle.clientHeight
+  if ((rootEle.scrollTop / scrollTotal) > ToggleRatio) {
     scrollToTopBtn.classList.add("showBtn")
   } else {
     scrollToTopBtn.classList.remove("showBtn")
   }
 }
 const scrollToTop = () => { 
-  rootElement.scrollTo({
+  rootEle.scrollTo({
     top: 0,
     behavior: "smooth"
   })
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
+window.onscroll = function() {colorHeader()};
 
 /** 
 * NAVIGATION
 */
   /* UPDATE ACTIVE PAGE ON NAV MENUS */
-
 document.addEventListener("DOMContentLoaded", function(event) { 
     updateMenu(document.getElementsByClassName("pg-name")[0].innerText,true)
 });
