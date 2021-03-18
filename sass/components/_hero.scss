@@ -1,14 +1,56 @@
-.hero{
+%hero{
     grid-column: container-start / container-end;
     padding: 2rem;
-    background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
-                url(../img/exploding-bulb.jpg) 
-                no-repeat center center ;
-    background-size: cover;
+   
+    background-size: cover !important;
     margin-top: -20vh;
     display: grid;
     justify-content: center;
     align-content: center;
     color: $color-white;
-    text-align: center;
+    text-align: left;
+
+    & h1{
+        font-size: 3rem;
+        line-height: 2;
+        padding-top: 7rem;
+/* 
+        & span.mk-lrg{
+            font-size: 4.5rem;
+            text-transform: uppercase;
+        }
+         */
+    } 
+}
+
+.hero{
+    &__big{
+        @extend %hero;
+        background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
+        url(../img/exploding-bulb.jpg) 
+        no-repeat center center ;
+        height: 65vh;
+    }
+    &__med{
+        @extend %hero;
+        
+        height: 45vh;
+
+        &--about{
+            background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
+            url(../img/hero/about-questions.jpg) 
+            no-repeat center top ;
+
+        }
+
+        &--contact{
+            background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
+            url(../img/hero/contact.jpg) 
+            no-repeat center center ;
+
+
+        }
+    }
+
+       
 }

@@ -17,10 +17,11 @@
 .is-font-size-large{font-size: $font-size-large;}
  */
 
-.is-centered { text-align: center !important; }
-.is-italic{font-style: italic;}
-.is-upper{text-transform: uppercase;}
-.is-smcap{font-variant: small-caps;}
+.is-centered { text-align: center}
+.is-italic   {font-style: italic;}
+.is-upper    {text-transform: uppercase;}
+.is-smcap    {font-variant: small-caps;}
+.is-block{display: block;}
 
 //MARGINS
 .mb-sm  { margin-bottom: 1.5rem !important; }

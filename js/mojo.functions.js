@@ -78,7 +78,7 @@ const updateMenu = (inPg, isInit=false) =>{
       }
   }
 }
-/* Handle Burger Click */
+/* Handle Nav Burger Click */
 const navContainer = document.querySelector(".nav-bar"),
       burger = document.querySelector(".nav-burger")
 burger.addEventListener("click", () => {
