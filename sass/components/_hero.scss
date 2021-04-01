@@ -3,7 +3,7 @@
     padding: 2rem;
    
     background-size: cover !important;
-    margin-top: -20vh;
+    margin-top: -12vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -14,12 +14,6 @@
         font-size: 3rem;
         line-height: 2;
         padding-top: 7rem;
-/* 
-        & span.mk-lrg{
-            font-size: 4.5rem;
-            text-transform: uppercase;
-        }
-         */
     } 
 }
 
@@ -27,26 +21,27 @@
     &__big{
         @extend %hero;
         background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
-        url(../img/exploding-bulb.jpg) 
+        url(../img/hero/impact.jpg) 
         no-repeat center center ;
-        height: 65vh;
+        height: 50vh;
     }
     &__med{
-        @extend %hero;
-        
-        height: 45vh;
-
+        @extend %hero;        
+        height: 25vh;
+        & h1{
+            margin-top: 4rem;
+        }
         &--about{
             background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
             url(../img/hero/about-questions.jpg) 
-            no-repeat center top ;
+            no-repeat center bottom ;
 
         }
 
         &--contact{
             background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
-            url(../img/hero/contact.jpg) 
-            no-repeat center center ;
+            url(../img/hero/dial.jpg) 
+            no-repeat center bottom ;
 
 
         }

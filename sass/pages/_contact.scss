@@ -79,11 +79,11 @@
     flex-direction: column;    
 }
 
-.map-wrapper {
+.iframe-wrapper {
     width: 40vw;
     height: 40vh;
     background-color: grey;
-    border: 2px solid $color-grey-med-3;
+    /* border: 2px solid $color-grey-med-3; */
     flex: 1 1 auto;
     position: relative;
     overflow: hidden;

@@ -7,7 +7,6 @@ for (const butt of btns) {
     console.log(this.href)
   })
 }
-
 const noLinks = document.querySelectorAll(".isDisabled")
 for (const noLink of noLinks) {
   noLink.addEventListener('click', function(e) {   
@@ -18,13 +17,14 @@ for (const noLink of noLinks) {
 /** 
 * SCROLL EVENTS
 */
-const rootEle    = document.documentElement
-const scrollToTopBtn = document.querySelector(".btnScrollToTop")
-const ToggleRatio    = 0.20
-const header         = document.querySelector("header")
+const rootEle    = document.documentElement,
+      scrollToTopBtn = document.querySelector(".btnScrollToTop"),
+      header         = document.querySelector("header"),
+      scrollTopConst = 50,
+      ToggleRatio    = 0.20
 /* CHANGE HEADER BACKGROUND */
 const colorHeader = () => {
-  if ( rootEle.scrollTop < 200) {
+  if ( rootEle.scrollTop < scrollTopConst) {
     header.classList.remove("bg-black");
     header.classList.add("bg-trans");
   } else {
