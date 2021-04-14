@@ -50,3 +50,4 @@ js/map/google-map-api.js
 *.log
 *.sql
 *.sqlite
+js/mojo.functions.min.js

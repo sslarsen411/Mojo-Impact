@@ -10,7 +10,7 @@ svg.icon {
 
     &-blue{
       @extend %icon;
-       
+      fill:$color-blue-drk; 
     }
     &-green{
       @extend %icon;
@@ -37,4 +37,3 @@ svg.icon {
   .footer__code-icon{
     height:3rem
   }
-  

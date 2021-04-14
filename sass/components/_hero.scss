@@ -1,14 +1,13 @@
 %hero{
-    grid-column: container-start / container-end;
-    padding: 2rem;
-   
-    background-size: cover !important;
-    margin-top: -12vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
     color: $color-white;
     text-align: left;
+    margin-top: -12rem;    
+    grid-column: container-start / container-end;
+    padding: 2rem;   
+    background-size: cover !important;  
+    display: grid;
+    justify-content: center;
+    align-content: center;   
 
     & h1{
         font-size: 3rem;
@@ -23,7 +22,7 @@
         background: linear-gradient(to right, rgba($color-mojo-charcoal, .6), rgba($color-mojo-black, .9)),
         url(../img/hero/impact.jpg) 
         no-repeat center center ;
-        height: 50vh;
+        height: 70vh;
     }
     &__med{
         @extend %hero;        

@@ -20,6 +20,11 @@
 
 #schedule-img {
     background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center / contain;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 600px;
 }
 
 #location-img {
@@ -77,6 +82,12 @@
     background-color: rgba($color-mojo-charcoal, 0.9);
     color: $color-alabaster;
     flex-direction: column;    
+}
+.schd-wrapper{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 .iframe-wrapper {

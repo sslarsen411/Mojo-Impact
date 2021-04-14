@@ -4,14 +4,12 @@
     line-height:1rem;
     text-align:center;
     text-decoration:none;
-    outline:none;   
-    display: inline-block;
-    cursor: pointer;
-    justify-content: center;    
-    padding: calc(.5em - 1px) 1em;  
+    outline:none;      
+    cursor: pointer;  
     white-space: nowrap;
     border-radius: 1rem !important;
     border: thin solid currentColor;
+    padding: calc(.5em - 1px) 1em;  
 
     &:hover{
         transform: translateY(-3px);
@@ -23,10 +21,8 @@
     &,
     &:link,
     &:visited {
-        @extend %btn;
-        background-color: $color-white;       
-        color: currentColor; 
-
+        @extend %btn;   
+        
         &::before{
             background-color: transparent; // No slide-up
         }
@@ -42,6 +38,10 @@
         outline: none;
         transform: translateY(3px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+
+    &__big{        
+        font-size: x-large;
     }
 
     &--saffron {
@@ -107,4 +107,8 @@
 .showBtn {
     opacity: 1;
     transform: translateY(0);
-  }
+}
+
+#hero__btn--cta{
+    margin: 6rem auto 0;    
+}

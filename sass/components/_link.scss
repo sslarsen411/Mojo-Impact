@@ -70,6 +70,20 @@ footer{
   }
 }
 
+.modal-button, .footer .nav-bar__link, .footer__social-link, .mim{
+  &:hover,
+  &:focus,
+  &:active{
+    & svg{
+      border: none;
+      background-color:transparent;
+      animation-name:waggle-top;    
+      animation-duration:1s;   
+      animation-timing-function:ease-in-out;    
+      animation-iteration-count:1;
+    }
+  }  
+}
 .footer__social-link{
 	line-height:.5rem;
 	display:inline-block;
@@ -79,22 +93,8 @@ footer{
 	box-shadow:0 0 1px transparent;	
 	transform-origin:0 100%;
 
-  &:hover,
-  &:focus,
-  &:active{
-    border: none;
-    background-color:transparent;
-    animation-name:waggle-top;    
-    animation-duration:1s;   
-    animation-timing-function:ease-in-out;    
-    animation-iteration-count:1;
-
-    & svg{
-      fill:$color-saffron !important;
-    }  
-  }  
+  
 }
-
 
 .isDisabled {
   color: currentColor;

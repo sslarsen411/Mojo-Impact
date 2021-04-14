@@ -36,11 +36,18 @@ h4 {
     //font-size: calc(1.5rem + .625vw);
     font-size: font-size(font-size-regular);
 };
-  
-ul{
-    margin-left: 1.4rem;
-    list-style: none;
+
+ul,ol{
+    margin-left: 1.4rem;   
+    list-style: none; 
 }
+
+ol {    
+    counter-reset: cnt;
+
+    & li {counter-increment: cnt;}
+    & li::before {content: counter(cnt) ") ";}
+  }
 
 .font-size-small{font-size: font-size(font-size-small);}
 .font-size-medium{font-size: font-size(font-size-medium);}

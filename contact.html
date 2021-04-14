@@ -11,54 +11,47 @@
 <body class="container">
   <header>
     <div class="header">
-      <div class="header__logo-box">
-        <img class="header__logo--img" src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
-          alt="Mojo Impact logo">
+        <div class="header__logo-box">
+          <img class="header__logo--img" src="https://cdn.mojoimpact.net/images/logos/mojo-impact-linear-logo-lt-o.svg"
+            alt="Mojo Impact logo">
+        </div>
+        <div class="nav-burger">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
       </div>
-      <div class="header__usp">
-
+      <nav id="topNav" class="header__nav-bar nav-bar">
+        <ul class="header__nav-bar--links">
+          <li class="header__nav-bar--item">
+            <a href="index.html" title="home" class="nav-bar__link" onclick="updateMenu(this.title)">Home</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">Solutions</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
+          </li>         
+        </ul>
+      </nav>
+        <div class="header__nap">
+          <p>
+            Mojo Impact<br>
+            Sonoma, CA<br>
+            707 939-5738
+          </p>
+        </div>
       </div>
-      <div class="header__nap">
-        <p>
-          Mojo Impact<br>
-          Sonoma, CA<br>
-          707 939-5738
-        </p>
-      </div>
-    </div>
-    <div class="nav-burger">
-      <div class="line line-1"></div>
-      <div class="line line-2"></div>
-      <div class="line line-3"></div>
-    </div>
-    <nav id="topNav" class="header__nav-bar nav-bar">
-      <ul class="header__nav-bar--links">
-        <li class="header__nav-bar--item">
-          <a href="index.html" title="home" class="nav-bar__link" onclick="updateMenu(this.title)">Home</a>
-        </li>
-        <li class="header__nav-bar--item">
-          <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">Solutions</a>
-        </li>
-        <li class="header__nav-bar--item">
-          <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
-        </li>
-        <li class="header__nav-bar--item">
-          <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
-        </li>
-      </ul>
-      <div class="header__nav-bar--cta">
-        <a href="https://buzz.mojoimpact.net/ws1/MTU4Nw==/MzU3Mw==" class="btn btn--saffron" target="_blank"
-          title="Link: Request your content">
-          Special Offer
-        </a>
-      </div>
-    </nav>
   </header>
+<!--  
   <section class="hero__med hero__med--contact">
     <h1 class="is-centered">     
       Contact </strong> Mojo <span class="has-text-saffron trade">Impact</span>
     </h1>    
   </section>
+-->
   <section id="contact" class="columns columns__col-2">
     <div id="contact__txt" class="contact__txt">
       <div class="title">
