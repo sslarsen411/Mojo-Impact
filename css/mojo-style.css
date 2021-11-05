@@ -315,22 +315,26 @@ blockquote {
 
 .hero__big, .hero__med {
   color: #FFF;
+  background-color: #04133e;
   text-align: left;
   margin-top: -12rem;
   grid-column: container-start / container-end;
   padding: 2rem;
-  background-size: cover !important;
+  background-size: contain;
   display: grid;
   justify-content: center;
   align-content: center; }
   .hero__big h1, .hero__med h1 {
-    font-size: 3rem;
-    line-height: 2;
+    line-height: 1.6;
     padding-top: 7rem; }
 
 .hero__big {
-  background: linear-gradient(to right, rgba(36, 34, 31, 0.6), rgba(14, 13, 13, 0.9)), url(../img/hero/impact.jpg) no-repeat center center;
-  height: 70vh; }
+  height: 70vh;
+  background-image: linear-gradient(105deg, rgba(36, 34, 31, 0.9) 0%, rgba(36, 34, 31, 0.9) 50%, transparent 50%), url(https://cdn.mojoimpact.net/images/backgrounds/rocket_1280.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
 
 .hero__med {
   height: 25vh; }
@@ -339,7 +343,7 @@ blockquote {
   .hero__med--about {
     background: linear-gradient(to right, rgba(36, 34, 31, 0.6), rgba(14, 13, 13, 0.9)), url(../img/hero/about-questions.jpg) no-repeat center bottom; }
   .hero__med--contact {
-    background: linear-gradient(to right, rgba(36, 34, 31, 0.6), rgba(14, 13, 13, 0.9)), url(../img/hero/dial.jpg) no-repeat center bottom; }
+    background: linear-gradient(to right, rgba(36, 34, 31, 0.6), rgba(14, 13, 13, 0.9)), url(../img/hero/dial.jpg) no-repeat center top; }
 
 svg.icon, svg.icon-blue, svg.icon-green, svg.icon-red, svg.icon-saffron, svg.icon-white {
   height: 2.5rem;
@@ -357,12 +361,12 @@ svg.icon {
     fill: #8E001C; }
   svg.icon-saffron {
     fill: #FEB41C;
-    stroke: #333;
-    stroke-width: 2; }
+    /*stroke: $color-grey-drk-2;
+      stroke-width: 2;*/ }
   svg.icon-white {
     fill: #FFF;
-    stroke: #333;
-    stroke-width: 2; }
+    /*stroke: $color-grey-drk-2;
+      stroke-width: 2;*/ }
 
 .footer__code-icon {
   height: 3rem; }
@@ -673,6 +677,10 @@ header {
 
 .bg-trans {
   background-color: transparent;
+  transition: all .5s ease; }
+
+.bg-half {
+  background-color: #24221F80;
   transition: all .5s ease; }
 
 /* HIGHLIGHT CURRENT PAGE */

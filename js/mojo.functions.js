@@ -40,9 +40,9 @@ const colorHeader = () => {
   if(hasHero.length > 0){
     if ( rootEle.scrollTop < scrollTopConst) {
       header.classList.remove("bg-black")
-      header.classList.add("bg-trans")
+      header.classList.add("bg-half")
     } else {
-      header.classList.remove("bg-trans")
+      header.classList.remove("bg-half")
       header.classList.add("bg-black")
     }
   }  
