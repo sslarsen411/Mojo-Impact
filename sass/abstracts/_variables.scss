@@ -52,13 +52,14 @@ $font-display: 'Josefin Sans', sans-serif;
 
 
 $font-sizes: (
+  "font-size-xsmall": calc(.5rem + .25vw),
   "font-size-small": calc(.75rem + .25vw),
   "font-size-std"  : calc(.75rem + .625vw),
   "font-size-regular": calc(1rem + .5vw),
   "font-size-medium": calc(.75rem + 1vw),
-  "font-size-large": calc(1rem + 1vw),
-  "font-size-xlarge": calc(1.6rem + 1vw),
-  "font-size-xxlarge": calc(2rem + 2vw),
+  "font-size-large": calc(1em + 1vw),
+  "font-size-xlarge": calc(1.8rem + 1vw),
+  "font-size-xxlarge": calc(1.8rem + 2vw),
 );
 
 // GRID

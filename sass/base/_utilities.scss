@@ -12,11 +12,6 @@
 .has-text-white{color:$color-white !important}
 .has-bg-white{background-color:$color-white !important}
 
-/* 
-.is-font-size-small{font-size: font-size(font-size-medium);}
-.is-font-size-large{font-size: $font-size-large;}
- */
-
 .is-centered { text-align: center}
 .is-italic   {font-style: italic;}
 .is-upper    {text-transform: uppercase;}
@@ -31,5 +26,12 @@
 .mt-big {margin-top: 8rem !important; }
 .mt-huge{margin-top: 10rem !important; }
 
-.trade:after{font-family:inherit;color:inherit; margin-left: -1rem; content: ' \2122 ';vertical-align:top;font-weight:400}
+.trade:after{
+    font-family:inherit;
+    color:inherit; 
+    margin-left: -0.5rem; 
+    content: ' \2122 ';
+    vertical-align:top;
+    font-weight:400
+}
 

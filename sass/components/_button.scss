@@ -46,15 +46,14 @@
 
     &--saffron {
         background-color: $color-saffron !important;
-        color: $color-grey-med-3 !important;
+        color: $color-mojo-charcoal !important;
         border-color: darken($color-saffron, 10%) !important;
 
         &:hover {
             background-color: lighten($color-saffron, 10%) !important;
             color:lighten($color-saffron, 50%) !important;
             border-color: currentColor !important ;
-        }
-        
+        }        
     }
 
     &--red {
@@ -109,6 +108,6 @@
     transform: translateY(0);
 }
 
-#hero__btn--cta{
-    margin: 6rem auto 0;    
+.hero__btn--cta{
+    margin: 4rem auto 0; 
 }
