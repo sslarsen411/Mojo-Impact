@@ -6,19 +6,16 @@
     0%    { opacity: 1; }
     100%  { opacity: 0; }
 }
-
 @keyframes moveInRight {
     0% {display: none;}
 	1% {display: flex; transform: translateX(0);}
     80% {transform: translateX(-100%);}
     100% {opacity: 1;}
 }
-
 @keyframes animateright{
     from{right:-300px;opacity:0} 
     to{right:0;opacity:1}
 }
-
 @keyframes waggle-top{
     16.65%{transform:skew(-12deg)}
     33.3% {transform:skew(10deg)}

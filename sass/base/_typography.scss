@@ -1,3 +1,4 @@
+//ELEMENTS
 body{    
     font-family: $font-primary;
     font-weight: 400;
@@ -5,57 +6,37 @@ body{
     color: $color-mojo-black;
     font-size: font-size(font-size-regular);
 }
-
 %heading {
     font-family: $font-display;
     font-weight: 600;    
     line-height: 1;
     margin: 1rem 0;
 }
-
 h1 {
-    @extend %heading;
-    //font-size: calc(3rem + .625vw);  
+    @extend %heading;      
     font-size: font-size(font-size-xlarge);          
-}
-    
+}    
 h2 {
-    @extend %heading;
-    //font-size: calc(2.4rem + .625vw);    
+    @extend %heading;      
     font-size:font-size(font-size-large);    
-}
-    
+}    
 h3 {
-    @extend %heading;
-   // font-size: calc(1.8rem + .625vw);
+    @extend %heading;   
     font-size: font-size(font-size-medium);
 }
-
 h4 {
-    @extend %heading;
-    //font-size: calc(1.5rem + .625vw);
+    @extend %heading;   
     font-size: font-size(font-size-regular);
 };
-
 ul,ol{
     margin-left: 1.4rem;   
     list-style: none; 
 }
-
 ol {    
     counter-reset: cnt;
-
     & li {counter-increment: cnt;}
     & li::before {content: counter(cnt) ") ";}
   }
-
-.font-size-xsmall{font-size: font-size(font-size-xsmall);}
-.font-size-small{font-size: font-size(font-size-small);}
-.font-size-medium{font-size: font-size(font-size-medium);}
-.font-size-large{font-size: font-size(font-size-large);}
-.font-size-xlarge{font-size: font-size(font-size-xlarge);}
-.font-size-xxlarge{font-size: font-size(font-size-xxlarge);}
-
 blockquote{
     font-family: $font-display;
     border-left:.2rem solid $color-grey-med-2;
@@ -65,7 +46,6 @@ blockquote{
     font-weight:500;    
     font-size:font-size(font-size-medium);
     width: calc(80vw);
-
     &:before{
         color:$color-grey-med-2;
         content:open-quote;
@@ -74,13 +54,18 @@ blockquote{
         margin-right:0.25rem;
         position: relative;
         top: 4rem;
-    }
-    
+    }    
     & p{
         display:inline;
     }
 }
-
+// CLASSES
+.font-size-xsmall   {font-size: font-size(font-size-xsmall);}
+.font-size-small    {font-size: font-size(font-size-small);}
+.font-size-medium   {font-size: font-size(font-size-medium);}
+.font-size-large    {font-size: font-size(font-size-large);}
+.font-size-xlarge   {font-size: font-size(font-size-xlarge);}
+.font-size-xxlarge  {font-size: font-size(font-size-xxlarge);}
 .dropcap{
 	float: left;
     font-size: 4rem;

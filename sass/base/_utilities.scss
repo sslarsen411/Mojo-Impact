@@ -1,31 +1,30 @@
 
-.has-text-black{color:$color-black !important}
-.has-text-blue{color:$color-blue-drk !important}
-.has-bg-blue{background-color:$color-blue-drk !important}
-.has-text-green{color:$color-green !important}
-.has-bg-green{background-color:$color-green !important}
-.has-text-hot{color:$color-mojo-hot !important}
-.has-bg-hot{background-color:$color-mojo-hot !important}
-.has-text-red{color:$color-red-drk !important}
-.has-bg-red{background-color:$color-red-drk !important}
+.has-text-black  {color:$color-black !important}
+.has-text-blue   {color:$color-blue-drk !important}
+.has-bg-blue     {background-color:$color-blue-drk !important}
+.has-text-green  {color:$color-green !important}
+.has-bg-green    {background-color:$color-green !important}
+.has-text-hot    {color:$color-mojo-hot !important}
+.has-bg-hot      {background-color:$color-mojo-hot !important}
+.has-text-red    {color:$color-red-drk !important}
+.has-bg-red      {background-color:$color-red-drk !important}
 .has-text-saffron{color:$color-saffron !important}
-.has-text-white{color:$color-white !important}
-.has-bg-white{background-color:$color-white !important}
-
-.is-centered { text-align: center}
+.has-text-white  {color:$color-white !important}
+.has-bg-white    {background-color:$color-white !important}
+//FORMATTING
+.is-centered {text-align: center}
 .is-italic   {font-style: italic;}
 .is-upper    {text-transform: uppercase;}
 .is-smcap    {font-variant: small-caps;}
-.is-block{display: block;}
-
+.is-block    {display: block;}
 //MARGINS
 .mb-sm  { margin-bottom: 1.5rem !important; }
 .mb-med {margin-bottom: 4rem !important;}
 .mb-big {margin-bottom: 8rem !important;}
 .mt-med {margin-top: 4rem !important;}
-.mt-big {margin-top: 8rem !important; }
-.mt-huge{margin-top: 10rem !important; }
-
+.mt-big {margin-top: 8rem !important;}
+.mt-huge{margin-top: 10rem !important;}
+//TRADEMARK SYMBOL
 .trade:after{
     font-family:inherit;
     color:inherit; 
@@ -34,4 +33,3 @@
     vertical-align:top;
     font-weight:400
 }
-
