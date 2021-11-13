@@ -79,7 +79,7 @@ const updateMenu = (inPg, isInit=false) =>{
   let currPg = pgName[0].innerText    
   pgName[0].innerText = inPg
   for (let i = 0; i < navBar.length; ++i) {    
-      let linkTitle = navBar[i].getAttribute("titlesearch__title")
+      let linkTitle = navBar[i].getAttribute("title")
       if (linkTitle.includes(currPg) && !isInit){
           navBar[i].parentNode.classList.remove("is-current-page") 
           navBar[i].classList.remove("is-current-page") 

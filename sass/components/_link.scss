@@ -7,7 +7,6 @@
     vertical-align: baseline;  
 }
 
-
 /*  Text ANCHOR TAGS with slide-up effect */
 :is(article, aside, main, section) a,
 :is(article, aside, main, section) a:link,
@@ -17,7 +16,6 @@
     transform: perspective(1px) translateZ(0);    
     position: relative;
     transition:all .5s ease;
-
     &:before {
         content: "";
         position: absolute;
@@ -30,15 +28,13 @@
         transform: scaleY(0);        
         transform-origin: 50% 100%;
         transition:all .5s ease;       
-      }
-      
+      }      
     &:hover,
     &:focus,
     &:active{    
       color:$color-white-2;
       border-radius:2px
     }
-
     &:hover:before, 
     &:focus:before, 
     &:active:before {
@@ -53,22 +49,32 @@
 :is(header, footer) a:visited{
     @extend %link;
     color: $color-white-2;
-    transition:all .5s ease; 
+    transition:all .5s ease;    
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-saffron;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
 
     &:hover,
     &:focus,
     &:active{    
       color:$color-white;
+      text-shadow: $shadow-glow; 
+      &::before {
+        transform: scaleX(1);
+      }  
     }
 }
 
-footer{
-  & a:hover,
-  & a:focus,
-  & a:active{   
-    text-shadow: $shadow-glow;   
-  }
-}
+
 
 .modal-button, .footer .nav-bar__link, .footer__social-link, .mim{
   &:hover,

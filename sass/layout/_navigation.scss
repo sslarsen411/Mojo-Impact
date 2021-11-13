@@ -1,17 +1,15 @@
 /* HIGHLIGHT CURRENT PAGE */
 header li.is-current-page{
-    background-color: $color-saffron ;
-
+    //background-color: $color-saffron ;
     & a{
-        color:$color-mojo-black;
+        color:$color-saffron;
     }
     &:hover{
-        background-color:  lighten($color-saffron, 25%);
+        color:  lighten($color-saffron, 25%);
     }
 }
 
 footer li.is-current-page{
-
     & a{
         color:$color-saffron;
     }
@@ -54,12 +52,8 @@ footer li.is-current-page{
 /* HEADER NAV BAR */
     .header__nav-bar{        
         display: flex;        
-        justify-content: space-between;
-        
-        & ul{
-            list-style-type: none;            
-        }
-
+        justify-content: space-between;        
+        & ul{list-style-type: none;}
         &--item{
             flex: 1;
             display: flex;
@@ -68,29 +62,21 @@ footer li.is-current-page{
             min-width: 11rem;
             padding: 0 2rem;
             text-align: center;
-            background-color: $color-red-drk;  
+            //background-color: $color-red-drk;  
             border-radius: 3px;
             transition: all .2s;
-
-            & a{
-                border:none;
-            }  
+            & a{border:none;}  
         }
-
         &--item:hover{
-            background-color:lighten($color-red-drk, 25%);
-            transform: translateY(-.5rem);
-        }
-    
+            //background-color:lighten($color-red-drk, 25%);
+            transform: translateY(-.1rem);
+        }    
         &--item:active,
         &--item:focus{
-            background-color:lighten($color-red-drk, 50%);
+            //background-color:lighten($color-red-drk, 50%);
             transform: translateY(-1rem);
         }
-
-        &--cta{
-            color: $color-blue-drk;
-        }
+        &--cta{color: $color-blue-drk;}
 
         /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:800px)  *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
         /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Nav bar to vertical *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
@@ -110,11 +96,9 @@ footer li.is-current-page{
                 padding-top: 15rem;
                 transition: all 0.35s ease-in;                
             }
-
             &--links{
                 flex-direction: column;
             }
-
             &--item{
                 color:$color-white-1;
                 flex: 1;               
@@ -125,7 +109,6 @@ footer li.is-current-page{
                 background-color: $color-red-drk;
                 transition: all .2s;    
             }
-
             &--cta{display: none;}    
     }
 }

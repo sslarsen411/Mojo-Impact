@@ -439,6 +439,19 @@ svg.icon {
 :is(header, footer) a:visited {
   color: #EEE;
   transition: all .5s ease; }
+  :is(header, footer) a::before,
+  :is(header, footer) a:link::before,
+  :is(header, footer) a:visited::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FEB41C;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; }
   :is(header, footer) a:hover, :is(header, footer) a:focus, :is(header, footer) a:active,
   :is(header, footer) a:link:hover,
   :is(header, footer) a:link:focus,
@@ -446,12 +459,16 @@ svg.icon {
   :is(header, footer) a:visited:hover,
   :is(header, footer) a:visited:focus,
   :is(header, footer) a:visited:active {
-    color: #FFF; }
-
-footer a:hover,
-footer a:focus,
-footer a:active {
-  text-shadow: 0 0 10px #F7F7F7, 0 0 20px #EEE, 0 0 30px #FEB41C, 0 0 40px #FEB41C, 0 0 50px #FEB41C, 0 0 60px #FEB41C; }
+    color: #FFF;
+    text-shadow: 0 0 10px #F7F7F7, 0 0 20px #EEE, 0 0 30px #FEB41C, 0 0 40px #FEB41C, 0 0 50px #FEB41C, 0 0 60px #FEB41C; }
+    :is(header, footer) a:hover::before, :is(header, footer) a:focus::before, :is(header, footer) a:active::before,
+    :is(header, footer) a:link:hover::before,
+    :is(header, footer) a:link:focus::before,
+    :is(header, footer) a:link:active::before,
+    :is(header, footer) a:visited:hover::before,
+    :is(header, footer) a:visited:focus::before,
+    :is(header, footer) a:visited:active::before {
+      transform: scaleX(1); }
 
 .modal-button:hover svg, .modal-button:focus svg, .modal-button:active svg, .footer .nav-bar__link:hover svg, .footer .nav-bar__link:focus svg, .footer .nav-bar__link:active svg, .footer__social-link:hover svg, .footer__social-link:focus svg, .footer__social-link:active svg, .mim:hover svg, .mim:focus svg, .mim:active svg {
   border: none;
@@ -610,11 +627,6 @@ footer {
   background-color: #0E0D0D;
   grid-column: container-start / container-end;
   background-image: linear-gradient(#0E0D0D, #333);
-  /*  ,
-      url("../img/footer/footer-bg.jpg");
-    @extend %bg;
-    @extend %sec-padding;
-   */
   display: grid;
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 8vh; }
@@ -693,12 +705,11 @@ header {
   transition: all .5s ease; }
 
 /* HIGHLIGHT CURRENT PAGE */
-header li.is-current-page {
-  background-color: #FEB41C; }
-  header li.is-current-page a {
-    color: #0E0D0D; }
-  header li.is-current-page:hover {
-    background-color: #ffde9b; }
+header li.is-current-page a {
+  color: #FEB41C; }
+
+header li.is-current-page:hover {
+  color: #ffde9b; }
 
 footer li.is-current-page a {
   color: #FEB41C; }
@@ -758,16 +769,13 @@ footer li.is-current-page svg {
     min-width: 11rem;
     padding: 0 2rem;
     text-align: center;
-    background-color: #8E001C;
     border-radius: 3px;
     transition: all .2s; }
     .header__nav-bar--item a {
       border: none; }
   .header__nav-bar--item:hover {
-    background-color: #ff0f3e;
-    transform: translateY(-0.5rem); }
+    transform: translateY(-0.1rem); }
   .header__nav-bar--item:active, .header__nav-bar--item:focus {
-    background-color: #ff8ea4;
     transform: translateY(-1rem); }
   .header__nav-bar--cta {
     color: #17125B; }
