@@ -2,7 +2,7 @@
     color: $color-white;
     background-color:$color-hero-bg;
     text-align: left;
-    margin-top: -12rem;    
+    //margin-top: -12rem;    
     grid-column: container-start / container-end;
     padding: 2rem;   
     background-size: cover;  
@@ -11,18 +11,24 @@
     align-content: center;   
 
     & h1{
-        font-size: calc(1.8rem + 1.5vw);
-        line-height: 1.6;
-        
+        font-size: calc(2rem + .75vw);
+        line-height: 1.2;        
         padding-right: 1rem;
     } 
+    & h2{
+        font-size: calc(2.75rem + 1vw);
+        line-height: 1.6; 
+    }
+    @media screen and (max-width: 900px) { 
+        & h2{font-size: calc(2rem + 1vw);} 
+    }
 }
 
 .hero{
     &__big{
         @extend %hero;        
         height: 70vh;
-        padding-top: 7rem;
+        //padding-top: 7rem;
         background-image: linear-gradient(105deg, rgba($color-ship-grey, 0.9) 0%, rgba($color-ship-grey, 0.9) 50%, transparent 50%), 
         url(../img/Generate-Sales-Leads.jpg);        
         background-position: right bottom ;

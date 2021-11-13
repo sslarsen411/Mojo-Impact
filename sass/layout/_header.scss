@@ -7,8 +7,6 @@ header{
 }
 .header, .header__nav-bar{
     color: $color-white;
-    //background-color: $color-mojo-charcoal;
-  //  background-color: transparent;
     padding: 1rem 4rem;
 }
 .header {
@@ -21,25 +19,20 @@ header{
         display: flex;    
         align-items: center;
     }
-
     &__logo--img {
         height: 3.5rem;
-    }
-    
+    }    
     &__nap {         
         //font-size: 1.5rem;
         line-height: 1.2;       
-    }    
-
+    }
     &__nav-bar--links{
         display: flex;
     }
-
     @media screen and (max-width: 1280px) { 
         &__usp{display: none;} 
     }
 }
-
 .bg-black{
     background-color:$color-mojo-charcoal;
     transition:all .5s ease;
