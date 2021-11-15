@@ -2,80 +2,65 @@
     background-color: rgba($color-alabaster, 0.75);
     padding: 2rem;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-template-columns: repeat(2, max-content) 1fr;
     grid-row-gap: 0.5rem;
     grid-column-gap: 2rem;
 }
-
 #contact-img, 
 #schedule-img,
 #location-img{
     @extend %col-img;    
 }
-
 #contact-img {    
-    background: url(https://cdn.mojoimpact.net/images/contact-mojo-impact.svg) no-repeat center center / contain;
+    background: url(https://d22dngtjl7mv6s.cloudfront.net/images/contact-mojo-impact.svg) no-repeat center center / contain;
 }
-
 #schedule-img {
-    background: url(https://cdn.mojoimpact.net/images/contact-appointment.svg) no-repeat center center / contain;
+    background: url(https://d22dngtjl7mv6s.cloudfront.net/images/contact-appointment.svg) no-repeat center center / contain;
     display: flex;
     align-content: center;
     justify-content: center;
     flex-direction: column;
     min-height: 600px;
 }
-
 #location-img {
-    background: url(https://cdn.mojoimpact.net/images/mailing-address.svg) no-repeat center center / contain;
-    
+    background: url(https://d22dngtjl7mv6s.cloudfront.net/images/mailing-address.svg) no-repeat center center / contain;    
 }
-
 .contact__txt {
     @extend %col-txt;
-
     & div {
         display: grid;
         align-items: center;
     }
-
     & p {
         font-size: font-size(font-size-medium);
         margin-bottom: 0 !important;
     }
-
     & .title {
         grid-area: 1 / 1 / 2 / 4;
-
         & svg {
             display: inline;
             vertical-align: middle;
         }
     }
-
     & svg {
         height: 4rem;
         width: 4rem;
         fill: $color-mojo-black;
     }
-
     .action {
         color: $color-blue-drk;
     }
-
     .value {
         color: $color-red-drk;
     }
 }
-
 .location__address {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .addr-wrapper {
     display: flex;
     padding: 4rem;
@@ -94,16 +79,13 @@
     width: 40vw;
     height: 40vh;
     background-color: grey;
-    /* border: 2px solid $color-grey-med-3; */
     flex: 1 1 auto;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-
     @media screen and (max-width: 600px) {
         width: 90vw;
     }
-
     & iframe {
         position: absolute;
         top: 0;

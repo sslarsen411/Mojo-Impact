@@ -17,6 +17,8 @@
 .is-upper    {text-transform: uppercase;}
 .is-smcap    {font-variant: small-caps;}
 .is-block    {display: block;}
+.has-stroke-drk{-webkit-text-stroke: .08rem $color-grey-med-1; -webkit-text-fill-color: inherit ;}
+.has-stroke-lt{-webkit-text-stroke: .1rem $color-white-2; -webkit-text-fill-color: inherit;}
 //MARGINS
 .mb-sm  { margin-bottom: 1.5rem !important; }
 .mb-med {margin-bottom: 4rem !important;}

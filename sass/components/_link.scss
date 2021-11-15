@@ -74,8 +74,6 @@
     }
 }
 
-
-
 .modal-button, .footer .nav-bar__link, .footer__social-link, .mim{
   &:hover,
   &:focus,
@@ -97,9 +95,7 @@
 	transform:perspective(1px) 
 	translateZ(0);
 	box-shadow:0 0 1px transparent;	
-	transform-origin:0 100%;
-
-  
+	transform-origin:0 100%;  
 }
 
 .isDisabled {

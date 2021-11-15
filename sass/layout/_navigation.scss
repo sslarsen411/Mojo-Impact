@@ -1,23 +1,12 @@
 /* HIGHLIGHT CURRENT PAGE */
-header li.is-current-page{
-    //background-color: $color-saffron ;
-    & a{
-        color:$color-saffron;
-    }
-    &:hover{
-        color:  lighten($color-saffron, 25%);
-    }
+header li.is-current-page{    
+    & a{color:$color-saffron;}
+    &:hover{color:lighten($color-saffron, 25%);}
 }
-
 footer li.is-current-page{
-    & a{
-        color:$color-saffron;
-    }
-    & svg{
-        fill:$color-saffron;
-    }
+    & a{color:$color-saffron;}
+    & svg{fill:$color-saffron;}
 }
-
 /* NAV BURGER */
 .nav-burger{
     width: 5rem;
@@ -32,8 +21,7 @@ footer li.is-current-page{
     z-index: 9;
     display: none;
     flex-direction: column;
-    justify-content: space-around;    
-
+    justify-content: space-around;  
     @media screen and (max-width: 960px) 
         {display: flex;}
 }
@@ -59,21 +47,15 @@ footer li.is-current-page{
             display: flex;
             justify-content: space-evenly;
             margin-right: 1rem;
-            min-width: 11rem;
-            padding: 0 2rem;
-            text-align: center;
-            //background-color: $color-red-drk;  
-            border-radius: 3px;
+            min-width: 11rem;                      
             transition: all .2s;
             & a{border:none;}  
         }
-        &--item:hover{
-            //background-color:lighten($color-red-drk, 25%);
+        &--item:hover{            
             transform: translateY(-.1rem);
         }    
         &--item:active,
-        &--item:focus{
-            //background-color:lighten($color-red-drk, 50%);
+        &--item:focus{            
             transform: translateY(-1rem);
         }
         &--cta{color: $color-blue-drk;}
