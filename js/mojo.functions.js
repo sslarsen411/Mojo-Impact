@@ -15,7 +15,6 @@ const rootEle        = document.documentElement,
       btnClose       = document.querySelectorAll(".modal__close"),
       mdlID          = document.getElementById('policy-modal'),
       hasHero        = document.getElementsByClassName("hero")
-
 /*******  ALL BUTTONS ******
 for (const butt of btns) {
   butt.addEventListener('click', function(e) {
@@ -30,12 +29,22 @@ for (const noLink of noLinks) {
     e.preventDefault()
   })
 }
-
 /** 
 * SCROLL EVENTS
 */
-/* CHANGE HEADER BACKGROUND */
-if(hasHero.length == 0){header.classList.add("bg-black")} // CHANGE ON HERO ONLY
+/* EQV TO DOC READY IN JQUERY*/
+var ready = (callback) => {
+    if (document.readyState != "loading") callback()
+    else document.addEventListener("DOMContentLoaded", callback)
+}
+ready(() => { 
+  /* Adj header after DOM has fully loaded */ 
+    if(hasHero.length == 0){    // Toggle header BG with HERO ONLY
+        header.classList.add("bg-black")
+    }else
+        header.classList.add("bg-half")
+})
+/* CHANGE HEADER BACKGROUND - Hero only */
 const colorHeader = () => {
   if(hasHero.length > 0){
     if ( rootEle.scrollTop < scrollTopConst) {
@@ -66,7 +75,6 @@ const scrollToTop = () => {
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
 window.onscroll = function() {colorHeader()}
-
 /** 
 * NAVIGATION
 */
@@ -94,12 +102,11 @@ burger.addEventListener("click", () => {
     burger.classList.toggle("clicked");
     navContainer.classList.toggle("show-nav-bar")
 });
-
 /** 
 * SITE POLICY MODAL
 */   
 const getModalContent = (inPolicy,inTitle) =>{
-    fetch('http://localhost/Mojo-Impact/php_scripts/fetchModalContent.php', {
+    fetch('php_scripts/fetchModalContent.php', {
         method: 'POST',      
         body: JSON.stringify({
         type: inPolicy   
