@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 | Not Found</title>
+    <link rel="stylesheet" href="css/mojo-style.css">
+</head>
+<body class="container">
+    <header class="bg-half">
+      <div class="header">
+        <div class="header__logo-box">
+          <img class="header__logo--img" src="https://d22dngtjl7mv6s.cloudfront.net/logos/logo_mi_lt-tagline.svg"
+            alt="Mojo Impact logo">  
+        </div>
+        <div class="nav-burger">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <nav id="topNav" class="header__nav-bar nav-bar">
+        <ul class="header__nav-bar--links">
+          <li class="header__nav-bar--item">
+            <a href="index.html" title="index" class="nav-bar__link" onclick="updateMenu(this.title)">Home</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">Solutions</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
+          </li>
+          <li class="header__nav-bar--item">
+            <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">About</a>
+          </li>         
+        </ul>
+      </nav>
+        <div class="header__nap">
+          <p>
+            Mojo Impact<br>
+            Sonoma, CA<br>
+            707 939-5738
+          </p>
+        </div>        
+      </div>
+    </header>
+    
+    <section class=" error columns columns__col-2">
+      <div class="column__text">      
+         <h1>
+            Error<br />404
+          </h1> 
+            <h2>Page Not Found</h2>
+      </div>
+      <div class="column__text">
+        <h3>Dude! I think you broke the internet.</h3>
+            <p>
+                We tried and tried, but we can&rsquo;t find the page &quot;<?php echo $pg ?>&quot;
+            </p>        
+            <p>
+                Try your browser&rsquo;s back button or go to our <a href="/"><span class="mojored">home page</span></a>.
+            </p> 
+        </div>        
+      </div>
+    </section><!-- END COLUMN WRAPPER -->
+
+    
+</body>
+</html>

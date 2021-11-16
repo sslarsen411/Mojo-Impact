@@ -1,0 +1,28 @@
+%error{    
+    text-align: center;
+    text-transform: uppercase;
+}
+.error{
+    min-height:60rem;
+    background: transparent url("https://d22dngtjl7mv6s.cloudfront.net/images/yell.jpg") no-repeat left center;
+    background-size: cover;
+    & h1{
+        @extend %error;
+        color: $color-red-drk;
+        font-size: 8rem;
+        line-height:8rem;    
+    }
+    & h2{
+        @extend %error;        
+        font-size: 5rem;
+        line-height:5rem;    
+    }
+    & h3{        
+        font-size: 3rem;
+        line-height:3rem; 
+    }
+    & p{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
