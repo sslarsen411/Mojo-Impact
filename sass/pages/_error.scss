@@ -4,7 +4,7 @@
 }
 .error{
     min-height:60rem;
-    background: transparent url("https://d22dngtjl7mv6s.cloudfront.net/images/yell.jpg") no-repeat left center;
+    background: transparent url("https://d22dngtjl7mv6s.cloudfront.net/images/error-404.jpg") no-repeat left center;
     background-size: cover;
     & h1{
         @extend %error;

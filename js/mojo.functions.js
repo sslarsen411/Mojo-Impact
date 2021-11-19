@@ -15,6 +15,19 @@ const rootEle        = document.documentElement,
       btnClose       = document.querySelectorAll(".modal__close"),
       mdlID          = document.getElementById('policy-modal'),
       hasHero        = document.getElementsByClassName("hero")
+
+/* EQV TO DOC READY IN JQUERY*/
+const ready = (callback) => {
+  if (document.readyState != "loading") callback()
+  else document.addEventListener("DOMContentLoaded", callback)
+}
+ready(() => { 
+/* Adj header after DOM has fully loaded */ 
+  if(hasHero.length == 0){    // Toggle header BG with HERO ONLY
+      header.classList.add("bg-black")
+  }else
+      header.classList.add("bg-half")
+})
 /*******  ALL BUTTONS ******
 for (const butt of btns) {
   butt.addEventListener('click', function(e) {
@@ -32,19 +45,7 @@ for (const noLink of noLinks) {
 /** 
 * SCROLL EVENTS
 */
-/* EQV TO DOC READY IN JQUERY*/
-var ready = (callback) => {
-    if (document.readyState != "loading") callback()
-    else document.addEventListener("DOMContentLoaded", callback)
-}
-ready(() => { 
-  /* Adj header after DOM has fully loaded */ 
-    if(hasHero.length == 0){    // Toggle header BG with HERO ONLY
-        header.classList.add("bg-black")
-    }else
-        header.classList.add("bg-half")
-})
-/* CHANGE HEADER BACKGROUND - Hero only */
+/* CHANGE HEADER BACKGROUND ON SCROLL - Hero only */
 const colorHeader = () => {
   if(hasHero.length > 0){
     if ( rootEle.scrollTop < scrollTopConst) {
