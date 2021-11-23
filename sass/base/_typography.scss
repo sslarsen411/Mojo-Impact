@@ -14,20 +14,23 @@ body{
 }
 h1 {
     @extend %heading;      
-    font-size: font-size(font-size-xlarge);          
+    font-size: font-size(font-size-xxlarge);          
 }    
 h2 {
     @extend %heading;      
-    font-size:font-size(font-size-large);    
+    font-size:font-size(font-size-xlarge);    
 }    
 h3 {
     @extend %heading;   
-    font-size: font-size(font-size-medium);
+    font-size: font-size(font-size-large);
 }
 h4 {
     @extend %heading;   
-    font-size: font-size(font-size-regular);
+    font-size: font-size(font-size-medium);
 };
+p,ul,ol{
+    font-size:  font-size(font-size-medium);
+}
 ul,ol{
     margin-left: 1.4rem;   
     list-style: none; 

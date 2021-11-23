@@ -8,6 +8,7 @@ header{
 .header, .header__nav-bar{
     color: $color-white;
     padding: 1rem 4rem;
+    font-size: font-size(font-size-medium)
 }
 .header {
     width: 100%;    
@@ -22,8 +23,7 @@ header{
     &__logo--img {
         height: 6rem;
     }    
-    &__nap {         
-        //font-size: 1.5rem;
+    &__nap { 
         line-height: 1.2;       
     }
     &__nav-bar--links{
