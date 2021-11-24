@@ -39,6 +39,7 @@ $font-display: 'Josefin Sans', sans-serif;
 $font-sizes: (
   "font-size-xsmall":   calc(.5rem + .25vw),
   "font-size-small":    calc(.75rem + .25vw),
+  "font-size-base":     clamp(1.4rem, calc(1rem + .5vw), 2.4rem),
   "font-size-medium":   clamp(1.4rem, calc(1rem + .75vw), 2.4rem),
   "font-size-large":    clamp(1.8rem, calc(1rem + 1vw), 3.2rem),
   "font-size-xlarge":   clamp(2rem, calc(1.5rem + 1.2vw), 4rem),

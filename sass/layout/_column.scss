@@ -10,6 +10,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));        
     place-items: center;
+    
+    & p,ol,ul{font-size: font-size(font-size-medium);}
     &__col-3{
         align-items: start;
     }
