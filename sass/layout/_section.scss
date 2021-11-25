@@ -1,14 +1,17 @@
 section {
-    background-color: $color-white-1;    
-    //padding: 2rem;
-
+    background-color: $color-white-1; 
     & p:not(:last-child),
     & li:not(:last-child) {
         margin-bottom: 0.6rem;
     }
-
     & p:last-child,
     & li:last-child {
         margin-bottom: 2rem;
     }
+}
+.highlight{
+    color: $color-white-2;
+    background-color: $color-mojo-charcoal;
+    width: 100vw;
+    height: 8vw;
 }

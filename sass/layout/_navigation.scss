@@ -36,7 +36,6 @@ footer li.is-current-page{
 .clicked .line-1 {transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);}
 .clicked .line-2 {opacity: 0;}
 .clicked .line-3 {transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);}
-
 /* HEADER NAV BAR */
     .header__nav-bar{        
         display: flex;        
@@ -47,17 +46,14 @@ footer li.is-current-page{
             display: flex;
             justify-content: space-evenly;
             margin-right: 1rem;
-            min-width: 11rem;                      
+            min-width: 9rem;                      
             transition: all .2s;
             & a{border:none;}  
         }
         &--item:hover{            
             transform: translateY(-.1rem);
         }    
-        &--item:active,
-        &--item:focus{            
-            transform: translateY(-1rem);
-        }
+        &--item:active, &--item:focus{transform: translateY(-1rem);}
         &--cta{color: $color-blue-drk;}
 
         /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:800px)  *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/

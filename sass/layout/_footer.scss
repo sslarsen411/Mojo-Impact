@@ -37,7 +37,7 @@ footer{
       align-items: center;
       justify-content: center; 
       border-bottom: thin solid rgba($color-white-2, .2) ; 
-      & img{margin-bottom: 1rem;}   
+      & img{height:4rem;margin-bottom: 1rem;}   
     }  
     &__copyright {display: block;text-align: center;}
 }

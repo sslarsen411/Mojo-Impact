@@ -4,8 +4,8 @@
 const rootEle        = document.documentElement,
       scrollToTopBtn = document.querySelector(".btnScrollToTop"),
       header         = document.querySelector("header"),
-      scrollTopConst = 50,
-      ToggleRatio    = 0.20,
+      scrHeaderConst = 100,
+      ToggleRatio    = 0.10,
       pgName         = document.getElementsByClassName("pg-name"),
       navBar         = document.getElementsByClassName("nav-bar__link"),
       navContainer   = document.querySelector(".nav-bar"),
@@ -18,15 +18,15 @@ const rootEle        = document.documentElement,
 
 /* EQV TO DOC READY IN JQUERY*/
 const ready = (callback) => {
-  if (document.readyState != "loading") callback()
-  else document.addEventListener("DOMContentLoaded", callback)
+    if (document.readyState != "loading") callback()
+    else document.addEventListener("DOMContentLoaded", callback)
 }
 ready(() => { 
-/* Adj header after DOM has fully loaded */ 
-  if(hasHero.length == 0){    // Toggle header BG with HERO ONLY
-      header.classList.add("bg-black")
-  }else
-      header.classList.add("bg-half")
+  /* Adj header after DOM has fully loaded */ 
+    if(hasHero.length == 0){    // Toggle header BG with HERO ONLY
+        header.classList.add("bg-black")
+    }else
+        header.classList.add("bg-half")
 })
 /*******  ALL BUTTONS ******
 for (const butt of btns) {
@@ -45,10 +45,10 @@ for (const noLink of noLinks) {
 /** 
 * SCROLL EVENTS
 */
-/* CHANGE HEADER BACKGROUND ON SCROLL - Hero only */
+/* CHANGE HEADER BACKGROUND - Hero only */
 const colorHeader = () => {
   if(hasHero.length > 0){
-    if ( rootEle.scrollTop < scrollTopConst) {
+    if ( rootEle.scrollTop < scrHeaderConst) {
       header.classList.remove("bg-black")
       header.classList.add("bg-half")
     } else {

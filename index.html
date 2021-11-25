@@ -24,7 +24,7 @@
             <a href="index.html" title="index" class="nav-bar__link" onclick="updateMenu(this.title)">Home</a>
           </li>
           <li class="header__nav-bar--item">
-            <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">Solutions</a>
+            <a href="#" title="solution" class="nav-bar__link isDisabled" onclick="updateMenu(this.title)">Solutions</a>
           </li>
           <li class="header__nav-bar--item">
             <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">Contact</a>
@@ -44,7 +44,7 @@
       </div>
     </header>
     <section class="hero hero__big columns columns__col-2">
-      <div class="column__text has-stroke-drk">
+      <div class="column__text">
         <p class="tagline font-size-large">Turn your profits up to <strong>11</strong>!</p>
         <h1>          
           Discover how to <strong>boost</strong> your bottom line and <strong>jump</strong> light-years <strong>ahead</strong> of your competition
@@ -55,11 +55,11 @@
           <svg class="icon-saffron">
             <use xlink:href="img/sprite.svg#star-empty"></use>
           </svg>
-          Attract <em>more</em> <span class="">customers</span><br>
+          Attract <em>more</em> <span >customers</span><br>
           <svg class="icon-saffron">
             <use xlink:href="img/sprite.svg#star-empty"></use>
           </svg>
-          Earn <em>more</em> cash.
+          Make <em>more</em> profit
         </h2>        
         <p>
             Find out how&hellip; <a href="https://appt.mojoimpact.com" target="_blank" rel="noopener noreferrer">              
@@ -70,6 +70,13 @@
         </a>       
       </div>
        <div><!-- filler --></div> 
+    </section>
+    <section class="columns highlight">
+      <div>
+        <h2 class="is-centered font-size-xxlarge">
+            Why <strong>Mojo <span class="has-text-saffron">Impact</span></strong>?
+        </h2>
+      </div>
     </section>
     <section id="stakes" class="columns columns__col-2">
       <div id="stakes-txt" class="column__text">
@@ -109,37 +116,37 @@
           </p>        
       </div>
     </section><!-- END COLUMN WRAPPER -->
-    <section class="columns">
+    <section class="columns highlight">
       <div>
-        <h2 class="is-centered mt-med font-size-xxlarge">Who can benefit from <strong>Mojo <span class="has-text-saffron has-stroke-drk">Impact</span></strong>?</h2>
+        <h2 class="is-centered font-size-xxlarge">Who can benefit from <strong>Mojo <span class="has-text-saffron">Impact</span></strong>?</h2>
       </div>
     </section>
     <section class="columns columns__col-3">
       <div  class="column__text">
           <h2 class="is-centered is-italic has-text-red">Local Businesses</h2>
-          <svg class="">
+          <svg >
             <use xlink:href="img/sprite.svg#local"></use>
           </svg>
           <p>
-             Dominate your market and be the <strong>go-to</strong> resource for the products and services you offer.
+             Dominate the local market for the products and services you offer.
           </p>
       </div>
       <div  class="column__text">
         <h2 class="is-centered is-italic has-text-red">        
           Startups
         </h2>
-        <svg class="">
+        <svg >
           <use xlink:href="img/sprite.svg#startup"></use>
         </svg>
         <p>
-          Hit the marketplace running to jump light-years ahead of your cometition.
+          Gain an advantage to jump light-years ahead of your competition.
         </p>
       </div>
       <div  class="column__text">
         <h2 class="is-centered is-italic has-text-red">
           Ecommerce
         </h2>
-        <svg class="">
+        <svg >
           <use xlink:href="img/sprite.svg#ecom"></use>
         </svg>
         <p>
@@ -207,7 +214,7 @@
     <footer class="footer">
       <!-- Footer Logo -->
       <div class="footer__logo">
-        <img class="header__logo--img" src="https://d22dngtjl7mv6s.cloudfront.net/logos/mojo-impact-linear-logo-lt-o.svg"
+        <img src="https://d22dngtjl7mv6s.cloudfront.net/logos/mojo-impact-linear-logo-lt-o.svg"
           alt="Mojo Impact logo">
       </div>
       <!-- Footer Content -->
@@ -215,8 +222,8 @@
         <div class="footer__content--navigation">
           <h2>Site Navigation</h2>
           <nav class="nav-bar">
-            <ul class="">
-              <li class="">
+            <ul >
+              <li >
                 <a href="index.html" title="index" class="nav-bar__link" onclick="updateMenu(this.title)">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#page-home"></use>
@@ -224,7 +231,7 @@
                   Home Page
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="#" title="solution" class="nav-bar__link" onclick="updateMenu(this.title)">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#page-solutions"></use>
@@ -232,7 +239,7 @@
                   Business Solutions
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="contact.html" title="contact" class="nav-bar__link" onclick="updateMenu(this.title)">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#page-contact"></use>
@@ -240,7 +247,7 @@
                   Contact Mojo Impact
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="about.html" title="about" class="nav-bar__link" onclick="updateMenu(this.title)">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#page-about"></use>
@@ -248,7 +255,7 @@
                   About Mojo Impact
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="#" title="site-map" class="nav-bar__link isDisabled">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#page-site-map"></use>
@@ -256,7 +263,7 @@
                   Site Map
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="typography.html" title="typography" class="nav-bar__link" target="_blank">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#typography"></use>
@@ -264,7 +271,7 @@
                   Typeography
                 </a>
               </li>
-              <li class="">
+              <li >
                 <a href="element.html" title="Elements" class="nav-bar__link" target="_blank">
                   <svg class="icon-saffron">
                     <use xlink:href="img/sprite.svg#elements"></use>
@@ -278,7 +285,7 @@
         <div class="footer__content--policies">
           <h2> Site Policies </h2>
           <ul class="menu-list">
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('calif',this.title);return false;" title="California Privacy Rights">
                 <svg class="icon-saffron">
@@ -286,7 +293,7 @@
                 </svg> California Privacy Rights
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('cookie',this.title);return false;" title="Cookie Policy">
                 <svg class="icon-saffron">
@@ -294,7 +301,7 @@
                 </svg> Cookie Policy
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('copyrt',this.title);return false;" title="Copyright Policy">
                 <svg class="icon-saffron">
@@ -302,7 +309,7 @@
                 </svg> Copyright Policy
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('privacy',this.title);return false;" title="Privacy Policy">
                 <svg class="icon-saffron">
@@ -310,7 +317,7 @@
                 </svg> Privacy Policy
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('refund',this.title);return false;" title="Refund Policy">
                 <svg class="icon-saffron">
@@ -318,7 +325,7 @@
                 </svg> Refund Policy
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('spam',this.title);return false;" title="Anti Spam Policy">
                 <svg class="icon-saffron">
@@ -326,7 +333,7 @@
                 </svg> Anti Spam Policy
               </a>
             </li>
-            <li class="">
+            <li >
               <a href="" class="modal-button" data-target="modal-id"
                 onclick="getModalContent('terms',this.title);return false;" title="Website Terms and Conditions">
                 <svg class="icon-saffron">
@@ -339,7 +346,7 @@
         <div class="footer__content--support">
           <h2>Support</h2>
           <ul class="menu-list">
-            <li class="">
+            <li >
               <a href="https://support.mojoimpact.com/" rel="noopener" target="_blank" class="mim">
                 <svg class="icon-red">
                   <use xlink:href="img/sprite.svg#mojo-impact-support"></use>
@@ -349,21 +356,21 @@
           </ul>
           <h2 class="mt-med">Additional Sites</h2>
           <ul>
-            <li class="" title="blog">
+            <li  title="blog">
               <a href="https://insights.mojoimpact.com" target="_blank" rel="noopener" class="mim">
                 <svg class="icon-saffron">
                   <use xlink:href="img/sprite.svg#mojo-impact-insights"></use>
                 </svg> Mojo Impact Insights Blog
               </a>
             </li>           
-            <li class="" title="Mojo Impact website development">
+            <li  title="Mojo Impact website development">
               <a href="https://mojoimpact.site/" target="_blank" rel="noopener" class="mim">
                 <svg class="icon-saffron">
                   <use xlink:href="img/sprite.svg#solution-coding"></use>
                 </svg> Mojo Impact Websites
               </a>
             </li>
-            <li class="" title="Mojo Impact Co">
+            <li  title="Mojo Impact Co">
               <a href="https://www.mojoimpact.co" target="_blank" rel="noopener" class="mim">
                 <svg class="icon-saffron">
                   <use xlink:href="img/sprite.svg#mojo-impact-social-media"></use>
@@ -373,7 +380,7 @@
           </ul>
         </div>
         <div class="footer__content--contact">
-          <h2 class="">Stay Connected</h2>
+          <h2 >Stay Connected</h2>
           <h3 class="mt-med">Contact Mojo Impact</h3>
           <ul>
             <li>
