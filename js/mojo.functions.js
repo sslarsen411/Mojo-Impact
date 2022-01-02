@@ -1,3 +1,4 @@
+// @ts-check
 /** 
 * GLOBAL VALUES
 */
@@ -38,9 +39,7 @@ for (const butt of btns) {
 */ 
 const noLinks = document.querySelectorAll(".isDisabled")
 for (const noLink of noLinks) {
-  noLink.addEventListener('click', function(e) {   
-    e.preventDefault()
-  })
+  noLink.addEventListener('click', (e) => e.preventDefault())
 }
 /** 
 * SCROLL EVENTS
@@ -75,38 +74,38 @@ const scrollToTop = () => {
 /* SCROLL LISTENERS */
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
-window.onscroll = function() {colorHeader()}
+window.onscroll = () => colorHeader()
 /** 
 * NAVIGATION
 */
   /* UPDATE ACTIVE PAGE ON NAV MENUS */
-document.addEventListener("DOMContentLoaded", function(event) { 
-    updateMenu(document.getElementsByClassName("pg-name")[0].innerText,true)
-});
+document.addEventListener("DOMContentLoaded", (event) =>  
+    updateMenu(document.getElementsByClassName("pg-name")[0].innerHTML,true)
+);
 /* LIVE*/
 const updateMenu = (inPg, isInit=false) =>{  
-  let currPg = pgName[0].innerText    
-  pgName[0].innerText = inPg
+  let currPg = pgName[0].innerHTML    
+  pgName[0].innerHTML = inPg
   for (let i = 0; i < navBar.length; ++i) { 
       const linkTitle = new RegExp(navBar[i].getAttribute("title"))
       if (linkTitle.test(currPg) && !isInit){
-          navBar[i].parentNode.classList.remove("is-current-page") 
+          navBar[i].parentElement.classList.remove("is-current-page") 
           navBar[i].classList.remove("is-current-page") 
-      }else if (linkTitle.test(pgName[0].innerText)){      
-          navBar[i].parentNode.classList.add("is-current-page")   
+      }else if (linkTitle.test(pgName[0].innerHTML)){      
+          navBar[i].parentElement.classList.add("is-current-page")   
           navBar[i].classList.add("is-current-page")
       }
   }
 }
 /* Handle Nav Burger Click */ 
 burger.addEventListener("click", () => {
-    burger.classList.toggle("clicked");
+    burger.classList.toggle("clicked")
     navContainer.classList.toggle("show-nav-bar")
 });
 /** 
 * SITE POLICY MODAL
 */   
-const getModalContent = (inPolicy,inTitle) =>{
+const getModalContent = (inPolicy,inTitle) => {
     fetch('php_scripts/fetchModalContent.php', {
         method: 'POST',      
         body: JSON.stringify({
@@ -119,23 +118,21 @@ const getModalContent = (inPolicy,inTitle) =>{
     })
     modal.classList.add('modal--show')   
   });
-}
+} //END getModalContent
 for (const btn of btnClose) {
-  btn.addEventListener('click', function(e) {   
+  btn.addEventListener('click', (e) => {   
     e.preventDefault()
     closeModal()
   })
 }
-window.onclick = function(event) {  //click outside of modal
+window.onclick = (event) => {  //click outside of modal
   if (event.target == mdlID) {
     closeModal()
   }
 }
-const closeModal = () =>{
+const closeModal = () => {
   modal.classList.remove('modal--show')
   modal.classList.add('modal--hide')  // Remove hide class after animation is done
-  afterAnimation = function() {
-    modal.classList.remove('modal--hide')
-  }  
+  const afterAnimation = () => modal.classList.remove('modal--hide')  
   modal.addEventListener("animationend", afterAnimation, false)
 }
