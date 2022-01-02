@@ -3,6 +3,7 @@ css/mojo-style.css
 img/
 images/
 node_modules/
+default/
 package-lock.json
 package.json
 README.md
