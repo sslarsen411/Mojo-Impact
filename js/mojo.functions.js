@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", (event) =>
     updateMenu(document.getElementsByClassName("pg-name")[0].innerHTML,true)
 );
 /* LIVE*/
-const updateMenu = (inPg, isInit=false) =>{  
+const updateMenu = (inPg, isInit=false) => {  
   let currPg = pgName[0].innerHTML    
   pgName[0].innerHTML = inPg
   for (let i = 0; i < navBar.length; ++i) { 
